@@ -16,13 +16,12 @@ from pathlib import Path
 from typing import Any
 
 from src.data_pipeline.crawlers.crawler_utils import (
-    CRAWLED_BIKE_MODELS,
-    CRAWLED_CAR_MODELS,
     NEWS_DIR,
     POLICIES_DIR,
     PROJECT_ROOT,
     build_rag_metadata,
     clean_html,
+    extract_related_models,
     fetch_html,
     get_current_iso_timestamp,
     random_delay,
@@ -38,23 +37,8 @@ CANDIDATE_CSV_PATHS = [
 ]
 
 
-def _extract_related_models(text: str) -> list[str]:
-    """Phát hiện các dòng xe được nhắc tới trong bài viết."""
-    text_upper = text.upper()
-    found: set[str] = set()
-
-    for car in CRAWLED_CAR_MODELS:
-        pattern = r"\b" + re.escape(car.upper()) + r"\b"
-        compressed = r"\b" + re.escape(car.upper().replace(" ", "")) + r"\b"
-        if re.search(pattern, text_upper) or re.search(compressed, text_upper):
-            found.add(car)
-
-    for bike in CRAWLED_BIKE_MODELS:
-        base_name = bike.split()[0].upper()
-        if base_name in text_upper:
-            found.add(bike)
-
-    return sorted(found)
+# Alias để giữ tính tương thích nội bộ
+_extract_related_models = extract_related_models
 
 
 def read_all_sources_csv(specific_path: Path | None = None) -> tuple[list[dict[str, str]], list[Path]]:

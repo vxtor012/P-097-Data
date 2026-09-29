@@ -46,11 +46,11 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
         pass
 
 # Import các crawler chuyên biệt
-from src.data_pipeline.crawlers.external_sources_crawler import run_external_sources_crawl
-from src.data_pipeline.crawlers.faq_crawler import run_faq_crawl
-from src.data_pipeline.crawlers.news_crawler import run_news_crawl
-from src.data_pipeline.crawlers.policy_crawler import run_policy_crawl
-from src.data_pipeline.crawlers.relational_crawler import (
+from src.data_pipeline.crawlers.external_sources_crawler import run_external_sources_crawl  # noqa: E402
+from src.data_pipeline.crawlers.faq_crawler import run_faq_crawl  # noqa: E402
+from src.data_pipeline.crawlers.news_crawler import run_news_crawl  # noqa: E402
+from src.data_pipeline.crawlers.policy_crawler import run_policy_crawl  # noqa: E402
+from src.data_pipeline.crawlers.relational_crawler import (  # noqa: E402
     export_bike_pricing,
     export_car_color_options,
     export_car_editions_pricing,
@@ -60,8 +60,8 @@ from src.data_pipeline.crawlers.relational_crawler import (
     fetch_rolling_data,
     run_relational_crawl,
 )
-from src.data_pipeline.crawlers.specs_crawler import run_specs_crawl
-from src.data_pipeline.crawlers.vgreen_crawler import run_vgreen_crawl
+from src.data_pipeline.crawlers.specs_crawler import run_specs_crawl  # noqa: E402
+from src.data_pipeline.crawlers.vgreen_crawler import run_vgreen_crawl  # noqa: E402
 
 # Re-export các hàm và biến để tương thích ngược 100% với mã nguồn cũ
 __all__ = [

@@ -18,7 +18,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html import unescape
 from pathlib import Path
 from typing import Any
@@ -90,7 +90,7 @@ DEFAULT_USER_AGENT = (
 
 def get_current_iso_timestamp() -> str:
     """Trả về thời gian hiện tại định dạng ISO 8601 UTC."""
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()
 
 
 def random_delay(
@@ -249,3 +249,90 @@ def save_json(data: Any, file_path: Path, indent: int = 2) -> None:
     file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=indent)
+
+
+def extract_related_models(text: str) -> list[str]:
+    """Phát hiện và trích xuất danh sách các dòng xe (ô tô & xe máy điện) được nhắc tới trong văn bản.
+
+    Cải tiến chống false positives (PR review feedback):
+    1. Sử dụng word boundary (\\b) nghiêm ngặt cho tất cả các model, tránh match nhầm các từ
+       như 'evolution', 'revolution', 'development' (với Evo) hay 'green' trong bài viết trạm sạc.
+    2. Chuẩn hóa linh hoạt khoảng trắng và dấu gạch nối (ví dụ: 'Evo 200 Lite' / 'Evo200 Lite',
+       'Theon-S' / 'Theon S', 'VF 8' / 'VF8').
+    3. Ưu tiên so khớp cụm từ cụ thể dài hơn trước để gán metadata chính xác nhất.
+    """
+    if not text:
+        return []
+
+    text_upper = text.upper()
+    found: set[str] = set()
+
+    # 1. Trích xuất ô tô điện
+    for car in CRAWLED_CAR_MODELS:
+        car_clean = car.strip()
+        # Xử lý các dòng xe có thương hiệu Green (Limo Green, Herio Green, Minio Green)
+        if "GREEN" in car_clean.upper():
+            pat = r"\b" + re.escape(car_clean.upper()).replace(r"\ ", r"\s+") + r"\b"
+            if re.search(pat, text_upper):
+                found.add(car)
+            continue
+
+        # Xử lý xe van
+        if car_clean.upper() == "EC VAN":
+            if re.search(r"\bEC\s*VAN\b", text_upper):
+                found.add(car)
+            continue
+
+        # Xử lý xe concept / đặc biệt (VF Wild, VF MPV 7, VF 8 The All New)
+        if "THE ALL NEW" in car_clean.upper():
+            if re.search(r"\bVF\s*8\s+(?:THE\s+ALL\s+NEW|ALL\s+NEW)\b", text_upper):
+                found.add(car)
+            continue
+
+        if car_clean.upper() == "VF WILD":
+            if re.search(r"\bVF\s*WILD\b", text_upper):
+                found.add(car)
+            continue
+
+        if car_clean.upper() == "VF MPV 7":
+            if re.search(r"\bVF\s*MPV\s*7\b", text_upper):
+                found.add(car)
+            continue
+
+        # Các dòng xe VF số (VF 2, VF 3, VF 5, VF 6, VF 7, VF 8, VF 9)
+        m = re.match(r"^VF\s*(\d+)$", car_clean, re.I)
+        if m:
+            num = m.group(1)
+            # Match "VF 3", "VF3", "VF-3", tránh false positive như "VF 30"
+            pat = rf"\bVF[\s\-]?{num}\b"
+            if re.search(pat, text_upper):
+                found.add(car)
+            continue
+
+        # Fallback chuẩn cho các ô tô khác
+        pat = r"\b" + re.escape(car_clean.upper()).replace(r"\ ", r"[\s\-]+") + r"\b"
+        if re.search(pat, text_upper):
+            found.add(car)
+
+    # 2. Trích xuất xe máy điện
+    for bike in CRAWLED_BIKE_MODELS:
+        bike_clean = bike.strip()
+        # Chuẩn hóa regex cho xe máy: hỗ trợ dấu cách, gạch nối linh hoạt giữa các từ
+        # Ví dụ: "Evo200 Lite" -> r"\bEVO\s*200\s+LITE\b"
+        # "Klara S (2022)" -> r"\bKLARA[\s\-]+S(?:\s*\(?2022\)?)?\b"
+        if "KLARA S" in bike_clean.upper():
+            pat = r"\bKLARA[\s\-]+S(?:\s*\(?2022\)?)?\b"
+        elif "EVO200" in bike_clean.upper():
+            suffix = bike_clean.upper().replace("EVO200", "").strip()
+            suffix_pat = rf"\s+{re.escape(suffix)}" if suffix else ""
+            pat = rf"\bEVO\s*200{suffix_pat}\b"
+        else:
+            # Tách các từ và dấu nối
+            tokens = [re.escape(t) for t in re.split(r"[\s\-]+", bike_clean.upper()) if t]
+            pat = r"\b" + r"[\s\-]+".join(tokens) + r"\b"
+
+        if re.search(pat, text_upper):
+            found.add(bike)
+
+    return sorted(found)
+

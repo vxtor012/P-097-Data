@@ -15,14 +15,12 @@ import re
 from typing import Any
 
 from src.data_pipeline.crawlers.crawler_utils import (
-    CRAWLED_BIKE_MODELS,
-    CRAWLED_CAR_MODELS,
     LEGAL_DIR,
     POLICIES_DIR,
     build_rag_metadata,
     clean_html,
+    extract_related_models,
     fetch_html,
-    get_current_iso_timestamp,
     random_delay,
     save_json,
 )
@@ -133,20 +131,8 @@ POLICY_CONFIGS = [
 ]
 
 
-def _extract_related_models(text: str) -> list[str]:
-    """Trích xuất các model xe liên quan trong tài liệu."""
-    text_upper = text.upper()
-    found = set()
-    for car in CRAWLED_CAR_MODELS:
-        pat = r"\b" + re.escape(car.upper()) + r"\b"
-        compressed = r"\b" + re.escape(car.upper().replace(" ", "")) + r"\b"
-        if re.search(pat, text_upper) or re.search(compressed, text_upper):
-            found.add(car)
-    for bike in CRAWLED_BIKE_MODELS:
-        base = bike.split()[0].upper()
-        if base in text_upper:
-            found.add(bike)
-    return sorted(found)
+# Alias để giữ tính tương thích nội bộ
+_extract_related_models = extract_related_models
 
 
 def _extract_sections(html: str) -> list[dict[str, str]]:

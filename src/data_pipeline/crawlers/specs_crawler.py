@@ -136,7 +136,7 @@ def extract_specs_from_html(html: str) -> dict[str, str]:
 
     for b in spec_blocks:
         lines = [clean_html(x) for x in re.findall(r"<[^>]+>([^<]+)<", b)]
-        clean_lines = [l.strip() for l in lines if l.strip()]
+        clean_lines = [line.strip() for line in lines if line.strip()]
 
         # Bỏ qua các hàng tiêu đề nhóm tabs
         if "Kích thước" in clean_lines and "Pin & Sạc" in clean_lines:
@@ -200,7 +200,7 @@ def crawl_car_model_specs(cfg: dict[str, Any]) -> dict[str, Any] | None:
         f"Dòng xe: {cfg['model_name']} ({cfg['segment']})\n"
         f"Mô tả: {description}\n\n"
         f"Thông số kỹ thuật:\n" + ("\n".join(spec_lines) if spec_lines else "Đang cập nhật") + "\n\n"
-        f"Tính năng nổi bật:\n" + ("\n".join(feat_lines) if feat_lines else "Đang cập nhật")
+        "Tính năng nổi bật:\n" + ("\n".join(feat_lines) if feat_lines else "Đang cập nhật")
     ).strip()
 
     metadata = build_rag_metadata(

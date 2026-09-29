@@ -11,39 +11,19 @@ import re
 from typing import Any
 
 from src.data_pipeline.crawlers.crawler_utils import (
-    CRAWLED_BIKE_MODELS,
-    CRAWLED_CAR_MODELS,
     FAQS_DIR,
     build_rag_metadata,
     clean_html,
+    extract_related_models,
     fetch_html,
     get_current_iso_timestamp,
-    random_delay,
     save_json,
 )
 
 FAQ_PAGE_URL = "https://vinfastauto.com/vn_vi/cau-hoi-thuong-gap"
 
-
-def _extract_related_models(text: str) -> list[str]:
-    """Tìm kiếm các dòng xe ô tô / xe máy được nhắc tới trong câu hỏi và câu trả lời."""
-    text_upper = text.upper()
-    found: set[str] = set()
-
-    for car in CRAWLED_CAR_MODELS:
-        # Ví dụ tìm VF 3, VF3, VF 8, VF8, Limo Green,...
-        pattern = r"\b" + re.escape(car.upper()) + r"\b"
-        compressed = car.upper().replace(" ", "")
-        compressed_pattern = r"\b" + re.escape(compressed) + r"\b"
-        if re.search(pattern, text_upper) or re.search(compressed_pattern, text_upper):
-            found.add(car)
-
-    for bike in CRAWLED_BIKE_MODELS:
-        base_name = bike.split()[0].upper()
-        if base_name in text_upper:
-            found.add(bike)
-
-    return sorted(found)
+# Alias để giữ tính tương thích nội bộ
+_extract_related_models = extract_related_models
 
 
 def parse_faqs_from_html(html: str) -> list[dict[str, Any]]:
@@ -55,7 +35,6 @@ def parse_faqs_from_html(html: str) -> list[dict[str, Any]]:
 
     results: list[dict[str, Any]] = []
     item_idx = 1
-    timestamp = get_current_iso_timestamp()
 
     # Legacy ICE models cần loại bỏ theo yêu cầu:
     # "chỉ các dòng, loại, option xe đã crawl được hoặc các thông tin chung"

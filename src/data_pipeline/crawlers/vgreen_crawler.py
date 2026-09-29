@@ -20,13 +20,12 @@ from pathlib import Path
 from typing import Any
 
 from src.data_pipeline.crawlers.crawler_utils import (
-    CRAWLED_BIKE_MODELS,
-    CRAWLED_CAR_MODELS,
     FAQS_DIR,
     NEWS_DIR,
     POLICIES_DIR,
     build_rag_metadata,
     clean_html,
+    extract_related_models,
     fetch_html,
     get_current_iso_timestamp,
     random_delay,
@@ -182,23 +181,8 @@ INCLUDE_TOPIC_PATTERNS = [
 ]
 
 
-def _extract_related_models(text: str) -> list[str]:
-    """Phát hiện các dòng xe hoặc dòng pin được nhắc tới trong bài viết."""
-    text_upper = text.upper()
-    found: set[str] = set()
-
-    for car in CRAWLED_CAR_MODELS:
-        pattern = r"\b" + re.escape(car.upper()) + r"\b"
-        compressed = r"\b" + re.escape(car.upper().replace(" ", "")) + r"\b"
-        if re.search(pattern, text_upper) or re.search(compressed, text_upper):
-            found.add(car)
-
-    for bike in CRAWLED_BIKE_MODELS:
-        base_name = bike.split()[0].upper()
-        if base_name in text_upper:
-            found.add(bike)
-
-    return sorted(found)
+# Alias để giữ tính tương thích nội bộ
+_extract_related_models = extract_related_models
 
 
 def _normalize_url(url: str, base: str = BASE_URL) -> str:
@@ -264,47 +248,119 @@ def extract_internal_links(html: str, current_url: str) -> list[str]:
     return valid_links
 
 
+def _detect_faq_section(line: str) -> str | None:
+    """Nhận diện tiêu đề danh mục câu hỏi (Section) linh hoạt, không phụ thuộc vào chuỗi tuyệt đối."""
+    clean = line.strip().lower()
+    if len(clean) > 50:
+        return None
+
+    # Phát hiện danh mục xe máy điện
+    if re.search(r"^(?:(?:dành\s+cho|trạm\s*sạc|mục|phần)\s+)?xe\s*máy(?:\s*điện)?\b", clean):
+        return "Xe máy điện"
+
+    # Phát hiện danh mục ô tô điện
+    if re.search(r"^(?:(?:dành\s+cho|trạm\s*sạc|mục|phần)\s+)?ô\s*tô(?:\s*điện)?\b", clean):
+        return "Ô tô điện"
+
+    return None
+
+
+def _is_faq_question(line: str) -> bool:
+    """Nhận diện dòng câu hỏi dựa trên dấu kết thúc hoặc mẫu câu hỏi phổ biến."""
+    clean = line.strip()
+    if not clean or len(clean) > 300:
+        return False
+
+    # Bỏ qua các bước thao tác (ví dụ trong câu trả lời có "+ Bước 1: ...")
+    if re.match(r"^[\+\-•\*]?\s*bước\s*\d+", clean, re.I):
+        return False
+
+    # 1. Kết thúc bằng dấu hỏi (cho phép dấu ngoặc kép hoặc khoảng trắng)
+    if re.search(r"\?\s*[\"'\)\]]?$", clean):
+        return True
+
+    # 2. Bắt đầu bằng từ khóa câu hỏi chuẩn
+    question_prefixes = (
+        r"^(?:câu\s*hỏi\s*\d*[:\.\-]|q\d*[:\.\-]|"
+        r"làm\s*thế\s*nào|làm\s*sao|tôi\s*có\s*thể|tại\s*sao|khi\s*nào|"
+        r"thời\s*hạn\s+thanh\s+toán|thời\s*gian\s+được\s+phép|hướng\s*dẫn\s+sạc)\b"
+    )
+    if re.search(question_prefixes, clean, re.I) and len(clean) > 15:
+        return True
+
+    return False
+
+
 def parse_vgreen_faqs(raw_content: str, url: str) -> list[dict[str, Any]]:
-    """Tách riêng toàn bộ các câu hỏi thường gặp FAQ của V-GREEN thành cấu trúc chuẩn."""
-    lines = [line_item.strip() for line_item in raw_content.split("\n") if line_item.strip()]
+    """Tách riêng toàn bộ các câu hỏi thường gặp FAQ của V-GREEN thành cấu trúc chuẩn.
+
+    Cải tiến chống Fragile Parsing (PR Review Feedback):
+    1. Không phụ thuộc so sánh chuỗi cứng '== Ô tô điện'. Dùng regex linh hoạt phát hiện
+       section xe máy/ô tô ngay cả khi UI đổi tiêu đề (ví dụ 'Trạm sạc Ô tô điện', 'Dành cho Xe máy').
+    2. Nhận diện câu hỏi thông minh hơn qua regex dấu hỏi và từ khóa nghi vấn.
+    3. Xử lý an toàn khi gặp footer/form đăng ký đối tác, luôn flush FAQ cuối cùng trước khi kết thúc.
+    """
+    if not raw_content:
+        return []
+
+    # Nếu đầu vào chứa thẻ HTML, làm sạch trước
+    text = clean_html(raw_content, strip_nav=True) if "<" in raw_content and ">" in raw_content else raw_content
+    lines = [line_item.strip() for line_item in text.split("\n") if line_item.strip()]
+
     faqs: list[dict[str, Any]] = []
     current_section = "Ô tô điện"
-    current_q = None
+    current_q: str | None = None
     current_a: list[str] = []
 
+    # Danh sách các từ khóa menu / điều hướng cần bỏ qua
+    nav_boilerplate = {
+        "trang chủ", "sản phẩm dịch vụ", "cho đối tác, khách hàng", "tin tức",
+        "về v-green", "góp ý về chất lượng dịch vụ", "faqs", "en", "vi", "-->",
+        "hệ thống trạm sạc", "tìm kiếm trạm sạc",
+    }
+
+    # Các từ khóa kết thúc nội dung FAQ chính (bắt đầu vào form liên hệ, footer)
+    footer_prefixes = ("×", "đăng ký đối tác", "góp ý về chất lượng dịch vụ", "xin chào quý khách", "bản quyền thuộc về")
+
     for line in lines:
-        if line in ["Ô tô điện", "Xe máy điện"]:
+        line_lower = line.lower().strip()
+
+        # Kiểm tra chuyển đổi section
+        new_section = _detect_faq_section(line)
+        if new_section:
             if current_q and current_a:
-                ans_text = "\n".join(current_a).strip()
                 faqs.append({
                     "section": current_section,
                     "question": current_q,
-                    "answer": ans_text,
+                    "answer": "\n".join(current_a).strip(),
                 })
                 current_q = None
                 current_a = []
-            current_section = line
+            current_section = new_section
             continue
 
-        if line in ["Trang chủ", "Sản phẩm dịch vụ", "Cho đối tác, khách hàng", "Tin tức", "Về V-Green", "Trạm sạc Ô tô điện", "Trạm sạc Xe máy điện", "Góp ý về chất lượng dịch vụ", "FAQs", "EN", "-->"]:
+        # Bỏ qua menu navigation
+        if line_lower in nav_boilerplate:
             continue
 
-        if line.startswith(("×", "ĐĂNG KÝ ĐỐI TÁC", "Góp ý về chất lượng dịch vụ trạm sạc", "Xin chào Quý khách")):
+        # Dừng an toàn khi gặp footer nhưng nhớ lưu lại FAQ đang parse dở
+        if any(line_lower.startswith(pref) for pref in footer_prefixes):
             break
 
-        if line.endswith("?"):
+        # Phát hiện câu hỏi mới
+        if _is_faq_question(line):
             if current_q and current_a:
-                ans_text = "\n".join(current_a).strip()
                 faqs.append({
                     "section": current_section,
                     "question": current_q,
-                    "answer": ans_text,
+                    "answer": "\n".join(current_a).strip(),
                 })
                 current_a = []
             current_q = line
         elif current_q is not None:
             current_a.append(line)
 
+    # Lưu FAQ cuối cùng nếu có
     if current_q and current_a:
         faqs.append({
             "section": current_section,
