@@ -1,0 +1,76 @@
+{
+  "total_models": 14,
+  "crawled_at": "2026-09-28T16:30:27.367114+00:00",
+  "models": [
+    {
+      "model_name": "VF 3",
+      "segment": "Mini SUV",
+      "specs_count": 12
+    },
+    {
+      "model_name": "VF 5",
+      "segment": "A-SUV",
+      "specs_count": 12
+    },
+    {
+      "model_name": "VF 6",
+      "segment": "B-SUV",
+      "specs_count": 13
+    },
+    {
+      "model_name": "VF 7",
+      "segment": "C-SUV",
+      "specs_count": 11
+    },
+    {
+      "model_name": "VF 8",
+      "segment": "D-SUV",
+      "specs_count": 11
+    },
+    {
+      "model_name": "VF 8 The All New",
+      "segment": "D-SUV (Thế hệ mới 2026)",
+      "specs_count": 12
+    },
+    {
+      "model_name": "VF 9",
+      "segment": "E-SUV Full-size",
+      "specs_count": 11
+    },
+    {
+      "model_name": "VF 2",
+      "segment": "Micro City Car",
+      "specs_count": 11
+    },
+    {
+      "model_name": "VF MPV 7",
+      "segment": "MPV 7 chỗ",
+      "specs_count": 12
+    },
+    {
+      "model_name": "VF Wild",
+      "segment": "Bán tải điện (Electric Pickup)",
+      "specs_count": 6
+    },
+    {
+      "model_name": "Limo Green",
+      "segment": "Xe dịch vụ cỡ lớn 7 chỗ",
+      "specs_count": 10
+    },
+    {
+      "model_name": "Herio Green",
+      "segment": "Xe đô thị dịch vụ",
+      "specs_count": 13
+    },
+    {
+      "model_name": "Minio Green",
+      "segment": "Xe dịch vụ mini",
+      "specs_count": 11
+    },
+    {
+      "model_name": "EC Van",
+      "segment": "Xe van chở hàng chạy điện",
+      "specs_count": 12
+    }
+  ]
+}

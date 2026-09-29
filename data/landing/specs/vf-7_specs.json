@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "doc_id": "doc_specs_vf-7",
+    "doc_type": "vehicle_spec",
+    "title": "Thông số kỹ thuật và tính năng xe VinFast VF 7",
+    "domain": "vinfastauto.com",
+    "source_url": "https://vinfastauto.com/vn_vi/dat-coc-xe-dien-vf7",
+    "language": "vi",
+    "category": "Thông số kỹ thuật",
+    "subcategory": "C-SUV",
+    "applies_to": "Dòng xe VF 7",
+    "related_models": [
+      "VF 7"
+    ],
+    "is_general_info": false,
+    "pipeline_stage": "landing_raw",
+    "crawled_at": "2026-09-28T16:29:58.354019+00:00",
+    "content_hash": "92da2780e8f78b4ace61ec1cbe2fcaeb",
+    "char_count": 579,
+    "word_count": 136,
+    "segment": "C-SUV",
+    "seats": 5,
+    "specifications_count": 11
+  },
+  "model_name": "VF 7",
+  "slug": "vf-7",
+  "segment": "C-SUV",
+  "seats": 5,
+  "description": "Xe điện VinFast VF 7 – SUV điện phong cách, công nghệ thông minh và khả năng vận hành mạnh mẽ. Xem ưu đãi mới nhất và đặt cọc online ngay hôm nay!",
+  "specifications": {
+    "Chiều dài cơ sở": "2.840 mm",
+    "Mô men xoắn cực đại": "250 Nm",
+    "Công suất tối đa": "130 kW/hp",
+    "Số chỗ ngồi": "5 chỗ",
+    "Dung lượng pin khả dụng": "59,6 kWh",
+    "Công suất sạc chậm AC tối đa": "7,2 kW",
+    "Công suất sạc nhanh DC tối đa": "100 kW",
+    "Lọc không khí Cabin": "Combi 1.0",
+    "Hệ thống túi khí": "4 túi khí",
+    "Màn hình giải trí cảm ứng": "12,9 inch",
+    "Tải Brochure": "Đặt cọc"
+  },
+  "key_features": [],
+  "raw_content": "Dòng xe: VF 7 (C-SUV)\nMô tả: Xe điện VinFast VF 7 – SUV điện phong cách, công nghệ thông minh và khả năng vận hành mạnh mẽ. Xem ưu đãi mới nhất và đặt cọc online ngay hôm nay!\n\nThông số kỹ thuật:\n- Chiều dài cơ sở: 2.840 mm\n- Mô men xoắn cực đại: 250 Nm\n- Công suất tối đa: 130 kW/hp\n- Số chỗ ngồi: 5 chỗ\n- Dung lượng pin khả dụng: 59,6 kWh\n- Công suất sạc chậm AC tối đa: 7,2 kW\n- Công suất sạc nhanh DC tối đa: 100 kW\n- Lọc không khí Cabin: Combi 1.0\n- Hệ thống túi khí: 4 túi khí\n- Màn hình giải trí cảm ứng: 12,9 inch\n- Tải Brochure: Đặt cọc\n\nTính năng nổi bật:\nĐang cập nhật"
+}

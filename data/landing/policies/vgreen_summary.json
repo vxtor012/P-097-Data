@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "domain": "vgreen.net",
+  "crawled_at": "2026-09-29T04:57:00.755430+00:00",
+  "total_visited_urls": 40,
+  "total_faqs_collected": 14,
+  "total_policies_collected": 13,
+  "total_news_collected": 1,
+  "faqs_file": "vgreen_faqs.json",
+  "policies_file": "vgreen_policies_all.json",
+  "news_file": "vgreen_news_articles.json"
+}

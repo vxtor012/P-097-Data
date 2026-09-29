@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "doc_id": "doc_specs_ec-van",
+    "doc_type": "vehicle_spec",
+    "title": "Thông số kỹ thuật và tính năng xe VinFast EC Van",
+    "domain": "vinfastauto.com",
+    "source_url": "https://vinfastauto.com/vn_vi/vinfast-ecvan",
+    "language": "vi",
+    "category": "Thông số kỹ thuật",
+    "subcategory": "Xe van chở hàng chạy điện",
+    "applies_to": "Dòng xe EC Van",
+    "related_models": [
+      "EC Van"
+    ],
+    "is_general_info": false,
+    "pipeline_stage": "landing_raw",
+    "crawled_at": "2026-09-28T16:30:27.356469+00:00",
+    "content_hash": "facd25f290eac8ba25233e9476b64263",
+    "char_count": 698,
+    "word_count": 160,
+    "segment": "Xe van chở hàng chạy điện",
+    "seats": 2,
+    "specifications_count": 12
+  },
+  "model_name": "EC Van",
+  "slug": "ec-van",
+  "segment": "Xe van chở hàng chạy điện",
+  "seats": 2,
+  "description": "VinFast EC Van - xe tải điện đô thị cho hộ kinh doanh và doanh nghiệp, vận hành linh hoạt, êm ái, tiết kiệm chi phí. Khám phá giá bán và ưu đãi mới nhất!",
+  "specifications": {
+    "Kích thước & Trọng lượng": "Pin & Sạc Công nghệ trang bị",
+    "Dung tích khoang chứa hàng": "2600 lít",
+    "Chiều dài cơ sở": "2520 (mm)",
+    "Mô men xoắn cực đại": "110 Nm",
+    "Công suất tối đa": "30 kW/hp",
+    "Dung lượng pin khả dụng": "18.23 kwh",
+    "Sạc nhanh từ 10% - 70% trong": "42 phút",
+    "Công suất sạc nhanh DC tối đa": "24.2 kW",
+    "Phân phối lực phanh điện tử": "EBD",
+    "Đèn báo nguy hiểm khi phanh khẩn cấp": "ESS",
+    "Chức năng kiểm soát lực kéo": "TCS",
+    "Tải Brochure": "Đặt cọc"
+  },
+  "key_features": [],
+  "raw_content": "Dòng xe: EC Van (Xe van chở hàng chạy điện)\nMô tả: VinFast EC Van - xe tải điện đô thị cho hộ kinh doanh và doanh nghiệp, vận hành linh hoạt, êm ái, tiết kiệm chi phí. Khám phá giá bán và ưu đãi mới nhất!\n\nThông số kỹ thuật:\n- Kích thước & Trọng lượng: Pin & Sạc Công nghệ trang bị\n- Dung tích khoang chứa hàng: 2600 lít\n- Chiều dài cơ sở: 2520 (mm)\n- Mô men xoắn cực đại: 110 Nm\n- Công suất tối đa: 30 kW/hp\n- Dung lượng pin khả dụng: 18.23 kwh\n- Sạc nhanh từ 10% - 70% trong: 42 phút\n- Công suất sạc nhanh DC tối đa: 24.2 kW\n- Phân phối lực phanh điện tử: EBD\n- Đèn báo nguy hiểm khi phanh khẩn cấp: ESS\n- Chức năng kiểm soát lực kéo: TCS\n- Tải Brochure: Đặt cọc\n\nTính năng nổi bật:\nĐang cập nhật"
+}

@@ -1,0 +1,22 @@
+{
+  "total_faqs": 400,
+  "source_url": "https://vinfastauto.com/vn_vi/cau-hoi-thuong-gap",
+  "crawled_at": "2026-09-28T16:27:48.839017+00:00",
+  "categories_breakdown": {
+    "Ô tô VinFast": {
+      "Chính sách bán hàng": 5,
+      "Chính sách hậu mãi": 5,
+      "Hệ thống trạm sạc": 5,
+      "Sạc pin": 5,
+      "Thông tin sản phẩm": 183,
+      "Trợ lý ảo": 5
+    },
+    "Xe máy điện": {
+      "Chính sách bán hàng": 5,
+      "Chính sách hậu mãi": 5,
+      "Hệ thống trạm sạc": 5,
+      "Sạc pin": 2,
+      "Thông tin sản phẩm": 175
+    }
+  }
+}

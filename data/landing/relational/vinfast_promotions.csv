@@ -1,0 +1,9 @@
+﻿promo_id,promo_type,promo_name,discount_percent,discount_amount_vnd,description,is_active
+o2o,o2o,Ưu đãi mua xe qua Kinh doanh O2O,2,0,Ưu đãi mua xe qua Kinh doanh O2O,True
+member_tier_0,vinclubTier,Không áp dụng,0,0,Không áp dụng,True
+member_tier_platinum,vinclubTier,Hạng Platinum,3,0,"Ưu đãi 6%, trong đó giảm giá 3% và tích điểm chi tiêu 3%",True
+member_tier_gold,vinclubTier,Hạng Gold,1.5,0,"Ưu đãi 3%, trong đó giảm giá 1,5% và tích điểm chi tiêu 1,5%",True
+green,green,Tri ân Khách hàng xe xăng VinFast chuyển đổi Xanh,0,0,Voucher có giá trị sử dụng đến hết 31/12/2026.,True
+caqd,caqd,Ưu đãi Khách hàng ngành Công an và Quân đội,5,0,Ưu đãi Khách hàng ngành Công an và Quân đội,True
+member_tier_diamond,vinclubTier,Hạng Diamond,4.5,0,"Ưu đãi 9%, trong đó giảm giá 4,5% và tích điểm chi tiêu 4,5%",True
+member_tier_member,vinclubTier,Hạng Member (Chưa có hạng VinClub),0.5,0,"Ưu đãi 1%, trong đó giảm giá 0,5% và tích điểm chi tiêu 0,5%",True

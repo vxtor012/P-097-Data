@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "doc_id": "doc_specs_limo-green",
+    "doc_type": "vehicle_spec",
+    "title": "Thông số kỹ thuật và tính năng xe VinFast Limo Green",
+    "domain": "vinfastauto.com",
+    "source_url": "https://vinfastauto.com/vn_vi/limo-green",
+    "language": "vi",
+    "category": "Thông số kỹ thuật",
+    "subcategory": "Xe dịch vụ cỡ lớn 7 chỗ",
+    "applies_to": "Dòng xe Limo Green",
+    "related_models": [
+      "Limo Green"
+    ],
+    "is_general_info": false,
+    "pipeline_stage": "landing_raw",
+    "crawled_at": "2026-09-28T16:30:19.165158+00:00",
+    "content_hash": "39e669f4a73f598ec8d9d8cc7a88fe4b",
+    "char_count": 619,
+    "word_count": 145,
+    "segment": "Xe dịch vụ cỡ lớn 7 chỗ",
+    "seats": 7,
+    "specifications_count": 10
+  },
+  "model_name": "Limo Green",
+  "slug": "limo-green",
+  "segment": "Xe dịch vụ cỡ lớn 7 chỗ",
+  "seats": 7,
+  "description": "Limo Green – mẫu xe điện 7 chỗ tối ưu cho kinh doanh vận tải hành khách, dịch vụ taxi và đưa đón chuyên nghiệp. Không gian rộng rãi, vận hành êm ái, tiết kiệm chi phí. Đặt cọc online ngay hôm nay!",
+  "specifications": {
+    "Chiều dài cơ sở": "2840 mm",
+    "Mô men xoắn cực đại": "280 Nm",
+    "Công suất tối đa": "150 kW/hp",
+    "Số chỗ ngồi": "7 chỗ",
+    "Dung lượng pin khả dụng": "60.13 kWh",
+    "Công suất sạc chậm AC tối đa": "6.9 kW",
+    "Công suất sạc nhanh DC tối đa": "80 kW",
+    "Màn hình giải trí cảm ứng": "10.1 inch",
+    "Hệ thống túi khí": "4 túi khí",
+    "Tải brochure": "Đặt cọc"
+  },
+  "key_features": [],
+  "raw_content": "Dòng xe: Limo Green (Xe dịch vụ cỡ lớn 7 chỗ)\nMô tả: Limo Green – mẫu xe điện 7 chỗ tối ưu cho kinh doanh vận tải hành khách, dịch vụ taxi và đưa đón chuyên nghiệp. Không gian rộng rãi, vận hành êm ái, tiết kiệm chi phí. Đặt cọc online ngay hôm nay!\n\nThông số kỹ thuật:\n- Chiều dài cơ sở: 2840 mm\n- Mô men xoắn cực đại: 280 Nm\n- Công suất tối đa: 150 kW/hp\n- Số chỗ ngồi: 7 chỗ\n- Dung lượng pin khả dụng: 60.13 kWh\n- Công suất sạc chậm AC tối đa: 6.9 kW\n- Công suất sạc nhanh DC tối đa: 80 kW\n- Màn hình giải trí cảm ứng: 10.1 inch\n- Hệ thống túi khí: 4 túi khí\n- Tải brochure: Đặt cọc\n\nTính năng nổi bật:\nĐang cập nhật"
+}

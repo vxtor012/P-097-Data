@@ -1,0 +1,23 @@
+{
+  "total_articles": 24,
+  "crawled_at": "2026-09-28T16:29:48.983145+00:00",
+  "categories": {
+    "Ô tô điện": 14,
+    "Doanh nghiệp & Công ty": 10
+  },
+  "model_mentions_count": {
+    "VF 2": 2,
+    "VF 3": 7,
+    "VF 5": 7,
+    "VF 6": 7,
+    "VF 7": 7,
+    "VF 8": 5,
+    "VF 9": 6,
+    "VF MPV 7": 6,
+    "VF Wild": 3,
+    "Limo Green": 6,
+    "Herio Green": 5,
+    "Minio Green": 2,
+    "EC Van": 2
+  }
+}

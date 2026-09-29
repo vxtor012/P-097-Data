@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "doc_id": "doc_specs_vf-wild",
+    "doc_type": "vehicle_spec",
+    "title": "Thông số kỹ thuật và tính năng xe VinFast VF Wild",
+    "domain": "vinfastauto.com",
+    "source_url": "https://vinfastauto.com/vn_vi/dat-coc-xe-vf-wild",
+    "language": "vi",
+    "category": "Thông số kỹ thuật",
+    "subcategory": "Bán tải điện (Electric Pickup)",
+    "applies_to": "Dòng xe VF Wild",
+    "related_models": [
+      "VF Wild"
+    ],
+    "is_general_info": false,
+    "pipeline_stage": "landing_raw",
+    "crawled_at": "2026-09-28T16:30:16.951733+00:00",
+    "content_hash": "a6a0c2dc7d9ccc2235e3ed8bf72de33a",
+    "char_count": 312,
+    "word_count": 70,
+    "segment": "Bán tải điện (Electric Pickup)",
+    "seats": 5,
+    "specifications_count": 6
+  },
+  "model_name": "VF Wild",
+  "slug": "vf-wild",
+  "segment": "Bán tải điện (Electric Pickup)",
+  "seats": 5,
+  "description": "",
+  "specifications": {
+    "Kích thước": "5.376 x 2.069 x 1.873 mm",
+    "Chiều dài cơ sở": "3258 mm",
+    "Kích thước thùng xe": "1.574 x 1.512 x 509 mm",
+    "Mô men xoắn cực đại": "280 Nm",
+    "Công suất tối đa": "160 kW/hp",
+    "Kích thước lốp": "255/70 R18"
+  },
+  "key_features": [],
+  "raw_content": "Dòng xe: VF Wild (Bán tải điện (Electric Pickup))\nMô tả: \n\nThông số kỹ thuật:\n- Kích thước: 5.376 x 2.069 x 1.873 mm\n- Chiều dài cơ sở: 3258 mm\n- Kích thước thùng xe: 1.574 x 1.512 x 509 mm\n- Mô men xoắn cực đại: 280 Nm\n- Công suất tối đa: 160 kW/hp\n- Kích thước lốp: 255/70 R18\n\nTính năng nổi bật:\nĐang cập nhật"
+}
