@@ -48,12 +48,13 @@ def fetch_rolling_data(
     session_handshake: bool = True,
     use_cache_fallback: bool = True,
     cache_path: Path | None = None,
+    max_backoff: float = 30.0,
 ) -> dict[str, Any]:
     """Gọi API RollingUpCost-GetInfoRolling của VinFast để lấy toàn bộ dữ liệu cấu hình và giá.
 
     Cải tiến chống Potential API Failure (PR Review feedback):
     1. Session handshake: Sử dụng CookieJar để nhận và duy trì session/CSRF cookies từ PAGE_URL.
-    2. Retry & Exponential backoff: Tự động thử lại khi gặp sự cố mạng tạm thời hoặc rate-limit.
+    2. Retry & Bounded Backoff: Tự động thử lại khi gặp sự cố mạng, có chặn trên max_backoff (tránh treo vô hạn).
     3. Local snapshot fallback: Khi API bị lỗi hoặc chặn kết nối, tự động fallback đọc từ file
        snapshot cục bộ gần nhất để pipeline dữ liệu không bị gãy đột ngột.
     """
@@ -114,7 +115,7 @@ def fetch_rolling_data(
             last_error = err
             print(f"⚠️  Lần thử {attempt}/{max_retries} thất bại: {err}")
             if attempt < max_retries:
-                backoff = 2 ** (attempt - 1)
+                backoff = min(float(2 ** (attempt - 1)), max_backoff)
                 time.sleep(backoff)
 
     # 3. Fallback sang snapshot cục bộ nếu có

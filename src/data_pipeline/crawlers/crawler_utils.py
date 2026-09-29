@@ -251,75 +251,48 @@ def save_json(data: Any, file_path: Path, indent: int = 2) -> None:
         json.dump(data, f, ensure_ascii=False, indent=indent)
 
 
-def extract_related_models(text: str) -> list[str]:
-    """Phát hiện và trích xuất danh sách các dòng xe (ô tô & xe máy điện) được nhắc tới trong văn bản.
+def _compile_model_patterns() -> list[tuple[re.Pattern[str], str]]:
+    """Biên dịch trước toàn bộ regex cho các model xe một lần duy nhất lúc khởi tạo module."""
+    patterns: list[tuple[re.Pattern[str], str]] = []
 
-    Cải tiến chống false positives (PR review feedback):
-    1. Sử dụng word boundary (\\b) nghiêm ngặt cho tất cả các model, tránh match nhầm các từ
-       như 'evolution', 'revolution', 'development' (với Evo) hay 'green' trong bài viết trạm sạc.
-    2. Chuẩn hóa linh hoạt khoảng trắng và dấu gạch nối (ví dụ: 'Evo 200 Lite' / 'Evo200 Lite',
-       'Theon-S' / 'Theon S', 'VF 8' / 'VF8').
-    3. Ưu tiên so khớp cụm từ cụ thể dài hơn trước để gán metadata chính xác nhất.
-    """
-    if not text:
-        return []
-
-    text_upper = text.upper()
-    found: set[str] = set()
-
-    # 1. Trích xuất ô tô điện
+    # 1. Ô tô điện
     for car in CRAWLED_CAR_MODELS:
         car_clean = car.strip()
-        # Xử lý các dòng xe có thương hiệu Green (Limo Green, Herio Green, Minio Green)
         if "GREEN" in car_clean.upper():
             pat = r"\b" + re.escape(car_clean.upper()).replace(r"\ ", r"\s+") + r"\b"
-            if re.search(pat, text_upper):
-                found.add(car)
+            patterns.append((re.compile(pat, re.IGNORECASE), car))
             continue
 
-        # Xử lý xe van
         if car_clean.upper() == "EC VAN":
-            if re.search(r"\bEC\s*VAN\b", text_upper):
-                found.add(car)
+            patterns.append((re.compile(r"\bEC\s*VAN\b", re.IGNORECASE), car))
             continue
 
-        # Xử lý xe concept / đặc biệt (VF Wild, VF MPV 7, VF 8 The All New)
         if "THE ALL NEW" in car_clean.upper():
-            if re.search(r"\bVF\s*8\s+(?:THE\s+ALL\s+NEW|ALL\s+NEW)\b", text_upper):
-                found.add(car)
+            patterns.append(
+                (re.compile(r"\bVF\s*8\s+(?:THE\s+ALL\s+NEW|ALL\s+NEW)\b", re.IGNORECASE), car)
+            )
             continue
 
         if car_clean.upper() == "VF WILD":
-            if re.search(r"\bVF\s*WILD\b", text_upper):
-                found.add(car)
+            patterns.append((re.compile(r"\bVF\s*WILD\b", re.IGNORECASE), car))
             continue
 
         if car_clean.upper() == "VF MPV 7":
-            if re.search(r"\bVF\s*MPV\s*7\b", text_upper):
-                found.add(car)
+            patterns.append((re.compile(r"\bVF\s*MPV\s*7\b", re.IGNORECASE), car))
             continue
 
-        # Các dòng xe VF số (VF 2, VF 3, VF 5, VF 6, VF 7, VF 8, VF 9)
         m = re.match(r"^VF\s*(\d+)$", car_clean, re.I)
         if m:
             num = m.group(1)
-            # Match "VF 3", "VF3", "VF-3", tránh false positive như "VF 30"
-            pat = rf"\bVF[\s\-]?{num}\b"
-            if re.search(pat, text_upper):
-                found.add(car)
+            patterns.append((re.compile(rf"\bVF[\s\-]?{num}\b", re.IGNORECASE), car))
             continue
 
-        # Fallback chuẩn cho các ô tô khác
         pat = r"\b" + re.escape(car_clean.upper()).replace(r"\ ", r"[\s\-]+") + r"\b"
-        if re.search(pat, text_upper):
-            found.add(car)
+        patterns.append((re.compile(pat, re.IGNORECASE), car))
 
-    # 2. Trích xuất xe máy điện
+    # 2. Xe máy điện
     for bike in CRAWLED_BIKE_MODELS:
         bike_clean = bike.strip()
-        # Chuẩn hóa regex cho xe máy: hỗ trợ dấu cách, gạch nối linh hoạt giữa các từ
-        # Ví dụ: "Evo200 Lite" -> r"\bEVO\s*200\s+LITE\b"
-        # "Klara S (2022)" -> r"\bKLARA[\s\-]+S(?:\s*\(?2022\)?)?\b"
         if "KLARA S" in bike_clean.upper():
             pat = r"\bKLARA[\s\-]+S(?:\s*\(?2022\)?)?\b"
         elif "EVO200" in bike_clean.upper():
@@ -327,12 +300,44 @@ def extract_related_models(text: str) -> list[str]:
             suffix_pat = rf"\s+{re.escape(suffix)}" if suffix else ""
             pat = rf"\bEVO\s*200{suffix_pat}\b"
         else:
-            # Tách các từ và dấu nối
             tokens = [re.escape(t) for t in re.split(r"[\s\-]+", bike_clean.upper()) if t]
             pat = r"\b" + r"[\s\-]+".join(tokens) + r"\b"
 
-        if re.search(pat, text_upper):
-            found.add(bike)
+        patterns.append((re.compile(pat, re.IGNORECASE), bike))
+
+    return patterns
+
+
+_COMPILED_MODEL_PATTERNS: list[tuple[re.Pattern[str], str]] = _compile_model_patterns()
+
+# Bộ lọc nhanh (Fast hint regex): nếu đoạn văn bản lớn không hề chứa từ khóa nào về xe, trả về [] ngay lập tức
+_VEHICLE_HINT_PATTERN: re.Pattern[str] = re.compile(
+    r"\b(?:VF|Limo|Herio|Minio|Van|Evo|Feliz|Klara|Theon|Vento|Flazz|Motio|Vero|Zgoo|Wild|MPV)\b",
+    re.IGNORECASE,
+)
+
+
+def extract_related_models(text: str) -> list[str]:
+    """Phát hiện và trích xuất danh sách các dòng xe (ô tô & xe máy điện) được nhắc tới trong văn bản.
+
+    Tối ưu hóa hiệu năng và độ chính xác (PR Review feedback):
+    1. Precompiled Regex: Toàn bộ pattern được biên dịch trước lúc nạp module, tránh lặp lại
+       re.compile và re.split trong mỗi lần gọi hàm.
+    2. Fast-reject O(1): Kiểm tra nhanh bằng _VEHICLE_HINT_PATTERN trên văn bản lớn để bỏ qua
+       các văn bản không liên quan mà không phải duyệt qua 30+ regex.
+    3. Strict Word Boundaries: Chống hoàn toàn false positive (evolution, green, VF 30).
+    """
+    if not text:
+        return []
+
+    # Bước lọc nhanh O(1) chống quét lãng phí trên văn bản dài không chứa từ khóa xe
+    if not _VEHICLE_HINT_PATTERN.search(text):
+        return []
+
+    found: set[str] = set()
+    for compiled_pat, model_name in _COMPILED_MODEL_PATTERNS:
+        if compiled_pat.search(text):
+            found.add(model_name)
 
     return sorted(found)
 

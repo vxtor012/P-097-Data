@@ -1,0 +1,113 @@
+---
+doc_id: doc_ext_policy_techcombank_com_thong-tin_blog_thu-tuc-mua-xe-tra-gop
+title: Điều kiện, hồ sơ, thủ tục mua xe máy và ô tô trả góp 2026
+category: policy
+source: https://techcombank.com/thong-tin/blog/thu-tuc-mua-xe-tra-gop
+subcategory: Vay mua ô tô & xe máy trả góp
+domain: techcombank.com
+effective_date: '2026-09-22'
+language: vi
+---
+
+# Điều kiện, hồ sơ, thủ tục mua xe máy và ô tô trả góp 2026
+
+Tìm hiểu điều kiện, hồ sơ và thủ tục mua xe máy, ô tô trả góp mới nhất. Khám phá các giải pháp vay ưu đãi với lãi suất hấp dẫn từ Techcombank trong bài viết sau!
+
+Mua xe trả góp giúp nhiều người sớm sở hữu phương tiện mà không cần thanh toán toàn bộ giá trị xe ngay từ đầu. Tuy nhiên, điều kiện vay, hồ sơ và thủ tục mua xe trả góp tại mỗi ngân hàng sẽ có sự khác nhau. Cùng tìm hiểu những thông tin cần biết khi mua xe máy, ô tô trả góp và tham khảo giải pháp vay tại Techcombank trong bài viết dưới đây.
+
+Bạn đọc lưu ý: Nội dung đề cập trong bài viết được tổng hợp dựa trên thông tin chung của thị trường, không đại diện cho duy nhất các sản phẩm và dịch vụ của Techcombank.
+
+1. Điều kiện, hồ sơ, thủ tục mua xe ô tô trả góp Mỗi ngân hàng sẽ có quy định riêng về điều kiện, hồ sơ và thủ tục mua ô tô trả góp. Các quy định này cũng có thể được điều chỉnh tuỳ theo chính sách của ngân hàng tại từng thời kỳ. Để cập nhật điều kiện, hồ sơ, thủ tục mua xe ô tô trả góp mới nhất, khách hàng nên truy cập website/Mobile Banking hoặc liên hệ hotline để được tư vấn chi tiết.
+
+Nếu khách hàng đang quan tâm đến giải pháp Vay mua ô tô tại Techcombank, dưới đây là thông tin sản phẩm cũng như điều kiện, hồ sơ, thủ tục vay.
+
+Thông tin giải pháp Vay mua ô tô Techcombank:
+
+Hạn mức vay lên đến 80% giá trị xe ô tô Lãi suất cạnh tranh chỉ từ 6.8%/năm, có thể thay đổi theo chính sách của Techcombank tại từng thời kỳ Thời gian vay dài lên tới 96 tháng (8 năm)
+Nhiều ưu đãi từ Techcombank và đối tác như Vinfast, Thaco. Nếu đang thế chấp nhà Vinhomes, bạn có thể vay thêm tối đa 100% giá trị tài sản bảo đảm Thủ tục đơn giản, trả kết quả phê duyệt trong vòng 24 tiếng Tài sản bảo đảm linh hoạt như chiếc xe hình thành từ vốn vay hoặc tài sản bảo đảm khác được Techcombank chấp nhận Chuyên viên tư vấn chuyên nghiệp, hỗ trợ nhiệt tình trong suốt thời gian vay, hotline hỗ trợ 24/7, giao dịch tại hơn 300 chi nhánh/phòng giao dịch trên toàn quốc Dễ dàng theo dõi dư nợ gốc, lãi hàng tháng trên Techcombank Mobile Áp dụng cho cả ô tô mới và cũ
+
+Lưu ý: Lãi suất, hạn mức, ưu đãi có thể thay đổi tùy theo chính sách của Techcombank tại từng thời kỳ.
+
+Giải pháp vay mua ô tô tại Techcombank giúp khách hàng chủ động kế hoạch tài chính khi mua xe.
+
+1.1. Điều kiện Nếu là khách hàng của Techcombank, bạn chỉ cần sử dụng các dịch vụ của Techcombank thường xuyên và:
+
+Là công dân Việt Nam 20 - 70 tuổi, có giấy tờ tuỳ thân hợp lệ Thu nhập ổn định và đều đặn từ 10 triệu VND mỗi tháng (sau khi nộp thuế) hoặc tùy theo chính sách của Techcombank tại từng thời điểm Không có nợ xấu tại các tổ chức tín dụng và công ty tài chính
+
+1.2. Hồ sơ Khách hàng cần chuẩn bị một số giấy tờ sau khi vay mua ô tô tại Techcombank:
+
+Giấy tờ tuỳ thân hợp lệ (CCCD/thẻ Căn cước)
+Hợp đồng lao động và sao kê lương (nếu khách hàng có thu nhập từ lương)
+Giấy chứng nhận quyền sở hữu tài sản đảm bảo Các giấy tờ khác theo quy định của ngân hàng tại từng thời kỳ
+
+1.3. Thủ tục Để vay mua xe ô tô trả góp tại Techcombank, khách hàng chỉ cần đăng ký tư vấn qua Techcombank Mobile bằng cách:
+
+Bước 1: Đăng nhập Techcombank Mobile, chọn Tính năng khác Bước 2: Tìm mục Vay, chọn Vay cá nhân Bước 3: Tại Vay thế chấp, chọn Vay mua ô tô và ấn Tư vấn cho tôi Bước 4: Điền các thông tin theo yêu cầu của hệ thống
+
+Các bước đăng ký tư vấn vay mua ô tô trên Techcombank Mobile.
+
+Sau khi nhận được thông tin đăng ký tư vấn của khách hàng, Techcombank sẽ liên hệ với khách hàng để:
+
+Bước 1: Tư vấn khoản vay Bước 2: Cùng khách hàng lựa chọn phương án vay phù hợp và chuẩn bị hồ sơ vay mua ô tô Bước 3: Thẩm định hồ sơ và gửi khách hàng kết quả phê duyệt Bước 4: Ký hợp đồng vay mua xe ô tô trả góp và giải ngân
+
+Sau khi nhận được thông tin đăng ký của khách hàng, Techcombank sẽ liên hệ để tư vấn chi tiết.
+
+2. Điều kiện, hồ sơ, thủ tục mua xe máy trả góp Nếu chiếc xe máy của bạn có giá trị dưới 400 triệu VND, bạn có thể cân nhắc giải pháp Vay tiêu dùng tín chấp trả góp. Tại Techcombank, bạn có thể vay tiêu dùng tín chấp trả góp online qua Techcombank Mobile để mua xe máy vì nhiều lợi ích thiết thực như:
+
+Vay không tài sản đảm bảo: Khoản vay sẽ được phê duyệt dựa trên năng lực tài chính và lịch sử tín dụng của bạn Hạn mức cao: Lên đến 400 triệu VND
+Thời gian vay linh hoạt: Chủ động lên kế hoạch trả góp với kỳ hạn từ tối đa 60 tháng khi vay online Thủ tục đơn giản không cần giấy tờ: Phê duyệt nhanh, giải ngân gọn trong 3 phút Lãi suất chỉ từ 1.2%/tháng (*) - tính trên dư nợ giảm dần: Giảm bớt áp lực trả góp với lãi suất cạnh tranh
+
+(*) Lưu ý: Lãi suất vay tiền thực tế có thể được điều chỉnh tùy thời điểm. Để xem lãi suất mới nhất, vui lòng tham khảo thêm tại trang sản phẩm tại website chính thức của Techcombank.
+
+Vay tiêu dùng tín chấp trả góp online tại Techcombank để mua xe máy.
+
+Dưới đây là điều kiện, hồ sơ và thủ tục vay trả góp không thế chấp online tại Techcombank:
+
+2.1. Điều kiện Để đăng ký vay, bạn chỉ cần sử dụng Techcombank thường xuyên và:
+
+Là công dân Việt Nam 20 - 70 tuổi, có giấy tờ tuỳ thân hợp lệ Thu nhập từ 10 triệu VND/tháng (sau khi nộp thuế) hoặc tùy theo chính sách của Techcombank tại từng thời điểm Không có nợ xấu
+
+2.2. Hồ sơ Tại Techcombank, khách hàng có thể vay trả góp không thế chấp online mà không cần nộp giấy tờ. Hệ thống sẽ dựa vào năng lực tài chính và lịch sử tín dụng của bạn để xét duyệt khoản vay.
+
+Không cần nộp giấy tờ khi vay trả góp không thế chấp online tại Techcombank.
+
+2.3. Thủ tục Khách hàng có thể đăng ký vay trả góp không thế chấp trên Techcombank Mobile chỉ với vài thao tác:
+
+Bước 1: Đăng nhập Techcombank Mobile, chọn Tính năng khác Bước 2: Tại mục Vay, chọn Vay cá nhân Bước 3: Tại mục Vay tín chấp, chọn Vay trả góp không thế chấp Bước 4: Ấn Đăng ký ngay, sau đó chọn Số tiền và thời hạn vay Bước 5: Nhận kết quả phê duyệt trong vòng 3 phút. Sau khi xác nhận khoản vay, tiền sẽ về ngay tài khoản của bạn
+
+Thủ tục vay vay trả góp không thế chấp online nhanh gọn trên Techcombank Mobile.
+
+3. Câu hỏi thường gặp 3.1. Mua xe ô tô trả góp trả trước bao nhiêu?
+Nếu vay mua ô tô trả góp tại Techcombank, khách hàng chỉ cần trả trước tối thiểu 20% giá trị chiếc xe (chưa bao gồm chi phí lăn bánh như thuế trước bạ, biển số, bảo hiểm...) vì Techcombank hỗ trợ cho vay với hạn mức lên đến 80% giá trị xe.
+
+3.2. Nợ xấu có mua xe trả góp được không?
+Không, hầu hết các ngân hàng đều không hỗ trợ duyệt thêm khoản vay với khách hàng đang có nợ xấu.
+
+3.3. Cần lưu ý gì khi mua xe trả góp?
+Trước khi quyết định mua xe trả góp, bạn nên lưu ý một số vấn đề sau:
+
+Cân nhắc khả năng tài chính và số tiền phải trả hằng tháng So sánh lãi suất, thời hạn vay và các loại phí giữa các đơn vị cho vay Đọc kỹ hợp đồng tín dụng, đặc biệt là điều kiện giải ngân, tất toán trước hạn…
+Chuẩn bị đầy đủ hồ sơ theo yêu cầu để quá trình xét duyệt diễn ra thuận lợi
+
+Nắm rõ điều kiện, hồ sơ và thủ tục mua xe trả góp sẽ giúp bạn chủ động lựa chọn phương án vay phù hợp và rút ngắn thời gian xét duyệt. Trước khi đăng ký, hãy tham khảo kỹ điều kiện của từng ngân hàng để lựa chọn giải pháp tài chính đáp ứng tốt nhất nhu cầu và khả năng thanh toán.
+
+Khách hàng lưu ý: Thông tin trong bài viết chỉ mang tính tham khảo và có thể thay đổi theo từng thời điểm. Để cập nhật chính sách mới nhất của Techcombank, quý khách vui lòng truy cập website Techcombank hoặc liên hệ các phương thức dưới đây:
+
+Hệ thống chi nhánh/phòng giao dịch Techcombank trên toàn quốc Trung tâm Dịch vụ khách hàng (hotline 24/7): 1800 588822 (trong nước) hoặc +84 24 39446699 (quốc tế)
+
+Vay mua ô tô đi lại
+
+Sở hữu chiếc xe yêu thích không còn xa vời
+
+Tìm hiểu thêm</p>
+">
+
+Vay thế chấp
+
+Vay
+
+Vay mua ô tô
+
+Chia sẻ:
+
+Các bài viết liên quan

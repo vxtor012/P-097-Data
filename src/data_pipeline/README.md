@@ -100,19 +100,27 @@ Mã nguồn tuân thủ nghiêm ngặt nguyên tắc Clean Architecture và **m�
 
 ```text
 src/data_pipeline/
-├── task1_vinfast_auto_crawl_data.py   # Entrypoint chính (CLI + Orchestrator) (~245 dòng)
+├── task1_vinfast_auto_crawl_data.py   # Task 1 Entrypoint chính (Crawl Landing Data) (~250 dòng)
+├── task2_normalize_data.py            # Task 2 Entrypoint chính (Normalize Bronze → Silver) (~165 dòng)
 ├── README.md                          # Tài liệu kỹ thuật chi tiết (file này)
 ├── sources.csv                        # Danh sách nguồn tham chiếu bổ sung (Techcombank, Bảo Việt, XeHay...)
-└── crawlers/                          # Gói các module crawler chuyên biệt
-    ├── __init__.py                    # Package init & re-export (22 dòng)
-    ├── crawler_utils.py               # Tiện ích HTTP, delay, hash & RAG metadata (242 dòng)
-    ├── relational_crawler.py          # Bóc tách bảng giá & dự toán lăn bánh CSV (VinFast duy nhất) (502 dòng)
-    ├── faq_crawler.py                 # Bóc tách 400 FAQ & phân cấp danh mục (185 dòng)
-    ├── policy_crawler.py              # Bóc tách chính sách dịch vụ & pháp lý VinFast (282 dòng)
-    ├── news_crawler.py                # Bóc tách tin tức & thông cáo sản phẩm VinFast (241 dòng)
-    ├── specs_crawler.py               # Bóc tách thông số kỹ thuật 14 dòng xe VinFast (293 dòng)
-    ├── vgreen_crawler.py              # Crawl đa cấp V-GREEN (trạm sạc, đổi pin, chính sách, tin tức) (~340 dòng)
-    └── external_sources_crawler.py    # Crawl các bài viết từ source.csv / sources.csv (~260 dòng)
+├── crawlers/                          # Task 1: Gói các module crawler chuyên biệt
+│   ├── __init__.py                    # Package init & re-export (22 dòng)
+│   ├── crawler_utils.py               # Tiện ích HTTP, delay, hash & RAG metadata (242 dòng)
+│   ├── relational_crawler.py          # Bóc tách bảng giá & dự toán lăn bánh CSV (VinFast duy nhất) (502 dòng)
+│   ├── faq_crawler.py                 # Bóc tách 400 FAQ & phân cấp danh mục (185 dòng)
+│   ├── policy_crawler.py              # Bóc tách chính sách dịch vụ & pháp lý VinFast (282 dòng)
+│   ├── news_crawler.py                # Bóc tách tin tức & thông cáo sản phẩm VinFast (241 dòng)
+│   ├── specs_crawler.py               # Bóc tách thông số kỹ thuật 14 dòng xe VinFast (293 dòng)
+│   ├── vgreen_crawler.py              # Crawl đa cấp V-GREEN (trạm sạc, đổi pin, chính sách, tin tức) (~340 dòng)
+│   └── external_sources_crawler.py    # Crawl các bài viết từ source.csv / sources.csv (~260 dòng)
+└── normalize/                         # Task 2: Module chi tiết Bronze → Silver Data Normalization
+    ├── __init__.py                    # Package init & re-export (~50 dòng)
+    ├── normalize_to_silver.py         # Pipeline Orchestrator logic (~450 dòng)
+    ├── text_cleaner.py                # Bộ làm sạch văn bản 9 bước (Unicode NFC, noise, dedup) (~250 dòng)
+    ├── metadata_extractor.py          # Trích xuất metadata phong phú (regex VN, dates, lineage) (~300 dòng)
+    ├── file_extractors.py             # Trích xuất đa định dạng: PDF (PyMuPDF), JSON, CSV (~280 dòng)
+    └── README.md                      # Tài liệu kỹ thuật chi tiết pipeline normalize
 ```
 
 ---
