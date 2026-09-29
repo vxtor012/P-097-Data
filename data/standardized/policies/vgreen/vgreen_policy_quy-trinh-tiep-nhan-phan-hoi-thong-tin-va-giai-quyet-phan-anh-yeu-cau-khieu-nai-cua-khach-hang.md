@@ -1,12 +1,25 @@
 ---
-doc_id: "doc_vgreen_policy_quy-trinh-tiep-nhan-phan-hoi-thong-tin-va-giai-quyet-phan-anh-yeu-cau-khieu-nai-cua-khach-hang"
-title: "Quy trình tiếp nhận, phản hồi thông tin và giải quyết phản ánh, yêu cầu, khiếu nại của khách hàng"
-category: policy
-source: "https://vgreen.net/vi/quy-trinh-tiep-nhan-phan-hoi-thong-tin-va-giai-quyet-phan-anh-yeu-cau-khieu-nai-cua-khach-hang"
+doc_id: doc_vgreen_policy_quy-trinh-tiep-nhan-phan-hoi-thong-tin-va-giai-quyet-phan-anh-yeu-cau-khieu-nai-cua-khach-hang
+title: Quy trình tiếp nhận, phản hồi thông tin và giải quyết phản ánh, yêu cầu, khiếu
+  nại của khách hàng
+doc_type: policy
+category: Chính sách V-Green
 subcategory: Trạm sạc & Tủ đổi pin
 domain: vgreen.net
-effective_date: '2024-07-01'
+source_url: https://vgreen.net/vi/quy-trinh-tiep-nhan-phan-hoi-thong-tin-va-giai-quyet-phan-anh-yeu-cau-khieu-nai-cua-khach-hang
+published_date: 01/07/2024
+applies_to: Khách hàng sử dụng ô tô điện/xe máy điện VinFast tại trạm sạc V-GREEN
+related_models: []
+is_general_info: true
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-29T04:56:10.200361+00:00'
+normalized_at: '2026-09-29T10:40:11.720301+00:00'
+content_hash: 8920af90037eb2eca0f53c960ad04756
+char_count: 7608
+word_count: 1616
+token_estimate: 2100
+ecosystem: V-GREEN Global Charging Network
 ---
 
 # Quy trình tiếp nhận, phản hồi thông tin và giải quyết phản ánh, yêu cầu, khiếu nại của khách hàng
@@ -25,15 +38,17 @@ I. Các bước tiếp nhận và giải quyết phản ánh, yêu cầu, khiế
 
 Quy trình tiếp nhận, phản hồi thông tin và giải quyết phản ánh, yêu cầu, khiếu nại (sau đây gọi tắt là "yêu cầu") của Khách hàng tại V-Green được thực hiện như sau:
 
-Bước 1: Tiếp nhận yêu cầu Trung tâm Chăm sóc Khách hàng V-Green tiếp nhận các yêu cầu tư vấn/hỗ trợ của Khách hàng qua các kênh:
+Bước 1: Tiếp nhận yêu cầu
+Trung tâm Chăm sóc Khách hàng V-Green tiếp nhận các yêu cầu tư vấn/hỗ trợ của Khách hàng qua các kênh:
 - Gọi điện đến Trung tâm Chăm sóc khách hàng: 1900 232389 - nhánh 5 (cước phí: 1000 VNĐ/phút);
-- Gửi thư điện tử đến địa chỉ: [email protected].
+- Gửi thư điện tử đến địa chỉ: [email protected].
 - Gửi yêu cầu cần hỗ trợ qua ứng dụng VinFast App.
 - Gửi thư đến V-Green theo địa chỉ tiếp nhận: Tòa văn phòng Symphony, đường Chu Huy Mân, Phường Phúc Lợi, Thành phố Hà Nội, Việt Nam
 
 Khi nhận được yêu cầu của khách hàng, Trung tâm Chăm sóc Khách hàng sẽ thông báo để khách hàng biết V-Green đã tiếp nhận và đang trong quá trình xử lý. Việc thông báo này được thực hiện trong 01 ngày làm việc.
 
-Bước 2: Phân loại và chuyển xử lý Sau khi tiếp nhận thông tin từ Khách hàng, Trung tâm Chăm sóc Khách hàng thực hiện phân loại yêu cầu:
+Bước 2: Phân loại và chuyển xử lý
+Sau khi tiếp nhận thông tin từ Khách hàng, Trung tâm Chăm sóc Khách hàng thực hiện phân loại yêu cầu:
 - Yêu cầu có thể giải đáp được ngay: tư vấn, giải đáp cho Khách hàng tại thời điểm nhận yêu cầu và đóng sự vụ.
 - Yêu cầu chưa thể xử lý được ngay: chuyển tiếp tới Phòng ban phụ trách/Đại lý ủy quyền để có thông tin/giải pháp tới Khách hàng.
 
@@ -45,7 +60,7 @@ V-Green tôn trọng và nghiêm túc thực hiện các quy định của pháp
 
 II. Quy định dành riêng cho người tiêu dùng dễ bị tổn thương theo quy định của Luật Bảo vệ quyền lợi người tiêu dùng:
 
-1. Kể từ ngày 01/07/2024, Luật Bảo vệ quyền lợi người tiêu dùng số 19/2023/QH15 được ban hành ngày 20/06/2023 chính thức có hiệu lực. Bên cạnh những điểm mới liên quan đến quyền và nghĩa vụ của người tiêu dùng, Luật Bảo vệ quyền lợi người tiêu dùng mới còn bổ sung thêm quy định về người tiêu dùng dễ bị tổn thương nhằm bảo vệ và tạo điều kiện thuận lợi cho các đối tượng này trong quá trình mua sắm hàng hóa, sử dụng dịch vụ. Theo đó, tại Khoản 01 Điều 08 Luật Bảo vệ quyền lợi người tiêu dùng đã có quy định về người tiêu dùng dễ bị tổn thương "là người tiêu dùng có khả năng chịu nhiều tác động bất lợi về tiếp cận thông tin, sức khỏe, tài sản, giải quyết tranh chấp tại thời điểm mua hoặc sử dụng sản phẩm, hàng hóa, dịch vụ". Để quyền lợi của mình được bảo vệ một cách triệt để theo quy định pháp luật, hãy thông báo cho Chúng tôi được biết nếu bạn thuộc một trong các đối tượng sau:
+1. Kể từ ngày 01/07/2024, Luật Bảo vệ quyền lợi người tiêu dùng số 19/2023/QH15 được ban hành ngày 20/06/2023 chính thức có hiệu lực. Bên cạnh những điểm mới liên quan đến quyền và nghĩa vụ của người tiêu dùng, Luật Bảo vệ quyền lợi người tiêu dùng mới còn bổ sung thêm quy định về người tiêu dùng dễ bị tổn thương nhằm bảo vệ và tạo điều kiện thuận lợi cho các đối tượng này trong quá trình mua sắm hàng hóa, sử dụng dịch vụ. Theo đó, tại Khoản 01 Điều 08 Luật Bảo vệ quyền lợi người tiêu dùng đã có quy định về người tiêu dùng dễ bị tổn thương "là người tiêu dùng có khả năng chịu nhiều tác động bất lợi về tiếp cận thông tin, sức khỏe, tài sản, giải quyết tranh chấp tại thời điểm mua hoặc sử dụng sản phẩm, hàng hóa, dịch vụ". Để quyền lợi của mình được bảo vệ một cách triệt để theo quy định pháp luật, hãy thông báo cho Chúng tôi được biết nếu bạn thuộc một trong các đối tượng sau:
 
 a) Người cao tuổi theo quy định của pháp luật về người cao tuổi;
 
@@ -87,7 +102,7 @@ k) Các quyền khác theo quy định tại Luật Bảo vệ quyền lợi ng�
 
 a) Người tiêu dùng dễ bị tổn thương vui lòng lựa chọn phương thức liên hệ phù hợp được nêu tại bước 1 mục I trên đây và thông báo đặc điểm của mình khi liên hệ với V-Green qua các kênh liên hệ để được ưu tiên hỗ trợ.
 
-b) Đối với người dân tộc thiểu số: vui lòng sử dụng các công cụ chuyển ngôn ngữ về tiếng Việt để gửi thông tin tới V-Green hoặc có thể gửi thông tin bằng tiếng dân tộc của bạn qua thư điện tử [email protected] cho chúng tôi. V-Green sẽ liên hệ lại với bạn trong vòng 24 giờ kể từ ngày nhận thư.
+b) Đối với người dân tộc thiểu số: vui lòng sử dụng các công cụ chuyển ngôn ngữ về tiếng Việt để gửi thông tin tới V-Green hoặc có thể gửi thông tin bằng tiếng dân tộc của bạn qua thư điện tử [email protected] cho chúng tôi. V-Green sẽ liên hệ lại với bạn trong vòng 24 giờ kể từ ngày nhận thư.
 
 4. Các quy định khác liên quan đến trình tự, thủ tục, phương thức hoặc biện pháp xử lý yêu cầu của người tiêu dùng dễ bị tổn thương nếu không được quy định tại Mục II Quy trình này thì sẽ được áp dụng theo quy định tại Mục I Quy trình này.
 

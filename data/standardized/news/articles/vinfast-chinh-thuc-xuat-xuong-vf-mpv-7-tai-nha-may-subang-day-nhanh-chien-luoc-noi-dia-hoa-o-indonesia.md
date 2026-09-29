@@ -1,18 +1,35 @@
 ---
-doc_id: "doc_news_vinfast-chinh-thuc-xuat-xuong-vf-mpv-7-tai-nha-may-subang-day-nhanh-chien-luoc-noi-dia-hoa-o-indonesia"
-title: "VINFAST CHÍNH THỨC XUẤT XƯỞNG VF MPV 7 TẠI NHÀ MÁY SUBANG, ĐẨY NHANH CHIẾN LƯỢC NỘI ĐỊA HÓA Ở INDONESIA"
-category: news
-source: "https://vinfastauto.com/vn_vi/vinfast-chinh-thuc-xuat-xuong-vf-mpv-7-tai-nha-may-subang-day-nhanh-chien-luoc-noi-dia-hoa-o-indonesia"
+doc_id: doc_news_vinfast-chinh-thuc-xuat-xuong-vf-mpv-7-tai-nha-may-subang-day-nhanh-chien-luoc-noi-dia-hoa-o-indonesia
+title: VINFAST CHÍNH THỨC XUẤT XƯỞNG VF MPV 7 TẠI NHÀ MÁY SUBANG, ĐẨY NHANH CHIẾN
+  LƯỢC NỘI ĐỊA HÓA Ở INDONESIA
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2026-05-21'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/vinfast-chinh-thuc-xuat-xuong-vf-mpv-7-tai-nha-may-subang-day-nhanh-chien-luoc-noi-dia-hoa-o-indonesia
+published_date: 23/05/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - Limo Green
+- VF 3
+- VF 5
+- VF 6
+- VF 7
 - VF MPV 7
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:28:44.654581+00:00'
+normalized_at: '2026-09-29T10:40:06.060544+00:00'
+content_hash: 3af10ef420639e6443a6930b4f0653b6
+char_count: 6284
+word_count: 1334
+token_estimate: 1734
 ---
 
 # VINFAST CHÍNH THỨC XUẤT XƯỞNG VF MPV 7 TẠI NHÀ MÁY SUBANG, ĐẨY NHANH CHIẾN LƯỢC NỘI ĐỊA HÓA Ở INDONESIA
+
+VINFAST CHÍNH THỨC XUẤT XƯỞNG VF MPV 7 TẠI NHÀ MÁY SUBANG, ĐẨY NHANH CHIẾN LƯỢC NỘI ĐỊA HÓA Ở INDONESIA
 
 Jakarta, ngày 21/5/2026 - Trong khuôn khổ sự kiện trải nghiệm mẫu VF MPV 7 tại Indonesia, VinFast công bố đã xuất xưởng mẫu xe điện này tại nhà máy VinFast Subang, Tây Java. Sự kiện đánh dấu bước tiến quan trọng trong chiến lược kiện toàn năng lực sản xuất toàn cầu và khẳng định cam kết đầu tư dài hạn tại một trong những thị trường xe điện tiềm năng nhất Đông Nam Á.
 
@@ -24,7 +41,7 @@ Công bố diễn ra trong khuôn khổ chương trình trải nghiệm VF MPV 7
 
 VF MPV 7 là phiên bản cao cấp của dòng Limo Green, được tinh chỉnh toàn diện về thiết kế, trang bị và công nghệ nhằm mang đến trải nghiệm vượt trội cho khách hàng gia đình. Mẫu xe tiếp tục kế thừa triết lý thiết kế đặc trưng của VinFast với ngôn ngữ hiện đại, thanh lịch nhưng vẫn đậm chất thực dụng của một mẫu MPV cỡ trung.
 
-Ông Kariyanto Hardjosoemarto, Tổng Giám đốc VinFast Indonesia, cho biết: "VF MPV 7 là sản phẩm chiến lược trong danh mục xe điện của VinFast tại Indonesia, khẳng định cam kết đầu tư lâu dài và tầm nhìn phát triển bền vững của chúng tôi tại thị trường. Việc xuất xưởng chiếc VF MPV 7 đầu tiên từ nhà máy Subang đánh dấu bước tiến quan trọng trong quá trình nội địa hóa sản xuất, nâng cao năng lực cạnh tranh và mang tới cho người tiêu dùng Indonesia những mẫu xe điện chất lượng cao, thông minh, giá tốt, phù hợp với nhu cầu thực tế của gia đình đô thị hiện đại".
+Ông Kariyanto Hardjosoemarto, Tổng Giám đốc VinFast Indonesia, cho biết: "VF MPV 7 là sản phẩm chiến lược trong danh mục xe điện của VinFast tại Indonesia, khẳng định cam kết đầu tư lâu dài và tầm nhìn phát triển bền vững của chúng tôi tại thị trường. Việc xuất xưởng chiếc VF MPV 7 đầu tiên từ nhà máy Subang đánh dấu bước tiến quan trọng trong quá trình nội địa hóa sản xuất, nâng cao năng lực cạnh tranh và mang tới cho người tiêu dùng Indonesia những mẫu xe điện chất lượng cao, thông minh, giá tốt, phù hợp với nhu cầu thực tế của gia đình đô thị hiện đại".
 
 Xe được phát triển dựa trên tỷ lệ vàng đặc trưng của dòng MPV với bốn bánh đẩy sát về các góc thân xe, giúp tối ưu hóa không gian cabin. Ngoại thất tạo ấn tượng với các đường nét mềm mại kết hợp cùng những mảng khối chắc chắn, mang đến cảm giác vững chãi mà vẫn tinh tế.
 
@@ -51,5 +68,7 @@ Nhà máy VinFast tại Subang được xây dựng trên khu đất rộng 171 
 Sau khi đi vào hoạt động, nhà máy đã bắt đầu sản xuất các mẫu xe VF 3, VF 5, VF 6, VF 7 và VF MPV 7, đồng thời sẽ tiếp tục mở rộng danh mục sản phẩm trong thời gian tới theo chiến lược phát triển của VinFast tại Đông Nam Á.
 
 Chỉ sau khoảng hai năm hiện diện, VinFast đã giới thiệu dải sản phẩm đa dạng, phát triển mạng lưới đại lý và trung tâm hậu mãi trên toàn quốc, đồng thời hợp tác với công ty phát triển trạm sạc toàn cầu V-Green nhằm nhanh chóng phủ rộng hạ tầng sạc. Song song đó, VinFast cũng hợp tác với nhiều ngân hàng và tổ chức tài chính hàng đầu để mang đến các giải pháp tài chính linh hoạt, giúp người tiêu dùng dễ dàng tiếp cận xe điện hơn. Thông qua những chính sách tiên phong và chiến lược đầu tư bài bản, VinFast đang từng bước thúc đẩy quá trình chuyển đổi xanh tại Indonesia, đồng thời khẳng định vị thế là một trong những thương hiệu tiên phong trong cuộc cách mạng giao thông điện hóa của khu vực châu Á./.
+
+23/05/2026
 
 Chia sẻ bài viết này

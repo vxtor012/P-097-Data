@@ -1,17 +1,31 @@
 ---
-doc_id: "doc_vgreen_policy_vinfast-mien-phi-sac-pin-cho-tat-ca-o-to-dien-den-ngay-30062027"
+doc_id: doc_vgreen_policy_vinfast-mien-phi-sac-pin-cho-tat-ca-o-to-dien-den-ngay-30062027
 title: VinFast miễn phí sạc pin cho tất cả ô tô điện đến ngày 30/06/2027
-category: policy
-source: "https://vgreen.net/vi/vinfast-mien-phi-sac-pin-cho-tat-ca-o-to-dien-den-ngay-30062027"
+doc_type: policy
+category: Chính sách V-Green
 subcategory: Trạm sạc & Tủ đổi pin
 domain: vgreen.net
-effective_date: '2027-06-30'
+source_url: https://vgreen.net/vi/vinfast-mien-phi-sac-pin-cho-tat-ca-o-to-dien-den-ngay-30062027
+published_date: 24/12/2024
+applies_to: Khách hàng sử dụng ô tô điện/xe máy điện VinFast tại trạm sạc V-GREEN
+related_models: []
+is_general_info: true
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-29T04:56:11.524811+00:00'
+normalized_at: '2026-09-29T10:40:12.413988+00:00'
+content_hash: 70fc104acb23ab8bbe86756f792d39fc
+char_count: 2945
+word_count: 633
+token_estimate: 822
+ecosystem: V-GREEN Global Charging Network
 ---
 
 # VinFast miễn phí sạc pin cho tất cả ô tô điện đến ngày 30/06/2027
 
 24.12.2024
+
+VinFast miễn phí sạc pin cho tất cả ô tô điện đến ngày 30/06/2027
 
 Hà Nội, ngày 24/12/2024 - Để tri ân khách hàng đã đồng hành đưa VinFast trở thành thương hiệu ô tô số 1 thị trường Việt Nam, đồng thời thúc đẩy mạnh mẽ chiến dịch "Mãnh liệt Tinh thần Việt Nam - Vì tương lai xanh", VinFast công bố áp dụng chính sách miễn phí sạc pin cho tất cả khách hàng cá nhân đã và sẽ mua xe tới hết ngày 30/06/2027. Với "0 đồng nhiên liệu" trong vòng hơn 2 năm tới, người tiêu dùng sẽ có thêm nhiều động lực để chuyển đổi sang xe điện, góp phần kiến tạo môi trường xanh bền vững.
 

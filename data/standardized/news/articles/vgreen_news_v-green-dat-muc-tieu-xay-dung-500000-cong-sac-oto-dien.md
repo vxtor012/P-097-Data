@@ -1,18 +1,32 @@
 ---
 doc_id: doc_vgreen_news_v-green-dat-muc-tieu-xay-dung-500000-cong-sac-oto-dien
 title: V-Green đặt mục tiêu xây dựng 500.000 cổng sạc ôtô điện
-category: news
-source: https://vgreen.net/vi/v-green-dat-muc-tieu-xay-dung-500000-cong-sac-oto-dien
+doc_type: news
+category: Tin tức V-Green
 subcategory: Phát triển hạ tầng xe điện
 domain: vgreen.net
-target_vehicles:
+source_url: https://vgreen.net/vi/v-green-dat-muc-tieu-xay-dung-500000-cong-sac-oto-dien
+published_date: ''
+applies_to: Khách hàng sử dụng ô tô điện/xe máy điện VinFast tại trạm sạc V-GREEN
+related_models:
 - VF 9
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-29T04:56:17.327503+00:00'
+normalized_at: '2026-09-29T10:40:05.929782+00:00'
+content_hash: 98cdfa1a5d23a8576e859462a051d751
+char_count: 7837
+word_count: 1699
+token_estimate: 2208
+ecosystem: V-GREEN Global Charging Network
 ---
 
 # V-Green đặt mục tiêu xây dựng 500.000 cổng sạc ôtô điện
 
 02.04.2025
+
+V-Green đặt mục tiêu xây dựng 500.000 cổng sạc ôtô điện
 
 Tạp chí Kinh tế Việt Nam/VnEconomy đã có cuộc trò chuyện với ông Nguyễn Thành Dương, CEO V-Green, để tìm hiểu hành trình vượt qua thách thức hạ tầng, những bước đột phá công nghệ và tầm nhìn đưa thương hiệu Việt cạnh tranh trên bản đồ xe điện toàn cầu. Liệu đây chỉ là giấc mơ lớn hay một chiến lược đã được định hình rõ nét?
 

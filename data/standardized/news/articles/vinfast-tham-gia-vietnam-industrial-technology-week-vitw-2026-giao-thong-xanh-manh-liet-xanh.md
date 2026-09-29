@@ -1,19 +1,32 @@
 ---
-doc_id: "doc_news_vinfast-tham-gia-vietnam-industrial-technology-week-vitw-2026-giao-thong-xanh-manh-liet-xanh"
-title: "VINFAST THAM GIA VIETNAM INDUSTRIAL TECHNOLOGY WEEK (VITW) 2026: GIAO THÔNG XANH – MÃNH LIỆT XANH"
-category: news
-source: "https://vinfastauto.com/vn_vi/vinfast-tham-gia-vietnam-industrial-technology-week-vitw-2026-giao-thong-xanh-manh-liet-xanh"
+doc_id: doc_news_vinfast-tham-gia-vietnam-industrial-technology-week-vitw-2026-giao-thong-xanh-manh-liet-xanh
+title: 'VINFAST THAM GIA VIETNAM INDUSTRIAL TECHNOLOGY WEEK (VITW) 2026: GIAO THÔNG
+  XANH – MÃNH LIỆT XANH'
+doc_type: news
+category: Tin tức
 subcategory: Doanh nghiệp & Công ty
 domain: vinfastauto.com
-effective_date: '2026-09-11'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/vinfast-tham-gia-vietnam-industrial-technology-week-vitw-2026-giao-thong-xanh-manh-liet-xanh
+published_date: 11/09/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - VF 8
 - VF 9
 - VF MPV 7
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:29:48.977426+00:00'
+normalized_at: '2026-09-29T10:40:06.494454+00:00'
+content_hash: a2ef66663245b086b892772a965487f5
+char_count: 4618
+word_count: 967
+token_estimate: 1257
 ---
 
 # VINFAST THAM GIA VIETNAM INDUSTRIAL TECHNOLOGY WEEK (VITW) 2026: GIAO THÔNG XANH - MÃNH LIỆT XANH
+
+VINFAST THAM GIA VIETNAM INDUSTRIAL TECHNOLOGY WEEK (VITW) 2026: GIAO THÔNG XANH - MÃNH LIỆT XANH
 
 Hướng tới mục tiêu thúc đẩy chuyển đổi xanh và phát triển bền vững, VinFast có mặt tại Vietnam Industrial Technology Week (VITW) 2026, mang đến hệ sinh thái xe điện cùng các giải pháp giao thông thông minh. Sự kiện là cơ hội để khách tham quan trực tiếp khám phá những công nghệ di chuyển tiên tiến, đồng thời chung tay lan tỏa xu hướng giao thông xanh vì một tương lai bền vững hơn.
 
@@ -48,6 +61,8 @@ Không chỉ là nơi giới thiệu các giải pháp di chuyển xanh, gian h�
 Đăng ký tham gia ngay để cập nhật những xu hướng di chuyển đang định hình tương lai.
 
 Để tìm hiểu thêm thông tin về sản phẩm và các hoạt động của sự kiện, Quý khách vui lòng truy cập website: www.vinfastauto.com.
+
+08/09/2026
 
 Chia sẻ bài viết này
 

@@ -1,18 +1,31 @@
 ---
 doc_id: doc_news_vinfast-ra-mat-evo-grand-the-he-moi-nam-2026
-title: VINFAST RA MẮT EVO GRAND THẾ HỆ MỚI - XE MÁY ĐIỆN ĐI ĐƯỢC 262 KM SAU MỖI LẦN SẠC
-category: news
-source: https://vinfastauto.com/vn_vi/vinfast-ra-mat-evo-grand-the-he-moi-nam-2026
+title: VINFAST RA MẮT EVO GRAND THẾ HỆ MỚI - XE MÁY ĐIỆN ĐI ĐƯỢC 262 KM SAU MỖI LẦN
+  SẠC
+doc_type: news
+category: Tin tức
 subcategory: Doanh nghiệp & Công ty
 domain: vinfastauto.com
-effective_date: '2026-09-21'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/vinfast-ra-mat-evo-grand-the-he-moi-nam-2026
+published_date: 21/09/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - Evo Grand
 - Evo Grand Lite
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:29:28.058685+00:00'
+normalized_at: '2026-09-29T10:40:06.331077+00:00'
+content_hash: 20b69f6c03cda3caac2ff28808f3942a
+char_count: 4777
+word_count: 1048
+token_estimate: 1362
 ---
 
 # VINFAST RA MẮT EVO GRAND THẾ HỆ MỚI - XE MÁY ĐIỆN ĐI ĐƯỢC 262 KM SAU MỖI LẦN SẠC
+
+VINFAST RA MẮT EVO GRAND THẾ HỆ MỚI - XE MÁY ĐIỆN ĐI ĐƯỢC 262 KM SAU MỖI LẦN SẠC
 
 Ngày 21/09/2026, VinFast chính thức công bố ra mắt ba phiên bản xe máy điện Evo Grand thế hệ mới, bao gồm Evo Grand II, Evo Grand Premia và Evo Grand Limited. Với ngôn ngữ thiết kế mới sang trọng và thời trang, nhiều tính năng thông minh cùng hệ thống 2 pin cho quãng đường di chuyển lên tới 262 km mỗi lần sạc, bộ ba xe Evo Grand mới mang đến cho người tiêu dùng những lựa chọn xe máy điện bền, đẹp, sang có giá bán hấp dẫn chỉ từ 22,9 triệu đồng.
 
@@ -37,6 +50,8 @@ Với ba màu cơ bản gồm Trắng ngọc trai, Xanh rêu và Đỏ tươi, E
 Đặc biệt, theo chính sách "Vì tương lai xanh" lần 2 đang được áp dụng từ ngày 19/9 đến hết ngày 19/12/2026, khách hàng đang sở hữu ô tô, xe máy xăng hoặc xe máy điện sử dụng ắc quy chì của thương hiệu bất kỳ, hoặc ô tô, xe máy điện VinFast, khi mua xe Evo Grand thế hệ mới sẽ được ưu đãi ngay 3 triệu đồng, giúp giá xe chỉ còn từ 22.900.000 đồng. Xe được bảo hành chính hãng tới 6 năm cho xe và 8 năm cho pin, không giới hạn quãng đường di chuyển.
 
 Để biết thêm thông tin chi tiết, quý khách hàng vui lòng liên hệ đại lý phân phối chính hãng xe máy điện VinFast hoặc tổng đài CSKH 1900 23 23 89./.
+
+21/09/2026
 
 Chia sẻ bài viết này
 

@@ -1,19 +1,31 @@
 ---
 doc_id: doc_news_trai-nghiem-va-so-huu-o-to-dien-vinfast-manh-liet-vi-tuong-lai-xanh
 title: TRẢI NGHIỆM VÀ SỞ HỮU Ô TÔ ĐIỆN VINFAST “MÃNH LIỆT VÌ TƯƠNG LAI XANH”
-category: news
-source: "https://vinfastauto.com/vn_vi/trai-nghiem-va-so-huu-o-to-dien-vinfast-manh-liet-vi-tuong-lai-xanh"
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2026-05-01'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/trai-nghiem-va-so-huu-o-to-dien-vinfast-manh-liet-vi-tuong-lai-xanh
+published_date: 01/05/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - EC Van
 - VF 9
 - VF MPV 7
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:28:50.070165+00:00'
+normalized_at: '2026-09-29T10:40:05.869179+00:00'
+content_hash: 75ae2746a628f660ebfd896cc1ccd7b4
+char_count: 5114
+word_count: 1094
+token_estimate: 1422
 ---
 
 # TRẢI NGHIỆM VÀ SỞ HỮU Ô TÔ ĐIỆN VINFAST "MÃNH LIỆT VÌ TƯƠNG LAI XANH"
+
+TRẢI NGHIỆM VÀ SỞ HỮU Ô TÔ ĐIỆN VINFAST "MÃNH LIỆT VÌ TƯƠNG LAI XANH"
 
 Lấy cảm hứng từ hành trình "Mãnh liệt vì tương lai xanh" - hành trình của công nghệ, của đổi mới và của phát triển xanh, VinFast mang đến không gian trải nghiệm toàn diện, nơi công nghệ, phong cách sống hiện đại và tinh thần tiên phong được hội tụ. Đây không chỉ đơn thuần là hoạt động trưng bày, mà còn mở ra cơ hội để khách hàng trực tiếp khám phá, lái thử và cảm nhận rõ nét giá trị của ô tô điện trong cuộc sống hàng ngày.
 
@@ -54,5 +66,7 @@ Không gian "Trạm sống chill" mang đến khoảng nghỉ thư thái giữa 
 Cơ hội trực tiếp trải nghiệm và sở hữu Ô tô điện VinFast phù hợp nhất dành cho khách hàng chỉ có tại sự kiện lần này. Đừng bỏ lỡ!
 
 Để lại thông tin để được tư vấn chi tiết và sắp xếp lịch trải nghiệm phù hợp ngay hôm nay.
+
+24/04/2026
 
 Chia sẻ bài viết này

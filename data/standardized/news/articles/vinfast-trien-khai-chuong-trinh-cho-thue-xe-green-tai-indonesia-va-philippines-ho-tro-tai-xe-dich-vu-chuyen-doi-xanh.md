@@ -1,18 +1,31 @@
 ---
-doc_id: "doc_news_vinfast-trien-khai-chuong-trinh-cho-thue-xe-green-tai-indonesia-va-philippines-ho-tro-tai-xe-dich-vu-chuyen-doi-xanh"
-title: "VINFAST TRIỂN KHAI CHƯƠNG TRÌNH CHO THUÊ XE GREEN TẠI INDONESIA VÀ PHILIPPINES, HỖ TRỢ TÀI XẾ DỊCH VỤ CHUYỂN ĐỔI XANH"
-category: news
-source: "https://vinfastauto.com/vn_vi/vinfast-trien-khai-chuong-trinh-cho-thue-xe-green-tai-indonesia-va-philippines-ho-tro-tai-xe-dich-vu-chuyen-doi-xanh"
+doc_id: doc_news_vinfast-trien-khai-chuong-trinh-cho-thue-xe-green-tai-indonesia-va-philippines-ho-tro-tai-xe-dich-vu-chuyen-doi-xanh
+title: VINFAST TRIỂN KHAI CHƯƠNG TRÌNH CHO THUÊ XE GREEN TẠI INDONESIA VÀ PHILIPPINES,
+  HỖ TRỢ TÀI XẾ DỊCH VỤ CHUYỂN ĐỔI XANH
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2026-04-08'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/vinfast-trien-khai-chuong-trinh-cho-thue-xe-green-tai-indonesia-va-philippines-ho-tro-tai-xe-dich-vu-chuyen-doi-xanh
+published_date: 08/04/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - Herio Green
 - Limo Green
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:29:01.709788+00:00'
+normalized_at: '2026-09-29T10:40:06.599064+00:00'
+content_hash: 0833f7934d7d88fb234bd5b0f7ecbaeb
+char_count: 4435
+word_count: 925
+token_estimate: 1202
 ---
 
 # VINFAST TRIỂN KHAI CHƯƠNG TRÌNH CHO THUÊ XE GREEN TẠI INDONESIA VÀ PHILIPPINES, HỖ TRỢ TÀI XẾ DỊCH VỤ CHUYỂN ĐỔI XANH
+
+VINFAST TRIỂN KHAI CHƯƠNG TRÌNH CHO THUÊ XE GREEN TẠI INDONESIA VÀ PHILIPPINES, HỖ TRỢ TÀI XẾ DỊCH VỤ CHUYỂN ĐỔI XANH
 
 Jakarta/Manila, ngày 08/04/2026 - VinFast công bố mở rộng mô hình tiếp cận xe điện dành cho tài xế kinh doanh dịch vụ tại Indonesia và Philippines, bổ sung lựa chọn thuê xe với nhiều hỗ trợ hấp dẫn. Chương trình hướng tới tạo điều kiện tối đa để tài xế dịch vụ dễ dàng chuyển đổi sang xe điện, qua đó thúc đẩy xanh hóa giao thông và khẳng định cam kết của VinFast với mục tiêu giảm phát thải tại Đông Nam Á.
 
@@ -37,5 +50,7 @@ Bà Dương Thị Thu Trang, Phó Tổng Giám đốc Kinh doanh Ô tô VinFast 
 VinFast đang mạnh mẽ xây dựng hệ sinh thái xe điện toàn diện tại các thị trường Đông Nam Á trọng điểm như Indonesia và Philippines, với danh mục sản phẩm đa dạng cho cả khách hàng cá nhân và vận tải dịch vụ, cùng mạng lưới đại lý, hậu mãi và hạ tầng trạm sạc liên tục được mở rộng.
 
 Song song đó, Vingroup, công ty mẹ của VinFast, đang triển khai nhiều giải pháp hỗ trợ chuyển đổi xanh, tiêu biểu như chương trình Thu xăng - Đổi điện với ưu đãi bổ sung 3% giá ô tô, áp dụng cộng dồn với các chính sách hiện hành tại Indonesia và Philippines, cùng ưu đãi giảm 10% giá cước dịch vụ di chuyển bằng xe điện Green SM tại Indonesia đến hết ngày 30/4/2026. Thông qua các giải pháp đồng bộ, VinFast từng bước thúc đẩy quá trình xanh hóa giao thông, đồng thời mang lại hiệu quả kinh tế thiết thực cho người dùng và cộng đồng trong khu vực.
+
+08/04/2026
 
 Chia sẻ bài viết này

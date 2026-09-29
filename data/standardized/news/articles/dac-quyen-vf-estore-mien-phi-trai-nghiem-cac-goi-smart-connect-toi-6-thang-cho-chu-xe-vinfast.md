@@ -1,12 +1,15 @@
 ---
-doc_id: "doc_news_dac-quyen-vf-estore-mien-phi-trai-nghiem-cac-goi-smart-connect-toi-6-thang-cho-chu-xe-vinfast"
-title: "ĐẶC QUYỀN VF ESTORE: MIỄN PHÍ TRẢI NGHIỆM CÁC GÓI SMART CONNECT TỚI 6 THÁNG CHO CHỦ XE VINFAST"
-category: news
-source: "https://vinfastauto.com/vn_vi/dac-quyen-vf-estore-mien-phi-trai-nghiem-cac-goi-smart-connect-toi-6-thang-cho-chu-xe-vinfast"
+doc_id: doc_news_dac-quyen-vf-estore-mien-phi-trai-nghiem-cac-goi-smart-connect-toi-6-thang-cho-chu-xe-vinfast
+title: 'ĐẶC QUYỀN VF ESTORE: MIỄN PHÍ TRẢI NGHIỆM CÁC GÓI SMART CONNECT TỚI 6 THÁNG
+  CHO CHỦ XE VINFAST'
+doc_type: news
+category: Tin tức
 subcategory: Doanh nghiệp & Công ty
 domain: vinfastauto.com
-effective_date: '2026-09-30'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/dac-quyen-vf-estore-mien-phi-trai-nghiem-cac-goi-smart-connect-toi-6-thang-cho-chu-xe-vinfast
+published_date: 30/09/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - Herio Green
 - Limo Green
 - VF 5
@@ -15,10 +18,20 @@ target_vehicles:
 - VF 8
 - VF 9
 - VF MPV 7
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:29:39.794967+00:00'
+normalized_at: '2026-09-29T10:40:03.300150+00:00'
+content_hash: 6bdc0ddeef1f22e5a30bc3bfe61c8572
+char_count: 4373
+word_count: 905
+token_estimate: 1176
 ---
 
 # ĐẶC QUYỀN VF ESTORE: MIỄN PHÍ TRẢI NGHIỆM CÁC GÓI SMART CONNECT TỚI 6 THÁNG CHO CHỦ XE VINFAST
+
+ĐẶC QUYỀN VF ESTORE: MIỄN PHÍ TRẢI NGHIỆM CÁC GÓI SMART CONNECT TỚI 6 THÁNG CHO CHỦ XE VINFAST
 
 Khách hàng đặt cọc ô tô điện VinFast trước ngày 30/09/2026 được miễn phí tới 06 tháng trải nghiệm các gói Smart Connect bao gồm các tính năng đa dạng từ giám sát điều khiển xe từ xa đến trợ lý ảo thông minh, chợ ứng dụng giải trí và dẫn đường nâng cao. Hệ sinh thái dịch vụ số VF eStore giúp công nghệ đồng hành cùng bạn trong từng khoảnh khắc, mang đến những hành trình chủ động, tiện nghi và thú vị hơn mỗi ngày.
 
@@ -58,7 +71,7 @@ Smart Connect Pro bao gồm toàn bộ tiện ích của Smart Connect Upper, đ
 
 Smart Connect Premium - Mở rộng trải nghiệm giải trí và cá nhân hóa
 
-Smart Connect Premium bao gồm toàn bộ tiện ích của Smart Connect Pro, đồng thời bổ sung Chợ ứng dụng với Spotify, YouTube, Game... giúp gia tăng lựa chọn giải trí; bản đồ VietMap Live Pro với cảnh báo tốc độ, camera phạt nguội…, chế độ thư giãn, các widget tiện ích như lịch âm, đồng hồ kỹ thuật số, mở rộng trải nghiệm số ngay trên xe.
+Smart Connect Premium bao gồm toàn bộ tiện ích của Smart Connect Pro, đồng thời bổ sung Chợ ứng dụng với Spotify, YouTube, Game... giúp gia tăng lựa chọn giải trí; bản đồ VietMap Live Pro với cảnh báo tốc độ, camera phạt nguội..., chế độ thư giãn, các widget tiện ích như lịch âm, đồng hồ kỹ thuật số, mở rộng trải nghiệm số ngay trên xe.
 
 Smart Connect Prime - Kết nối liền mạch cho trải nghiệm số
 
@@ -77,5 +90,7 @@ Thông qua chương trình trải nghiệm miễn phí các gói dịch vụ s�
 Thông tin chi tiết về chương trình và các gói phần mềm đang áp dụng được cập nhật trên website VinFast hoặc Hotline 1900 23 23 89.
 
 (*) Các gói phần mềm, tính năng, ứng dụng và chính sách áp dụng có thể thay đổi tùy theo chiến lược và định hướng phát triển của VinFast tại từng thời điểm.
+
+16/09/2026
 
 Chia sẻ bài viết này

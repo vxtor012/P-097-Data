@@ -1,20 +1,33 @@
 ---
-doc_id: "doc_news_vinfast-ghi-nhan-da-tang-truong-manh-me-trong-quy-3-so-xe-ban-giao-tang-115-doanh-thu-tang-493"
-title: "VINFAST GHI NHẬN ĐÀ TĂNG TRƯỞNG MẠNH MẼ TRONG QUÝ 3: SỐ XE BÀN GIAO TĂNG 115%, DOANH THU TĂNG 49,3%"
-category: news
-source: "https://vinfastauto.com/vn_vi/vinfast-ghi-nhan-da-tang-truong-manh-me-trong-quy-3-so-xe-ban-giao-tang-115-doanh-thu-tang-493"
+doc_id: doc_news_vinfast-ghi-nhan-da-tang-truong-manh-me-trong-quy-3-so-xe-ban-giao-tang-115-doanh-thu-tang-493
+title: 'VINFAST GHI NHẬN ĐÀ TĂNG TRƯỞNG MẠNH MẼ TRONG QUÝ 3: SỐ XE BÀN GIAO TĂNG 115%,
+  DOANH THU TĂNG 49,3%'
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2024-11-26'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/vinfast-ghi-nhan-da-tang-truong-manh-me-trong-quy-3-so-xe-ban-giao-tang-115-doanh-thu-tang-493
+published_date: 26/11/2024
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - VF 3
 - VF 5
 - VF 7
 - VF 9
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:29:17.563449+00:00'
+normalized_at: '2026-09-29T10:40:06.112311+00:00'
+content_hash: 0fde949671bc785006b40c2b577fb36d
+char_count: 7172
+word_count: 1562
+token_estimate: 2030
 ---
 
 # VINFAST GHI NHẬN ĐÀ TĂNG TRƯỞNG MẠNH MẼ TRONG QUÝ 3: SỐ XE BÀN GIAO TĂNG 115%, DOANH THU TĂNG 49,3%
+
+VINFAST GHI NHẬN ĐÀ TĂNG TRƯỞNG MẠNH MẼ TRONG QUÝ 3: SỐ XE BÀN GIAO TĂNG 115%, DOANH THU TĂNG 49,3%
 
 Singapore, ngày 26/11/2024 - VinFast Auto Ltd. ("VinFast" hoặc "Công ty") (Nasdaq: VFS) công bố kết quả tài chính chưa kiểm toán Quý 3, kết thúc vào ngày 30/09/2024.
 
@@ -24,9 +37,9 @@ VinFast trở thành thương hiệu ô tô bán chạy nhất thị trường V
 
 VinFast bám sát kế hoạch tăng trưởng và tối ưu các khoản hỗ trợ tài chính trong quá trình mở rộng. Công ty tập trung vào cân bằng giữa thúc đẩy tăng trưởng và tối ưu chi phí.
 
-Bà Lê Thị Thu Thủy, Chủ tịch Hội đồng Quản trị của VinFast, chia sẻ: "Kết quả Quý 3 của VinFast được thúc đẩy nhờ kết quả kinh doanh khả quan trong tháng 9. Chúng tôi đã ghi nhận số xe bàn giao hàng tháng cao nhất thị trường nội địa. Đây cũng là cột mốc lịch sử đối với ngành công nghiệp ô tô Việt Nam khi lần đầu tiên một thương hiệu xe nội địa, vốn chỉ mới ra đời cách đây 7 năm, vượt qua các hãng xe nước ngoài để chiếm vị thế số 1 thị trường. Chúng tôi kỳ vọng kết thúc năm 2024 với kết quả tươi sáng, đạt mục tiêu giao 80.000 xe đã đặt ra trước đó, nhờ đà tăng trưởng trong Quý 3 vẫn mạnh mẽ trong Quý 4. Sản xuất xe điện chất lượng cao là một nhiệm vụ không dễ dàng, đòi hỏi sự quyết tâm và kiên trì vượt qua thách thức. Mỗi ngày, chúng tôi không ngừng cải tiến cách tạo ra những chiếc xe điện mạnh mẽ và thông minh, đóng vai trò quan trọng trong cuộc cách mạng di chuyển xanh. Đó là một con đường không bằng phẳng, nhưng chúng tôi vẫn giữ quyết tâm cao độ và niềm tin rằng tương lai điện hóa là điều tất yếu."
+Bà Lê Thị Thu Thủy, Chủ tịch Hội đồng Quản trị của VinFast, chia sẻ: "Kết quả Quý 3 của VinFast được thúc đẩy nhờ kết quả kinh doanh khả quan trong tháng 9. Chúng tôi đã ghi nhận số xe bàn giao hàng tháng cao nhất thị trường nội địa. Đây cũng là cột mốc lịch sử đối với ngành công nghiệp ô tô Việt Nam khi lần đầu tiên một thương hiệu xe nội địa, vốn chỉ mới ra đời cách đây 7 năm, vượt qua các hãng xe nước ngoài để chiếm vị thế số 1 thị trường. Chúng tôi kỳ vọng kết thúc năm 2024 với kết quả tươi sáng, đạt mục tiêu giao 80.000 xe đã đặt ra trước đó, nhờ đà tăng trưởng trong Quý 3 vẫn mạnh mẽ trong Quý 4. Sản xuất xe điện chất lượng cao là một nhiệm vụ không dễ dàng, đòi hỏi sự quyết tâm và kiên trì vượt qua thách thức. Mỗi ngày, chúng tôi không ngừng cải tiến cách tạo ra những chiếc xe điện mạnh mẽ và thông minh, đóng vai trò quan trọng trong cuộc cách mạng di chuyển xanh. Đó là một con đường không bằng phẳng, nhưng chúng tôi vẫn giữ quyết tâm cao độ và niềm tin rằng tương lai điện hóa là điều tất yếu."
 
-Bà Nguyễn Thị Lan Anh, Giám đốc Tài chính VinFast, khẳng định: "Chúng tôi rất tự hào chia sẻ rằng VinFast đạt kết quả kinh doanh tốt trong Quý 3 nhờ doanh thu tăng trưởng mạnh, biên lợi nhuận cải thiện do lỗ gộp và lỗ ròng đều thu hẹp đáng kể. Lợi ích từ gia tăng quy mô, tối ưu chi phí sản xuất và tối ưu chi phí nguyên vật liệu đã tạo ra những tác động tích cực đối với biên lãi gộp, và sẽ là động lực chính trên con đường đạt lợi nhuận. Tình hình thanh khoản nói chung của chúng tôi được cải thiện nhờ các khoản vay dự kiến từ Vingroup và khoản tài trợ dự kiến từ doanh nhân sáng lập của chúng tôi, tổng cộng 3,5 tỷ USD từ giờ cho tới năm 2026, như mới công bố hôm 12/11 vừa qua."
+Bà Nguyễn Thị Lan Anh, Giám đốc Tài chính VinFast, khẳng định: "Chúng tôi rất tự hào chia sẻ rằng VinFast đạt kết quả kinh doanh tốt trong Quý 3 nhờ doanh thu tăng trưởng mạnh, biên lợi nhuận cải thiện do lỗ gộp và lỗ ròng đều thu hẹp đáng kể. Lợi ích từ gia tăng quy mô, tối ưu chi phí sản xuất và tối ưu chi phí nguyên vật liệu đã tạo ra những tác động tích cực đối với biên lãi gộp, và sẽ là động lực chính trên con đường đạt lợi nhuận. Tình hình thanh khoản nói chung của chúng tôi được cải thiện nhờ các khoản vay dự kiến từ Vingroup và khoản tài trợ dự kiến từ doanh nhân sáng lập của chúng tôi, tổng cộng 3,5 tỷ USD từ giờ cho tới năm 2026, như mới công bố hôm 12/11 vừa qua."
 
 VinFast ghi nhận kết quả kinh doanh Quý 3 khả quan: số xe bàn giao tăng 115%, doanh thu tăng 49,3%
 
@@ -66,14 +79,16 @@ VinFast cũng chính thức ra mắt thương hiệu tại Trung Đông vào th�
 
 VinFast được hỗ trợ tài chính cho quá trình mở rộng
 
-VinFast tiếp tục nhận được cam kết hỗ trợ tài chính từ nhà sáng lập và công ty mẹ vào ngày 12/11 vừa qua. Theo đó, từ nay đến hết năm 2026, Vingroup có kế hoạch cho các công ty trong nhóm VinFast tại Việt Nam vay mới tối đa 35.000 tỷ đồng, ông Phạm Nhật Vượng cũng cam kết tài trợ cho VinFast 50.000 tỷ đồng.
+VinFast tiếp tục nhận được cam kết hỗ trợ tài chính từ nhà sáng lập và công ty mẹ vào ngày 12/11 vừa qua. Theo đó, từ nay đến hết năm 2026, Vingroup có kế hoạch cho các công ty trong nhóm VinFast tại Việt Nam vay mới tối đa 35.000 tỷ đồng, ông Phạm Nhật Vượng cũng cam kết tài trợ cho VinFast 50.000 tỷ đồng.
 
-Đồng thời, Vingroup sẽ đầu tư thêm vào VinFast Việt Nam thông qua việc chuyển đổi toàn bộ khoản cho vay hiện hữu khoảng 80.000 tỷ đồng thành cổ phần ưu đãi được hưởng cổ tức.
+Đồng thời, Vingroup sẽ đầu tư thêm vào VinFast Việt Nam thông qua việc chuyển đổi toàn bộ khoản cho vay hiện hữu khoảng 80.000 tỷ đồng thành cổ phần ưu đãi được hưởng cổ tức.
 
-Kế hoạch hỗ trợ nhằm giúp VinFast có đủ nguồn lực và thêm dự phòng để tài trợ hoạt động kinh doanh, các khoản đầu tư thiết yếu và hoàn thành những nghĩa vụ khác của Công ty, hướng đến mục tiêu đến hết năm 2026, Công ty đạt điểm hòa vốn và tự cân đối được dòng tiền.
+Kế hoạch hỗ trợ nhằm giúp VinFast có đủ nguồn lực và thêm dự phòng để tài trợ hoạt động kinh doanh, các khoản đầu tư thiết yếu và hoàn thành những nghĩa vụ khác của Công ty, hướng đến mục tiêu đến hết năm 2026, Công ty đạt điểm hòa vốn và tự cân đối được dòng tiền.
 
 VinFast hướng tới kết quả cả năm 2024 khả quan
 
 Nhà sản xuất xe điện niêm yết trên Nasdaq lạc quan về kết quả kinh doanh trong Quý 4. Nương theo đà tăng trưởng mạnh mẽ trong Quý 3, đặc biệt là tại các thị trường trọng điểm như Việt Nam và Bắc Mỹ, công ty tự tin vào khả năng đạt được mục tiêu bàn giao 80.000 xe trong năm nay./.
+
+26/11/2024
 
 Chia sẻ bài viết này

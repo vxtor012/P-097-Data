@@ -1,17 +1,29 @@
 ---
 doc_id: doc_news_dat-coc-vf-wild
 title: ĐẶT CỌC VF WILD 15 TRIỆU ĐỒNG, NHẬN TỔNG ƯU ĐÃI 104 TRIỆU ĐỒNG
-category: news
-source: https://vinfastauto.com/vn_vi/dat-coc-vf-wild
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2026-09-30'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/dat-coc-vf-wild
+published_date: 30/09/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - VF Wild
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:28:37.952615+00:00'
+normalized_at: '2026-09-29T10:40:03.372900+00:00'
+content_hash: f44ffbdfe9b4dd509278c48c708754dd
+char_count: 4328
+word_count: 923
+token_estimate: 1199
 ---
 
 # ĐẶT CỌC VF WILD 15 TRIỆU ĐỒNG, NHẬN TỔNG ƯU ĐÃI 104 TRIỆU ĐỒNG
+
+ĐẶT CỌC VF WILD 15 TRIỆU ĐỒNG, NHẬN TỔNG ƯU ĐÃI 104 TRIỆU ĐỒNG
 
 Từ ngày 25-30/09/2026, VinFast chính thức nhận đặt cọc VF WILD với số tiền 15 triệu đồng. Khách hàng đáp ứng các điều kiện của chương trình có thể nhận đồng thời hai ưu đãi với tổng giá trị lên tới 104 triệu đồng, đưa giá VF WILD từ 860 triệu đồng xuống còn 756 triệu đồng khi xuất hóa đơn đến hết ngày 19/12/2026.
 
@@ -80,6 +92,8 @@ Khách hàng quan tâm có thể đặt cọc VF WILD với số tiền 15 tri�
 VF WILD - CHẤT CỦA NGƯỜI DẪN ĐẦU
 
 Lưu ý: Mức giá 756 triệu đồng được tính trên MSRP 860 triệu đồng sau khi áp dụng đồng thời hai ưu đãi và chỉ áp dụng khi khách hàng xuất hóa đơn đến hết ngày 19/12/2026. Chính sách được áp dụng theo điều kiện và thông tin chính thức của VinFast.
+
+24/09/2026
 
 Chia sẻ bài viết này
 

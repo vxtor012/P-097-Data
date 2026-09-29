@@ -1,15 +1,28 @@
 ---
 doc_id: doc_news_lang-nghe-tan-tam-nang-tam-trai-nghiem-0
 title: LẮNG NGHE TẬN TÂM - NÂNG TẦM TRẢI NGHIỆM
-category: news
-source: https://vinfastauto.com/vn_vi/lang-nghe-tan-tam-nang-tam-trai-nghiem-0
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2025-04-24'
+source_url: https://vinfastauto.com/vn_vi/lang-nghe-tan-tam-nang-tam-trai-nghiem-0
+published_date: 24/04/2025
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models: []
+is_general_info: true
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:28:55.517373+00:00'
+normalized_at: '2026-09-29T10:40:05.641408+00:00'
+content_hash: 06d3cd6ce3a24922235853385894c0ce
+char_count: 1635
+word_count: 338
+token_estimate: 439
 ---
 
 # LẮNG NGHE TẬN TÂM - NÂNG TẦM TRẢI NGHIỆM
+
+LẮNG NGHE TẬN TÂM - NÂNG TẦM TRẢI NGHIỆM
 
 VinFast tin rằng, sự thấu hiểu bắt đầu từ việc lắng nghe - từng góp ý của khách hàng đều là điều quý giá.
 
@@ -32,5 +45,7 @@ https://forms.office.com/r/27isC4MHPS
 VinFast sẽ triển khai khảo sát định kỳ theo quý để tiếp tục ghi nhận ý kiến khách hàng, không ngừng nâng cao trải nghiệm Dịch vụ Hậu mãi - tận tâm hơn mỗi ngày, trọn vẹn hơn trên từng hành trình.
 
 Mọi thắc mắc Quý khách vui lòng liên hệ hotline 1900 23 23 89 hoặc Xưởng dịch vụ VinFast gần nhất để được hỗ trợ.
+
+18/04/2026
 
 Chia sẻ bài viết này

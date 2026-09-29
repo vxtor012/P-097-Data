@@ -1,16 +1,122 @@
 ---
-doc_id: "doc_ext_news_xehay_vn_danh-gia-xe-nguoi-dung-danh-gia-vinfast-vf-9-dep-cao-cap-lai-hay-va-rat-phu-hop-cho-gia-dinh_html"
-title: "[ĐÁNH GIÁ XE] Người dùng đánh giá VinFast VF 9: Đẹp, cao cấp, lái hay và rất phù hợp cho gia đình"
-category: news
-source: "https://xehay.vn/danh-gia-xe-nguoi-dung-danh-gia-vinfast-vf-9-dep-cao-cap-lai-hay-va-rat-phu-hop-cho-gia-dinh.html"
+doc_id: doc_ext_news_xehay_vn_danh-gia-xe-nguoi-dung-danh-gia-vinfast-vf-9-dep-cao-cap-lai-hay-va-rat-phu-hop-cho-gia-dinh_html
+title: '[ĐÁNH GIÁ XE] Người dùng đánh giá VinFast VF 9: Đẹp, cao cấp, lái hay và rất
+  phù hợp cho gia đình'
+doc_type: news
+category: Tin tức Thị trường & Đánh giá xe
 subcategory: Tin tức chuyên ngành ô tô xe máy
 domain: xehay.vn
-effective_date: '2026-09-29'
-target_vehicles:
+source_url: https://xehay.vn/danh-gia-xe-nguoi-dung-danh-gia-vinfast-vf-9-dep-cao-cap-lai-hay-va-rat-phu-hop-cho-gia-dinh.html
+source_type: external_collected_source
+published_date: 29/09/2026
+applies_to: Khách hàng quan tâm xu hướng và thông tin thị trường xe
+related_models:
 - VF 9
 - VF Wild
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-29T04:46:30.655342+00:00'
+normalized_at: '2026-09-29T10:40:04.025584+00:00'
+content_hash: 65e5b5d8dd65a9e6078ffd14fdd821fe
+char_count: 11579
+word_count: 2529
+token_estimate: 3287
 ---
+
+# [ĐÁNH GIÁ XE] Người dùng đánh giá VinFast VF 9: Đẹp, cao cấp, lái hay và rất phù hợp cho gia đình
+
+[ĐÁNH GIÁ XE] Người dùng đánh giá VinFast VF 9: Đẹp, cao cấp, lái hay và rất phù hợp cho gia đình
+
+--&gt;
+
+Xe Hay | Chuyên trang thông tin, đánh giá xe ô tô xe máy --&gt;
+
+for older IEs to work. --&gt;
+
+--&gt;
+
+Đóng
+
+--&gt;
+
+TRANG THÔNG TIN Ô TÔ - XE MÁY--&gt;
+
+--&gt;
+
+Thứ ba, 29/09/2026 | 11:37
+
+Trang chủ
+
+Tin TứcTrong nước
+Quốc tế
+Giao thông
+Giải trí
+
+Xe Hay TVClip phóng sự
+Hùng Lâm
+
+Ô tô mới
+Xe máy mới
+Đánh giá xeĐánh giá Ô tô
+Đánh giá Xe máy
+EmagazineEmagazine
+Toyota 2021 - Look Back
+Emagazine Camry 2023
+Emagazines Toyota 2023
+Emagazines Toyota 2025
+
+Kinh nghiệmÔ tô
+Xe máy
+Luật giao thông
+
+Xe và ThợThợ Ô tô
+Cafe Racer
+Thợ Xe máy
+
+Thể thao
+Xe xanh
+Triển lãm Ô tôViệt Nam
+Bangkok
+Detroit
+Frankfurt
+Geneva
+Los Angeles
+New York
+Paris
+SEMA
+Tokyo
+
+Bảng giáÔ tô
+Xe máy
+
+Trang Thông tin Điện tử Tổng hợp
+
+Giấy phép số: 473/GP-Sở Văn hoá và Thể thao.
+Cấp ngày 23/9/2025.
+
+Chịu trách nhiệm nội dung: Bùi Mai Linh
+
+Cơ quan chủ quản: Công ty TNHH Xe Hay
+
+Địa chỉ: P802A, 47 Lê Văn Hưu, phườngHai Bà Trưng, TP. Hà Nội, Việt Nam
+
+Điện thoại: 0947924688
+
+Email: mailinh@xehay.vn
+
+--&gt;
+
+Tin tức
+
+Thứ ba, 29/09/2026 | 11:37
+
+[ĐÁNH GIÁ XE] Người dùng đánh giá VinFast VF 9: Đẹp, cao cấp, lái hay và rất phù hợp cho gia đình
+
+17:42 |
+12/09/2023
+
+--&gt;
 
 [ĐÁNH GIÁ XE] Người dùng đánh giá VinFast VF 9: Đẹp, cao cấp, lái hay và rất phù hợp cho gia đình
 
@@ -58,6 +164,109 @@ Tổng kết nhanh, anh Trần Minh Phương đánh giá chiếc VinFast VF 9 đ
 
 Anh Phan (Tuoitrethudo)
 
-xe điện đánh giá xe xe 7 chỗ SUV điện Xe điện Vinfast Xe Việt Nam xe Vinfast xe điện Việt Nam Review xe xe điện Việt đánh giá VF9
+Ảnh: Huy Bách
+
+Tags:
+xe điện
+xe gia đình
+đánh giá xe
+xe 7 chỗ
+SUV điện
+Xe điện Vinfast
+Xe Việt Nam
+xe Vinfast
+xe điện Việt Nam
+Review xe
+xe điện Việt
+VinFast VF9
+đánh giá VF9
 review VF9
-người dùng đánh giá xe người dùng review chủ xe review
+người dùng đánh giá xe
+người dùng review
+chủ xe review
+
+XE HAY
+
+--&gt;
+
+Tin khác
+
+Yamaha Ténéré 700 lột xác thành xe flat-track, giảm 47 kg nhờ loạt thay đổi táo bạo
+
+Volkswagen ID. Buzz lập kỷ lục Guinness sau hành trình gần 100.000 km qua nhiều quốc gia
+
+Hyundai xác nhận phát triển Grand i10 thế hệ mới, dự kiến trình làng vào cuối năm 2027
+
+Mitsubishi Pajero 2026 sẽ ra mắt Đông Nam Á vào tháng 10: Có 3 phiên bản, máy diesel 204 mã lực
+
+Giá từ 756 triệu đồng, sạc miễn phí tới năm 2029: VF Wild hấp dẫn từ lúc mua đến khi lăn bánh
+
+MG Việt Nam nhá hàng MG5 bản mới: Nâng cấp thiết kế, thêm ADAS và động cơ tăng áp 1.5L mới
+
+Phía sau bốn vòng tròn: Những điều ít biết về thiết kế Audi Q3 thế hệ mới
+
+Volvo EX90 và ES90 thu hút khách hàng Việt trước thềm ra mắt, mở đầu kỷ nguyên xe điện mới
+
+Xem tiếp ...
+
+Tin tức
+
+Yamaha Ténéré 700 lột xác thành xe flat-track, giảm 47 kg nhờ loạt thay đổi táo bạo
+
+Mới đây, xưởng độ danh tiếng Rough Crafts tại Đài Loan đã giới thiệu bản độ ấn tượng mang tên YenereZ 700 FT, dựa trên mẫu xe địa hình Yamaha Tenere 700.
+
+Volkswagen ID. Buzz lập kỷ lục Guinness sau hành trình gần 100.000 km qua nhiều quốc gia
+
+Hyundai xác nhận phát triển Grand i10 thế hệ mới, dự kiến trình làng vào cuối năm 2027
+
+Mitsubishi Pajero 2026 sẽ ra mắt Đông Nam Á vào tháng 10: Có 3 phiên bản, máy diesel 204 mã lực
+
+Giá từ 756 triệu đồng, sạc miễn phí tới năm 2029: VF Wild hấp dẫn từ lúc mua đến khi lăn bánh
+
+MG Việt Nam nhá hàng MG5 bản mới: Nâng cấp thiết kế, thêm ADAS và động cơ tăng áp 1.5L mới
+
+Phía sau bốn vòng tròn: Những điều ít biết về thiết kế Audi Q3 thế hệ mới
+
+Volvo EX90 và ES90 thu hút khách hàng Việt trước thềm ra mắt, mở đầu kỷ nguyên xe điện mới
+
+Từ MHEV đến EREV: Mazda đang có những công nghệ điện hóa nào?
+
+Làn sóng hãng xe phá sản đẩy hơn 850.000 ôtô Trung Quốc vào cảnh "mồ côi"
+
+Xe và Thợ
+
+Yamaha Ténéré 700 lột xác thành xe flat-track, giảm 47 kg nhờ loạt thay đổi táo bạo
+
+Mới đây, xưởng độ danh tiếng Rough Crafts tại Đài Loan đã giới thiệu bản độ ấn tượng mang tên YenereZ 700 FT, dựa trên mẫu xe địa hình Yamaha Tenere 700.
+
+Rolls-Royce Phantom khoác lớp áo mới đầy sang chảnh sau màn "dao kéo" của Mansory
+
+Toyota Fortuner thế hệ mới đã có "bản sao" ngoài đời dù chưa ra mắt toàn cầu
+
+Cận cảnh Lexus LX 700 bọc thép: Chống đạn AK-47, chịu sức nổ lựu đạn và dàn trang bị như xe đặc vụ
+
+Kinh nghiệm
+
+Gia đình 2 - 3 con nên mua SUV hay MPV?
+
+SUV đang là dòng xe được nhiều người Việt lựa chọn nhờ thiết kế khỏe khoắn, khoảng sáng gầm lớn và khả năng vận hành linh hoạt trên nhiều điều kiện đường sá.
+
+Ô tô vận hành 100.000 km: Bỏ quên 5 chi tiết này, nguy cơ sửa chữa rất tốn kém
+
+Phân biệt động cơ xe điện, hybrid và PHEV: Đâu là lựa chọn phù hợp nhất tại Việt Nam hiện nay?
+
+5 mẫu xe máy Honda tiết kiệm nhiên liệu nhất tại Việt Nam hiện nay
+
+Ô tô mới
+
+Hyundai xác nhận phát triển Grand i10 thế hệ mới, dự kiến trình làng vào cuối năm 2027
+
+Hyundai đã xác nhận kế hoạch phát triển thế hệ tiếp theo của Grand i10 Nios. Mẫu hatchback hạng A được cho là sẽ xuất hiện vào cuối năm 2027 nhằm thay thế cho phiên bản hiện hành...
+
+Mitsubishi Pajero 2026 sẽ ra mắt Đông Nam Á vào tháng 10: Có 3 phiên bản, máy diesel 204 mã lực
+
+MG Việt Nam nhá hàng MG5 bản mới: Nâng cấp thiết kế, thêm ADAS và động cơ tăng áp 1.5L mới
+
+Volkswagen ID. Unyx 09 ra mắt: Coupe điện mạnh 496 mã lực, có hệ thống hỗ trợ lái bằng AI
+
+--&gt;

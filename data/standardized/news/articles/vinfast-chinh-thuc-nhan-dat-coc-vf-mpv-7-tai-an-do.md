@@ -1,19 +1,31 @@
 ---
 doc_id: doc_news_vinfast-chinh-thuc-nhan-dat-coc-vf-mpv-7-tai-an-do
 title: VINFAST CHÍNH THỨC NHẬN ĐẶT CỌC VF MPV 7 TẠI ẤN ĐỘ
-category: news
-source: https://vinfastauto.com/vn_vi/vinfast-chinh-thuc-nhan-dat-coc-vf-mpv-7-tai-an-do
+doc_type: news
+category: Tin tức
 subcategory: Ô tô điện
 domain: vinfastauto.com
-effective_date: '2026-04-02'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/vinfast-chinh-thuc-nhan-dat-coc-vf-mpv-7-tai-an-do
+published_date: 02/04/2026
+applies_to: Khách hàng quan tâm ô tô điện & hệ sinh thái VinFast
+related_models:
 - VF 6
 - VF 7
 - VF MPV 7
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:29:05.431743+00:00'
+normalized_at: '2026-09-29T10:40:06.009053+00:00'
+content_hash: 917b0ebf4fdb57480cf1fb58fc98de28
+char_count: 3962
+word_count: 865
+token_estimate: 1124
 ---
 
 # VINFAST CHÍNH THỨC NHẬN ĐẶT CỌC VF MPV 7 TẠI ẤN ĐỘ
+
+VINFAST CHÍNH THỨC NHẬN ĐẶT CỌC VF MPV 7 TẠI ẤN ĐỘ
 
 Gurugram, 02/04/2026 - VinFast chính thức nhận đặt cọc mẫu xe điện thứ ba của hãng tại Ấn Độ, VF MPV 7 - dòng xe đa dụng 7 chỗ cao cấp dành cho khách hàng cá nhân tại thị trường. Sở hữu không gian rộng rãi, công nghệ thông minh và tính ứng dụng cao, VF MPV 7 sẽ đáp ứng mọi nhu cầu di chuyển hàng ngày với giá trị vượt trội, khẳng định cam kết dài hạn của hãng trong việc phát triển hệ sinh thái di chuyển xanh toàn diện tại Ấn Độ, mang đến các giải pháp giao thông thông minh, hiện đại và bền vững cho mọi gia đình.
 
@@ -39,10 +51,14 @@ VinFast cũng áp dụng chế độ bảo hành sản phẩm tốt nhất thị
 
 ***
 
+Về VinFast
+
 VinFast (NASDAQ: VFS), công ty con của Vingroup JSC, một trong những tập đoàn lớn nhất Việt Nam, là nhà sản xuất xe thuần điện (EV) với sứ mệnh giúp xe điện trở nên dễ tiếp cận hơn cho mọi người. Danh mục sản phẩm hiện tại của VinFast bao gồm dải SUV điện đa dạng, xe máy điện, xe đạp điện và xe buýt điện.
 
 VinFast đang bước vào giai đoạn tăng trưởng tiếp theo thông qua việc nhanh chóng mở rộng mạng lưới phân phối và đại lý trên toàn cầu, đồng thời kiện toàn năng lực sản xuất, tập trung vào các thị trường trọng điểm tại Bắc Mỹ, châu Âu, Trung Đông, và châu Á.
 
 Tìm hiểu thêm tại: https://vinfastauto.in/
+
+02/04/2026
 
 Chia sẻ bài viết này

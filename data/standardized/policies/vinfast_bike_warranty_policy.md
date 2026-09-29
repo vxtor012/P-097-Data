@@ -1,22 +1,422 @@
 ---
 doc_id: doc_policy_warranty-bike
 title: Chính sách bảo hành
-category: policy
-source: https://vinfastauto.com/vn_vi/chinh-sach-bao-hanh-xe-may
+doc_type: policy
+category: Chính sách
 subcategory: Bảo hành
 domain: vinfastauto.com
-effective_date: '2025-08-15'
-target_vehicles:
+source_url: https://vinfastauto.com/vn_vi/chinh-sach-bao-hanh-xe-may
+applies_to: Xe máy điện VinFast (Evo, Feliz, Klara, Vento, Theon...)
+related_models:
+- EC Van
 - Evo Grand
+- Evo Grand Lite
+- Evo200
+- Evo200 Lite
+- Feliz 2025
+- Feliz Lite
 - Feliz S
+- Flazz
+- Herio Green
+- Klara S (2022)
+- Limo Green
+- Minio Green
+- Motio
+- VF 2
+- VF 3
+- VF 5
+- VF 6
+- VF 7
+- VF 8
+- VF 9
+- VF MPV 7
+- VF Wild
+- Vero X
+- Zgoo
+is_general_info: false
 language: vi
+pipeline_stage: silver_standardized
+crawled_at: '2026-09-28T16:27:53.597945+00:00'
+normalized_at: '2026-09-29T10:40:13.824922+00:00'
+content_hash: e78ee88b0515d6ad47991cb24dce5b35
+char_count: 14925
+word_count: 3149
+token_estimate: 4093
 ---
 
 # Chính sách bảo hành
 
+Chính sách bảo hành xe máy | VinFast
+
+Tài khoản
+
+Giới thiệu
+
+Ô tô
+
+Xe cá nhân
+
+Xe dịch vụ
+
+Động cơ xăng
+
+Công cụ hỗ trợ khách hàng
+
+So sánh xe
+
+Đăng ký lái thử
+
+Dự toán chi phí lăn bánh
+
+Dự toán vay trả góp
+
+VF 2
+
+4 chỗ
+
+Xe đô thị cỡ nhỏ
+
+VF 3
+
+4 chỗ
+
+Xe đô thị cỡ nhỏ
+
+VF 5
+
+5 chỗ
+
+Xe gia đình
+
+VF 6
+
+5 chỗ
+
+Xe gia đình
+
+VF 7
+
+5 chỗ
+
+Xe cá nhân thể thao
+
+VF MPV 7
+
+7 chỗ
+
+Xe đô thị 7 chỗ
+
+VF 8
+
+5 chỗ
+
+Xe đô thị cỡ lớn
+
+VF 8 Thế hệ mới
+
+5 chỗ
+
+Xe đô thị cỡ lớn
+
+VF 9
+
+7 chỗ
+
+Xe doanh nhân
+
+VF Wild
+
+5 chỗ
+
+Bán tải điện
+
+Đóng
+
+Minio Green
+
+4 chỗ
+
+Xe dịch vụ mini
+
+Herio Green
+
+5 chỗ
+
+Xe dịch vụ
+
+Nerio Green
+
+5 chỗ
+
+Xe dịch vụ
+
+Limo Green
+
+7 chỗ
+
+Xe dịch vụ cỡ lớn
+
+EC Van
+
+2 chỗ
+
+Xe vận tải đô thị
+
+EBus
+
+45 chỗ
+
+Xe bus đô thị
+
+Đóng
+
+VinFast Fadil
+
+5 chỗ
+
+Xe gia đình cỡ nhỏ
+
+VinFast Lux A2.0
+
+5 chỗ
+
+Xe gia đình
+
+VinFast Lux SA2.0
+
+5 chỗ
+
+Xe gia đình hạng sang
+
+VinFast President
+
+5 chỗ
+
+Xe doanh nhân
+
+Đóng
+
+Xe máy điện
+
+Xe cao cấp
+
+Xe trung cấp
+
+Xe phổ thông
+
+Công cụ hỗ trợ khách hàng
+
+Tính chi phí sử dụng
+
+Đăng ký lái thử
+
+Kinet
+
+Từ 40.000.000 VNĐ
+
+Viper
+
+Từ 35.000.000 VNĐ
+
+Vero X
+
+Từ 34.900.000 VNĐ
+
+Xem tất cả
+
+Đóng
+
+Kyo
+
+Từ 30.000.000 VNĐ
+
+Feliz II
+
+Từ 23.000.000 VNĐ
+
+Feliz 2025
+
+Từ 26.000.000 VNĐ
+
+Xem tất cả
+
+Đóng
+
+Evo Grand Limited
+
+Từ 29.900.000 VNĐ
+
+Evo Grand Premia
+
+Từ 27.900.000 VNĐ
+
+Evo
+
+Từ 18.800.000 VNĐ
+
+Evo Grand
+
+Từ 22.500.000 VNĐ
+
+Amio
+
+Từ 11.600.000 VNĐ
+
+Amio S
+
+Từ 11.600.000 VNĐ
+
+Amio S2
+
+Từ 12.000.000 VNĐ
+
+Flazz
+
+Từ 14.200.000 VNĐ
+
+Flazz Max
+
+Từ 12.500.000 VNĐ
+
+ZGoo
+
+Từ 13.300.000 VNĐ
+
+Evo Lite
+
+Từ 14.300.000 VNĐ
+
+VF DrgnFly
+
+Từ 18.690.000 VNĐ
+
+Evo Grand Lite
+
+Từ 16.500.000 VNĐ
+
+Evo Lite Neo
+
+Từ 14.400.000 VNĐ
+
+Xem tất cả
+
+Đóng
+
+Phụ kiện xe
+
+Dịch vụ hậu mãi
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+ĐẶT LỊCH DỊCH VỤ
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Ô tô điện
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+Xe máy điện
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Xe bus
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+Đặt lịch dịch vụ
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Pin và trạm sạc
+
+Pin và trạm sạc Ô tô điện
+
+Pin và trạm sạc Xe máy điện
+
+Lưu trữ năng lượng
+
+Tài khoản
+
+Đăng ký lái thử
+
+Đăng nhập / Đăng ký
+
+Chính sách bảo hành
 Vững vàng lăn bánh trên mọi hành trình với chính sách bảo hành dài lâu từ VinFast - bảo vệ trọn vẹn quyền lợi và mang đến sự an tâm cho Quý khách.
 
-## Phạm vi bảo hành
+Sổ bảo hành xe máy điện
+
+Phạm vi bảo hành
+
+Phạm vi bảo hành
+
+Thời hạn bảo hành
+
+Các chi tiết bảo hành giới hạn
+
+Bảo hành phụ tùng
+
+Các hạng mục không thuộc phạm vi bảo hành
+
+Câu hỏi thường gặp
+
+Thông tin hỗ trợ
+
+Sổ bảo hành xe máy điện
+
+Hướng dẫn sử dụng
+xe máy điện
+
+Phạm vi bảo hành
 
 Bảo hành áp dụng cho các hư hỏng do lỗi phần mềm, lỗi chất lượng của linh kiện hoặc lỗi lắp ráp của VinFast với điều kiện sản phẩm được sử dụng và bảo dưỡng đúng cách, ngoại trừ các hạng mục không thuộc phạm vi bảo hành.
 
@@ -28,7 +428,7 @@ Công việc bảo hành được thực hiện miễn phí theo các điều kh
 
 VinFast không có trách nhiệm thu hồi và thay thế sản phẩm khác cho khách hàng nếu việc sửa chữa bảo hành có thể khắc phục được lỗi chất lượng, lỗi vật liệu hay lỗi lắp ráp của nhà sản xuất.
 
-## Thời hạn bảo hành
+Thời hạn bảo hành
 
 Đối với các dòng xe máy điện VinFast sử dụng pin LFP, thời hạn bảo hành xe là 6 năm/không giới hạn số km và thời hạn bảo hành pin lên tới 8 năm/không giới hạn số km. Các dòng xe còn lại thời hạn bảo hành 3 năm/không giới hạn km.
 
@@ -128,39 +528,36 @@ HDSD xe VinFast KINET
 
 HDSD xe VinFast Evo Grand Premia
 
-## Các chi tiết bảo hành giới hạn
+Các chi tiết bảo hành giới hạn
 
 Pin (Mua lần đầu theo xe mới):
-
 Pin LFP: thời hạn bảo hành 8 năm từ ngày kích hoạt bảo hành (không giới hạn quãng đường sử dụng).
 
 Pin khác (không phải pin LFP):
-
 Thời hạn bảo hành 3 năm từ ngày kích hoạt bảo hành (không giới hạn quãng đường sử dụng).
 
 Ắc quy:
-
 Ắc quy 12V: thời hạn bảo hành 1 năm từ ngày kích hoạt bảo hành (không giới hạn quãng đường sử dụng).
 
-## Bảo hành phụ tùng
+Bảo hành phụ tùng
 
 Bảo hành phụ tùng thay thế chính hãng
 
 Phụ tùng thay thế cho xe của khách hàng trong quá trình sửa chữa tại Xưởng dịch vụ/ Đại lý phân phối của VinFast do khách hàng chịu chi phí, sẽ có thời hạn bảo hành như sau:
 
 Phụ tùng (không bao gồm pin và ắc quy 12V):
-
 1 năm kể từ ngày mua (không giới hạn quãng đường sử dụng).
 
 Pin LFP:
-
 8 năm kể từ ngày mua (không giới hạn quãng đường sử dụng).
 
+Pin khác (không phải pin LFP):
 3 năm kể từ ngày mua (không giới hạn quãng đường sử dụng).
 
 Ắc quy 12V:
+1 năm kể từ ngày mua (không giới hạn quãng đường sử dụng).
 
-## Các hạng mục không thuộc phạm vi bảo hành
+Các hạng mục không thuộc phạm vi bảo hành
 
 Quý khách vui lòng tham khảo các hạng mục không thuộc phạm vi bảo hành để đảm bảo quyền lợi khi sử dụng dịch vụ.
 
@@ -200,7 +597,7 @@ Trong phạm vi pháp luật cho phép, VinFast từ chối bất cứ trách nh
 
 Thông tin chi tiết được quy định trong Sổ bảo hành đi kèm sản phẩm.
 
-## Câu hỏi thường gặp
+Câu hỏi thường gặp
 
 Chính sách bảo hành mới có áp dụng cho các xe khách hàng đã mua trước đó không?
 
@@ -218,8 +615,519 @@ Xe ngập nước có được bảo hành không?
 
 Hư hỏng gây ra bởi các yếu tố nằm ngoài kiểm soát của nhà sản xuất bao gồm sự bất thường của nguồn điện sử dụng, hỏa hoạn, động đất, bão, sét, mưa đá, lũ lụt, các thiên tai khác và những thiệt hại do các loại động vật gây ra sẽ không thuộc phạm vi bảo hành của VinFast.
 
-## Thông tin hỗ trợ
+Thông tin hỗ trợ
+
+DỊCH VỤ KHÁCH HÀNG
+
+1900 23 23 89 - Nhánh 1
+
+[email protected]
+
+SPEAK-UP HOTLINE
+
+https://vinfast.ethicspoint.com/
+
+[email protected]
 
 TÀI LIỆU LIÊN QUAN
 
 Tra cứu tài liệu
+
+Công ty TNHH Kinh doanh Thương mại và Dịch vụ VinFast
+
+MST/MSDN: 0108926276 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 01/10/2019 và các lần thay đổi tiếp theo.
+
+Địa chỉ trụ sở chính: Số 7, Đường Bằng Lăng 1, Khu đô thị Vinhomes Riverside, Phường Phúc Lợi, Thành phố Hà Nội, Việt Nam.
+
+Người đại diện theo pháp luật: Nguyễn Mai Hoa.
+
+Chức vụ: Chủ tịch Hội đồng thành viên.
+
+Hệ sinh thái
+
+Vinhomes
+
+Vinmec
+
+Vinpearl
+
+VinFast. All rights reserved.
+© Copyright 2025
+
+Về VinFast
+
+Về Vingroup
+
+Tin tức
+
+Công ty
+
+Ô tô điện
+
+Xe máy điện
+
+Showroom &amp; Đại lý
+
+Điều khoản chính sách
+
+Chính sách bảo vệ dữ liệu cá nhân
+
+Chính sách vận chuyển
+
+Chính sách đổi trả
+
+Miễn trừ trách nhiệm
+
+Điều khoản ký kết thỏa thuận đặt cọc mua Ô tô VinFast
+
+Hợp đồng và chính sách
+
+Dịch vụ khách hàng
+
+1900 23 23 89 - Nhánh 1
+
+[email protected]
+
+Speak-up hotline
+
+https://vinfast.ethicspoint.com/
+
+[email protected]
+
+Kết nối với VinFast
+
+Hệ sinh thái
+
+Vinhomes
+
+Vinmec
+
+Vinpearl
+
+VinFast. All rights reserved.
+© Copyright 2025
+
+Tiện ích
+
+Đăng ký lái thử
+
+So sánh xe
+
+Dự toán chi phí lăn bánh
+
+Dự toán vay trả góp
+
+Thẩm định vay
+
+Đặt lịch dịch vụ
+
+Tính chi phí sử dụng Xe máy điện
+
+Mua sắm
+
+Phụ kiện xe
+
+VF eStore
+
+Tin tức
+
+Công ty
+
+Ô tô
+
+Xe máy điện
+
+Hỗ trợ
+
+Tìm Showroom &amp; Trạm sạc
+
+Câu hỏi thường gặp
+
+Thảo luận
+
+Cộng đồng VinFast toàn cầu
+
+Giới thiệu
+
+Ô tô
+
+Công cụ hỗ trợ
+
+Xe cá nhân
+
+VF 2
+
+4 chỗ
+
+Xe đô thị cỡ nhỏ
+
+VF 3
+
+4 chỗ
+
+Xe đô thị cỡ nhỏ
+
+VF 5
+
+5 chỗ
+
+Xe gia đình
+
+VF 6
+
+5 chỗ
+
+Xe gia đình
+
+VF 7
+
+5 chỗ
+
+Xe cá nhân thể thao
+
+VF MPV 7
+
+7 chỗ
+
+Xe đô thị 7 chỗ
+
+VF 8
+
+5 chỗ
+
+Xe đô thị cỡ lớn
+
+VF 8 Thế hệ mới
+
+5 chỗ
+
+Xe đô thị cỡ lớn
+
+VF 9
+
+7 chỗ
+
+Xe doanh nhân
+
+VF Wild
+
+5 chỗ
+
+Bán tải điện
+
+Xe dịch vụ
+
+Minio Green
+
+4 chỗ
+
+Xe dịch vụ mini
+
+Herio Green
+
+5 chỗ
+
+Xe dịch vụ
+
+Nerio Green
+
+5 chỗ
+
+Xe dịch vụ
+
+Limo Green
+
+7 chỗ
+
+Xe dịch vụ cỡ lớn
+
+EC Van
+
+2 chỗ
+
+Xe vận tải đô thị
+
+EBus
+
+45 chỗ
+
+Xe bus đô thị
+
+Động cơ xăng
+
+VinFast Fadil
+
+5 chỗ
+
+Xe gia đình cỡ nhỏ
+
+VinFast Lux A2.0
+
+5 chỗ
+
+Xe gia đình
+
+VinFast Lux SA2.0
+
+5 chỗ
+
+Xe gia đình hạng sang
+
+VinFast President
+
+5 chỗ
+
+Xe doanh nhân
+
+Xe máy điện
+
+Công cụ hỗ trợ
+
+Xe cao cấp
+
+Kinet
+
+Từ 40.000.000 VNĐ
+
+Viper
+
+Từ 35.000.000 VNĐ
+
+Vero X
+
+Từ 34.900.000 VNĐ
+
+Xe trung cấp
+
+Kyo
+
+Từ 30.000.000 VNĐ
+
+Feliz II
+
+Từ 23.000.000 VNĐ
+
+Feliz 2025
+
+Từ 26.000.000 VNĐ
+
+Xe phổ thông
+
+Evo Grand Limited
+
+Từ 29.900.000 VNĐ
+
+Evo Grand Premia
+
+Từ 27.900.000 VNĐ
+
+Evo
+
+Từ 18.800.000 VNĐ
+
+Evo Grand
+
+Từ 22.500.000 VNĐ
+
+Amio
+
+Từ 11.600.000 VNĐ
+
+Amio S
+
+Từ 11.600.000 VNĐ
+
+Amio S2
+
+Từ 12.000.000 VNĐ
+
+Flazz
+
+Từ 14.200.000 VNĐ
+
+Flazz Max
+
+Từ 12.500.000 VNĐ
+
+ZGoo
+
+Từ 13.300.000 VNĐ
+
+Evo Lite
+
+Từ 14.300.000 VNĐ
+
+VF DrgnFly
+
+Từ 18.690.000 VNĐ
+
+Evo Grand Lite
+
+Từ 16.500.000 VNĐ
+
+Evo Lite Neo
+
+Từ 14.400.000 VNĐ
+
+VF eStore
+
+Dịch vụ hậu mãi
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+ĐẶT LỊCH DỊCH VỤ
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Ô tô điện
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+Xe máy điện
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Xe bus
+
+Chính sách bảo hành
+
+Dịch vụ bảo dưỡng
+
+Dịch vụ sửa chữa
+
+Thông tin cứu hộ
+
+Đặt lịch dịch vụ
+
+Tra cứu xưởng dịch vụ
+
+Tra cứu tài liệu hướng dẫn
+
+Pin và trạm sạc
+
+Pin và trạm sạc Ô tô điện
+
+Pin và trạm sạc Xe máy điện
+
+Lưu trữ năng lượng
+
+Mua sắm
+
+Phụ kiện xe
+
+Tin tức
+
+Công ty
+
+Ô tô
+
+Xe máy điện
+
+Hỗ trợ
+
+Tìm Showroom &amp; Trạm sạc
+
+Câu hỏi thường gặp
+
+Thảo luận
+
+Cộng đồng VinFast toàn cầu
+
+Tiện ích
+
+So sánh xe
+
+Đăng ký lái thử
+
+Dự toán chi phí lăn bánh
+
+Dự toán vay trả góp
+
+Thẩm định vay
+
+Đặt lịch dịch vụ
+
+Tính chi phí sử dụng Xe máy điện
+
+Lựa chọn quốc gia
+Việt Nam
+
+Bắc Mỹ
+
+United States
+
+English
+
+Canada
+
+English
+
+Francais
+
+Châu Âu
+
+France
+
+Francais
+
+Deutschland
+
+Deutsch
+
+Nederland
+
+Nederlands
+
+Others
+
+English
+
+Châu Á
+
+Việt Nam
+
+Tiếng Việt
+
+English
+
+Ưu đãi chỉ tới 31/12!
