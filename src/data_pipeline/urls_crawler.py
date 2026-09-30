@@ -1,30 +1,26 @@
 """src/data_pipeline/urls_crawler.py
-Script quét và thu thập danh sách toàn diện các URLs phục vụ 8 nhóm chủ đề cốt lõi.
+Script quét và thu thập danh sách toàn diện các URLs phục vụ các nhóm chủ đề cốt lõi.
 
-8 Nhóm Chủ Đề (Topic / Category) chuẩn hóa:
-1. gia_ca_lan_banh       : Giá niêm yết, chi phí đăng ký, thuế trước bạ, phí biển số.
-2. thong_so_ky_thuat     : Kích thước, động cơ, pin, công suất, an toàn, ADAS.
-3. chinh_sach_uu_dai     : Khuyến mãi đại lý, voucher, miễn giảm thuế trước bạ, VinClub.
-4. he_thong_tram_sac     : Vị trí trạm sạc, công suất sạc, chi phí sạc/phút (V-GREEN & VinFast).
-5. tai_chinh_tra_gop     : Lãi suất ngân hàng, gói vay, thủ tục chứng minh tài chính.
-6. thu_tuc_phap_ly       : Quy trình bấm biển, đăng kiểm, nộp thuế, bảo hiểm TNDS/thân vỏ.
-7. trai_nghiem_danh_gia  : Ưu nhược điểm từ người dùng, lỗi vặt, độ ồn, cảm giác lái, review.
-8. hau_mai_bao_duong     : Lịch bảo dưỡng, chi phí kiểm tra pin, chính sách bảo hành, cứu hộ 24/7.
+QUY TẮC PHẠM VI NGUỒN DỮ LIỆU:
+1. `gia_ca_lan_banh`: ĐÃ CRAWL TRỰC TIẾP TỪ API VINFAST thành dữ liệu quan hệ (relational snapshot).
+   -> Bỏ qua thu thập URL bên ngoài về giá/lăn bánh để tránh xung đột thông tin.
+2. `thong_so_ky_thuat`: CHỈ ĐƯỢC PHÉP CRAWL TỪ TRANG CHỦ CHÍNH HÃNG VINFAST (vinfastauto.com).
+   -> Bao gồm cả các link tải Brochure PDF thông số chi tiết của từng dòng xe.
+3. `chinh_sach_uu_dai`: Thu thập từ trang Ưu đãi VinFast (vinfastauto.com/vn_vi/uu-dai) và văn bản chính sách.
+4. `he_thong_tram_sac`: Hệ sinh thái V-GREEN và VinFast (vgreen.net, vinfastauto.com).
+5. `tai_chinh_tra_gop`: Các ngân hàng đối tác liên kết và cổng tài chính VinFast.
+6. `thu_tuc_phap_ly`: Bảo hiểm (Bảo Việt, PVI), Đăng kiểm, Cổng DVC, Luật Việt Nam.
+7. `trai_nghiem_danh_gia`: Báo chí & chuyên trang đánh giá xe uy tín (XeHay, VnExpress...).
+8. `hau_mai_bao_duong`: Chính sách bảo hành, bảo dưỡng, cứu hộ 24/7 chính hãng VinFast.
 
-Nguồn thu thập:
-- Hệ sinh thái VinFast Auto (vinfastauto.com, shop.vinfastauto.com)
-- Mạng lưới trạm sạc V-GREEN (vgreen.net)
-- Ngân hàng & Tài chính (Techcombank, VPBank, TPBank, Vietcombank...)
-- Bảo hiểm & Pháp lý (Bảo Việt, PVI, Cổng Dịch vụ công, Cục Đăng kiểm, LuatVietnam...)
-- Chuyên trang đánh giá xe uy tín (XeHay, VnExpress, Otofun, Autodaily, Tipcar...)
-
-ĐẦU RA: File CSV lưu tại `src/data_pipeline/urls.csv` (Mặc định không ghi đè sources.csv).
+ĐẦU RA: File CSV lưu tại `data/urls.csv` (Mặc định không ghi đè sources.csv).
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 import socket
 import subprocess
@@ -52,9 +48,8 @@ DEFAULT_USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 
-# 8 danh mục chuẩn hóa theo yêu cầu
+# Danh mục chuẩn hóa cho Web & Tài liệu (Loại bỏ gia_ca_lan_banh khỏi web crawler vì đã dùng Relational API)
 VALID_CATEGORIES = {
-    "gia_ca_lan_banh",
     "thong_so_ky_thuat",
     "chinh_sach_uu_dai",
     "he_thong_tram_sac",
@@ -65,60 +60,21 @@ VALID_CATEGORIES = {
 }
 
 # ==============================================================================
-# DANH SÁCH HẠT GIỐNG (SEEDS) ĐƯỢC CHỌN LỌC THEO 8 NHÓM CHỦ ĐỀ
+# DANH SÁCH HẠT GIỐNG (SEEDS) ĐƯỢC CHỌN LỌC CHUẨN XÁC
 # ==============================================================================
 
 SEED_ENTRIES: list[dict[str, str]] = [
     # --------------------------------------------------------------------------
-    # 1. GIA_CA_LAN_BANH
-    # --------------------------------------------------------------------------
-    {
-        "title": "Dự toán chi phí lăn bánh ô tô điện VinFast toàn quốc",
-        "url": "https://shop.vinfastauto.com/vn_vi/chi-phi-lan-banh",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Bảng giá niêm yết & Đặt cọc ô tô điện VinFast",
-        "url": "https://shop.vinfastauto.com/vn_vi/dat-coc-o-to-dien-vinfast.html",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Bảng giá niêm yết & Đặt cọc xe máy điện VinFast",
-        "url": "https://shop.vinfastauto.com/vn_vi/dat-coc-xe-may-dien.html",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Bảng giá xe VinFast mới nhất 2026 kèm ưu đãi lăn bánh",
-        "url": "https://xehay.vn/bang-gia-xe-vinfast.html",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Chi phí lăn bánh VinFast VF 3 tại Hà Nội, TP.HCM và các tỉnh",
-        "url": "https://xehay.vn/chi-phi-lan-banh-vinfast-vf-3.html",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Chi phí lăn bánh VinFast VF 5 Plus chi tiết sau miễn thuế trước bạ",
-        "url": "https://xehay.vn/chi-phi-lan-banh-vinfast-vf-5-plus.html",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Chi phí lăn bánh VinFast VF 6 các phiên bản Base và Plus",
-        "url": "https://xehay.vn/chi-phi-lan-banh-vinfast-vf-6.html",
-        "category": "gia_ca_lan_banh",
-    },
-    {
-        "title": "Chi phí lăn bánh VinFast VF 7 chi tiết các phiên bản",
-        "url": "https://xehay.vn/chi-phi-lan-banh-vinfast-vf-7.html",
-        "category": "gia_ca_lan_banh",
-    },
-
-    # --------------------------------------------------------------------------
-    # 2. THONG_SO_KY_THUAT
+    # 1. THONG_SO_KY_THUAT (CHỈ TỪ TRANG CHỦ VINFAST & TÀI LIỆU BROCHURE CHÍNH HÃNG)
     # --------------------------------------------------------------------------
     {
         "title": "Thông số kỹ thuật & Thiết kế VinFast VF 3",
         "url": "https://vinfastauto.com/vn_vi/dat-coc-xe-dien-vf3",
+        "category": "thong_so_ky_thuat",
+    },
+    {
+        "title": "Brochure PDF Thông số kỹ thuật chi tiết VinFast VF 3",
+        "url": "https://static-cms-prod.vinfastauto.com/statics/shared/16062026-Brochure-VF-3.pdf",
         "category": "thong_so_ky_thuat",
     },
     {
@@ -142,7 +98,7 @@ SEED_ENTRIES: list[dict[str, str]] = [
         "category": "thong_so_ky_thuat",
     },
     {
-        "title": "Thông số kỹ thuật VinFast VF 8 The All New (Nâng cấp 2026)",
+        "title": "Thông số kỹ thuật VinFast VF 8 The All New",
         "url": "https://vinfastauto.com/vn_vi/dat-coc-xe-vf8-the-all-new-2026",
         "category": "thong_so_ky_thuat",
     },
@@ -157,34 +113,19 @@ SEED_ENTRIES: list[dict[str, str]] = [
         "category": "thong_so_ky_thuat",
     },
     {
-        "title": "Thông số kỹ thuật xe máy điện VinFast Evo200 & Evo200 Lite",
-        "url": "https://vinfastauto.com/vn_vi/xe-may-dien-vinfast-evo-200",
-        "category": "thong_so_ky_thuat",
-    },
-    {
-        "title": "Thông số kỹ thuật xe máy điện VinFast Feliz S",
-        "url": "https://vinfastauto.com/vn_vi/xe-may-dien-vinfast-feliz-s",
-        "category": "thong_so_ky_thuat",
-    },
-    {
-        "title": "Thông số kỹ thuật xe máy điện VinFast Klara S (2022)",
-        "url": "https://vinfastauto.com/vn_vi/xe-may-dien-vinfast-klara-s-2022",
-        "category": "thong_so_ky_thuat",
-    },
-    {
-        "title": "Thông số kỹ thuật xe máy điện VinFast Vento S",
-        "url": "https://vinfastauto.com/vn_vi/xe-may-dien-vinfast-vento-s",
-        "category": "thong_so_ky_thuat",
-    },
-    {
-        "title": "Thông số kỹ thuật xe máy điện VinFast Theon S",
-        "url": "https://vinfastauto.com/vn_vi/xe-may-dien-vinfast-theon-s",
+        "title": "Thông số kỹ thuật xe tải điện VinFast EC Van",
+        "url": "https://vinfastauto.com/vn_vi/vinfast-ecvan",
         "category": "thong_so_ky_thuat",
     },
 
     # --------------------------------------------------------------------------
-    # 3. CHINH_SACH_UU_DAI
+    # 2. CHINH_SACH_UU_DAI (TRANG CHỦ ƯU ĐÃI Ô TÔ ĐIỆN VINFAST)
     # --------------------------------------------------------------------------
+    {
+        "title": "Tổng hợp chương trình ưu đãi và khuyến mại VinFast",
+        "url": "https://vinfastauto.com/vn_vi/uu-dai",
+        "category": "chinh_sach_uu_dai",
+    },
     {
         "title": "Chính sách ưu đãi chương trình Mãnh liệt Tinh thần Việt Nam",
         "url": "https://vinfastauto.com/vn_vi/manh-liet-tinh-than-viet-nam",
@@ -201,16 +142,21 @@ SEED_ENTRIES: list[dict[str, str]] = [
         "category": "chinh_sach_uu_dai",
     },
     {
-        "title": "Tổng hợp chương trình khuyến mại, voucher và ưu đãi mua xe VinFast",
-        "url": "https://vinfastauto.com/vn_vi/uu-dai-mua-xe",
+        "title": "Chương trình ưu đãi Mua 1 tặng 1 xe ô tô điện VinFast VF 8 và VF 9",
+        "url": "https://vinfastauto.com/vn_vi/chuong-trinh-uu-dai-mua-1-tang-1-danh-cho-khach-hang-mua-xe-o-to-dien-vinfast-vf-8-va-vf-9",
+        "category": "chinh_sach_uu_dai",
+    },
+    {
+        "title": "Chương trình ưu đãi tặng bảo hiểm 2 năm khi mua xe VinFast VF 3, VF 5",
+        "url": "https://vinfastauto.com/vn_vi/chuong-trinh-uu-dai-tang-bao-hiem-2-nam-khi-mua-xe-o-to-vinfast-vf-3-vf-5-va-herio-green",
         "category": "chinh_sach_uu_dai",
     },
 
     # --------------------------------------------------------------------------
-    # 4. HE_THONG_TRAM_SAC
+    # 3. HE_THONG_TRAM_SAC (Ô TÔ ĐIỆN)
     # --------------------------------------------------------------------------
     {
-        "title": "Mạng lưới trạm sạc xe điện toàn quốc VinFast & V-GREEN",
+        "title": "Mạng lưới trạm sạc ô tô điện toàn quốc VinFast & V-GREEN",
         "url": "https://vinfastauto.com/vn_vi/pin-va-tram-sac",
         "category": "he_thong_tram_sac",
     },
@@ -234,14 +180,9 @@ SEED_ENTRIES: list[dict[str, str]] = [
         "url": "https://vinfastauto.com/vn_vi/giai-phap-sac-tai-nha",
         "category": "he_thong_tram_sac",
     },
-    {
-        "title": "Dịch vụ thuê pin, mua pin và đổi pin xe máy điện VinFast",
-        "url": "https://vinfastauto.com/vn_vi/dich-vu-pin-xe-may-dien",
-        "category": "he_thong_tram_sac",
-    },
 
     # --------------------------------------------------------------------------
-    # 5. TAI_CHINH_TRA_GOP
+    # 4. TAI_CHINH_TRA_GOP
     # --------------------------------------------------------------------------
     {
         "title": "Lãi suất vay mua ô tô các ngân hàng cập nhật mới nhất",
@@ -270,7 +211,7 @@ SEED_ENTRIES: list[dict[str, str]] = [
     },
 
     # --------------------------------------------------------------------------
-    # 6. THU_TUC_PHAP_LY
+    # 5. THU_TUC_PHAP_LY
     # --------------------------------------------------------------------------
     {
         "title": "Bảo hiểm xe ô tô Bảo Việt: Quyền lợi & Biểu phí thân vỏ",
@@ -280,11 +221,6 @@ SEED_ENTRIES: list[dict[str, str]] = [
     {
         "title": "Bảo hiểm trách nhiệm dân sự bắt buộc cho xe ô tô Bảo Việt",
         "url": "https://baoviet.com/bao-hiem-trach-nhiem-dan-su-xe-o-to-bao-viet.htm",
-        "category": "thu_tuc_phap_ly",
-    },
-    {
-        "title": "Bảo hiểm trách nhiệm dân sự bắt buộc cho xe máy Bảo Việt",
-        "url": "https://baoviet.com/bao-hiem-xe-may-bao-viet.htm",
         "category": "thu_tuc_phap_ly",
     },
     {
@@ -309,7 +245,7 @@ SEED_ENTRIES: list[dict[str, str]] = [
     },
 
     # --------------------------------------------------------------------------
-    # 7. TRAI_NGHIEM_DANH_GIA
+    # 6. TRAI_NGHIEM_DANH_GIA (Ô TÔ ĐIỆN VINFAST)
     # --------------------------------------------------------------------------
     {
         "title": "[ĐÁNH GIÁ XE] VinFast VF 8 thế hệ mới: Nhẹ hơn, êm hơn và thực dụng sau vô-lăng",
@@ -428,16 +364,11 @@ SEED_ENTRIES: list[dict[str, str]] = [
     },
 
     # --------------------------------------------------------------------------
-    # 8. HAU_MAI_BAO_DUONG
+    # 7. HAU_MAI_BAO_DUONG (Ô TÔ ĐIỆN VINFAST)
     # --------------------------------------------------------------------------
     {
         "title": "Chính sách bảo hành 10 năm hoặc 200.000 km cho ô tô điện VinFast",
         "url": "https://vinfastauto.com/vn_vi/chinh-sach-bao-hanh-o-to",
-        "category": "hau_mai_bao_duong",
-    },
-    {
-        "title": "Chính sách bảo hành xe máy điện VinFast chính hãng",
-        "url": "https://vinfastauto.com/vn_vi/chinh-sach-bao-hanh-xe-may",
         "category": "hau_mai_bao_duong",
     },
     {
@@ -472,8 +403,24 @@ SEED_ENTRIES: list[dict[str, str]] = [
 # HÀM CÀO ĐỘNG BỔ SUNG TỪ TIN TỨC & CHUYÊN MỤC
 # ==============================================================================
 
-def fetch_html(url: str, timeout: int = 15) -> str:
-    """Tải nội dung HTML (urllib + fallback curl.exe)."""
+def fetch_html(url: str, timeout: int = 6) -> str:
+    """Tải nội dung HTML nhanh chóng và ổn định bằng curl -4 / urllib."""
+    cmd = [
+        "curl.exe", "-4", "-sL", "--http1.1", "--compressed",
+        "-m", str(timeout), url,
+        "-H", f"User-Agent: {DEFAULT_USER_AGENT}",
+        "-H", "Accept-Language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
+    ]
+    try:
+        res = subprocess.run(
+            cmd, capture_output=True, text=True, encoding="utf-8", errors="ignore", timeout=timeout + 2
+        )
+        if res.stdout and len(res.stdout) > 200:
+            return res.stdout
+    except Exception:
+        pass
+
+    # Fallback sang urllib nếu curl không phản hồi
     socket.setdefaulttimeout(timeout)
     req = urllib.request.Request(
         url,
@@ -487,16 +434,7 @@ def fetch_html(url: str, timeout: int = 15) -> str:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return resp.read().decode("utf-8", errors="ignore")
     except Exception:
-        cmd = [
-            "curl.exe", "-sL", "--http1.1", "--compressed",
-            "-m", str(timeout + 5), url,
-            "-H", f"User-Agent: {DEFAULT_USER_AGENT}",
-            "-H", "Accept-Language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-        ]
-        res = subprocess.run(
-            cmd, capture_output=True, text=True, encoding="utf-8", errors="ignore", timeout=timeout + 10
-        )
-        return res.stdout or ""
+        return ""
 
 
 def clean_text(text: str) -> str:
@@ -508,14 +446,28 @@ def clean_text(text: str) -> str:
     return re.sub(r"\s+", " ", t).strip()
 
 
-def classify_topic_from_text(title: str, url: str) -> str:
-    """Tự động phân loại URL vào 1 trong 8 nhóm chủ đề chuẩn hóa."""
+def classify_topic_from_text(title: str, url: str) -> str | None:
+    """Tự động phân loại URL vào các nhóm chủ đề được phép (loại trừ xe máy và giá lăn bánh)."""
     t = f"{title} {url}".lower()
 
-    if any(k in t for k in ["gia", "lan-banh", "lăn bánh", "chi-phi-lan-banh", "bang-gia", "bảng giá"]):
-        return "gia_ca_lan_banh"
-    if any(k in t for k in ["thong-so", "thông số", "dong-co", "pin-catl", "kich-thuoc", "specs", "ky-thuat"]):
-        return "thong_so_ky_thuat"
+    # BỎ TOÀN BỘ DATA XE MÁY, XE ĐẠP ĐIỆN
+    motorbike_keywords = [
+        "xe-may", "xe máy", "xmd", "xe dap", "xe-dap", "xedap", "feliz",
+        "evo", "klara", "vento", "theon", "viper", "drgnfly", "ebike",
+        "e-scooter", "xe hai banh", "xe 2 banh", "scooter"
+    ]
+    if any(k in t for k in motorbike_keywords):
+        return None
+
+    # Nếu là giá lăn bánh bên ngoài -> bỏ qua không thu thập (tránh xung đột với relational API)
+    if any(k in t for k in ["lan-banh", "lăn bánh", "chi-phi-lan-banh"]):
+        return None
+
+    # Thông số kỹ thuật CHỈ chấp nhận từ domain vinfastauto.com
+    is_vinfast = "vinfast" in url.lower() or "vinfastauto" in url.lower()
+    if any(k in t for k in ["thong-so", "thông số", "dong-co", "pin-catl", "kich-thuoc", "specs", "ky-thuat", "brochure"]):
+        return "thong_so_ky_thuat" if is_vinfast else "trai_nghiem_danh_gia"
+
     if any(k in t for k in ["uu-dai", "ưu đãi", "khuyen-mai", "khuyến mại", "voucher", "giam-gia", "vinclub", "manh-liet"]):
         return "chinh_sach_uu_dai"
     if any(k in t for k in ["tram-sac", "trạm sạc", "vgreen", "tru-sac", "phi-sac", "sac-nhanh", "doi-pin", "pin-va-tram-sac"]):
@@ -532,10 +484,10 @@ def classify_topic_from_text(title: str, url: str) -> str:
 
 
 def discover_dynamic_news_urls(max_pages: int = 3) -> list[dict[str, str]]:
-    """Quét động các bài viết từ VinFast Auto và V-GREEN."""
+    """Quét động các bài viết từ VinFast Auto và V-GREEN (CHỈ Ô TÔ ĐIỆN)."""
     feeds = [
+        {"url": "https://vinfastauto.com/vn_vi/uu-dai", "default_cat": "chinh_sach_uu_dai"},
         {"url": "https://vinfastauto.com/vn_vi/tin-tuc/o-to-dien", "default_cat": "trai_nghiem_danh_gia"},
-        {"url": "https://vinfastauto.com/vn_vi/tin-tuc/xe-may-dien", "default_cat": "thong_so_ky_thuat"},
         {"url": "https://vinfastauto.com/vn_vi/tin-tuc/cong-ty", "default_cat": "chinh_sach_uu_dai"},
         {"url": "https://vgreen.net/vi/tin-tuc", "default_cat": "he_thong_tram_sac"},
     ]
@@ -552,29 +504,43 @@ def discover_dynamic_news_urls(max_pages: int = 3) -> list[dict[str, str]]:
             if not html or len(html) < 400:
                 break
 
-            matches = re.findall(r'<a[^>]+href="(/v[ni]_[^"]+|/vi/[^"]+)"[^>]*>(.*?)</a>', html, re.DOTALL | re.I)
+            matches = re.findall(r'<a[^>]+href="(/v[ni]_[^"]+|/vi/[^"]+|https://[^"]+\.pdf)"[^>]*>(.*?)</a>', html, re.DOTALL | re.I)
             for href, anchor in matches:
                 clean_href = href.split("?")[0].strip()
                 if any(x in clean_href for x in ["/tin-tuc", "/cau-hoi-thuong-gap", "/tim-kiem"]) and clean_href.count("/") <= 2:
                     continue
 
-                full_url = f"https://vinfastauto.com{clean_href}" if clean_href.startswith("/vn_vi/") else f"https://vgreen.net{clean_href}"
+                if clean_href.startswith("https://"):
+                    full_url = clean_href
+                elif clean_href.startswith("/vn_vi/"):
+                    full_url = f"https://vinfastauto.com{clean_href}"
+                else:
+                    full_url = f"https://vgreen.net{clean_href}"
+
                 if full_url in seen:
                     continue
                 seen.add(full_url)
 
                 title = clean_text(anchor)
-                if not title or len(title) < 12 or "Xem thêm" in title:
-                    slug = clean_href.split("/")[-1].replace(".html", "").replace("-", " ")
+                if not title or len(title) < 8 or "Xem thêm" in title:
+                    slug = clean_href.split("/")[-1].replace(".html", "").replace(".pdf", "").replace("-", " ")
                     title = slug.capitalize()
 
                 cat = classify_topic_from_text(title, full_url)
+                if cat is None:
+                    # Bỏ qua nhóm gia_ca_lan_banh để tránh xung đột
+                    continue
+
+                # Kiểm tra nghiêm ngặt: thong_so_ky_thuat chỉ từ vinfastauto.com
+                if cat == "thong_so_ky_thuat" and "vinfast" not in full_url.lower():
+                    cat = "trai_nghiem_danh_gia"
+
                 discovered.append({
                     "title": title,
                     "url": full_url,
                     "category": cat,
                 })
-            time.sleep(0.4)
+            time.sleep(0.3)
 
     return discovered
 
@@ -604,14 +570,14 @@ def export_urls_to_csv(records: list[dict[str, str]], output_path: Path) -> None
 def main() -> None:
     """Hàm chính điều phối quy trình crawl URLs."""
     parser = argparse.ArgumentParser(
-        description="Crawl toàn diện danh sách URLs phục vụ 8 nhóm chủ đề cốt lõi"
+        description="Crawl toàn diện danh sách URLs (Loại bỏ giá lăn bánh xung đột, thông số kỹ thuật chuẩn VinFast)"
     )
     parser.add_argument(
         "--output",
         "-o",
         type=str,
         default=str(DEFAULT_OUTPUT_CSV),
-        help="Đường dẫn file CSV xuất ra (mặc định: src/data_pipeline/urls.csv)",
+        help="Đường dẫn file CSV xuất ra (mặc định: data/urls.csv)",
     )
     parser.add_argument(
         "--max-pages",
@@ -625,23 +591,32 @@ def main() -> None:
     out_path = Path(args.output)
 
     print("=" * 70)
-    print("🚀 URLS CRAWLER THEO 8 NHÓM CHỦ ĐỀ CỐT LÕI")
+    print("🚀 URLS CRAWLER ĐƯỢC ĐIỀU CHỈNH THEO QUY TẮC NGUỒN CHUẨN:")
+    print("   1. 'gia_ca_lan_banh': Bỏ qua (Đã có Relational API VinFast).")
+    print("   2. 'thong_so_ky_thuat': CHỈ lấy từ vinfastauto.com & brochure PDF.")
+    print("   3. 'chinh_sach_uu_dai': Lấy từ vinfastauto.com/vn_vi/uu-dai & văn bản.")
     print(f"   Vị trí xuất file: {out_path}")
-    print(f"   Số trang quét động: {args.max_pages}")
-    print("   Lưu ý: Không ghi đè sources.csv (sources.csv là tập URL kiểm chứng)")
     print("=" * 70)
 
     all_records: list[dict[str, str]] = []
     seen_urls: set[str] = set()
 
-    # 1. Nạp danh mục hạt giống từ tất cả 8 chủ đề (VinFast, V-Green, Techcombank, Bảo Việt, XeHay...)
-    print("\n[1/2] Nạp danh sách URLs hạt giống theo 8 nhóm chủ đề...")
+    # 1. Nạp danh mục hạt giống
+    print("\n[1/2] Nạp danh sách URLs hạt giống chất lượng cao...")
     for s in SEED_ENTRIES:
         u = s["url"].strip()
+        c = s["category"].strip()
+
+        # Kiểm tra tính hợp lệ
+        if c == "gia_ca_lan_banh":
+            continue
+        if c == "thong_so_ky_thuat" and "vinfast" not in u.lower():
+            continue
+
         if u not in seen_urls:
             seen_urls.add(u)
             all_records.append(s)
-    print(f"   -> Đã nạp {len(all_records)} URLs hạt giống chất lượng cao.")
+    print(f"   -> Đã nạp {len(all_records)} URLs hạt giống.")
 
     # 2. Quét động thêm các bài viết mới từ VinFast & V-GREEN
     print("\n[2/2] Quét động bài viết từ các feed tin tức VinFast & V-GREEN...")
@@ -658,7 +633,7 @@ def main() -> None:
     # 3. Xuất file CSV (urls.csv)
     export_urls_to_csv(all_records, out_path)
 
-    # 4. Báo cáo thống kê theo 8 nhóm chủ đề
+    # 4. Báo cáo thống kê
     cat_counts: dict[str, int] = {k: 0 for k in sorted(VALID_CATEGORIES)}
     for r in all_records:
         c = r["category"]
@@ -667,7 +642,7 @@ def main() -> None:
     duration = time.time() - start_time
     print("\n" + "=" * 70)
     print(f"🏁 HOÀN TẤT THU THẬP {len(all_records)} URLS TRONG {duration:.2f} GIÂY!")
-    print("\n📊 PHÂN BỐ DỮ LIỆU THEO 8 NHÓM CHỦ ĐỀ (TOPIC / CATEGORY):")
+    print("\n📊 PHÂN BỐ DỮ LIỆU THEO CÁC NHÓM CHỦ ĐỀ:")
     for cat, cnt in cat_counts.items():
         print(f"   - {cat:<24}: {cnt:>3} URLs")
     print("=" * 70)
