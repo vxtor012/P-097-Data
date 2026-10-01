@@ -33,7 +33,7 @@ P-097-Data/
 │   │   └── silver_report.json            # Báo cáo thống kê tầng Silver
 │   ├── gold/                             # Dữ liệu tinh tuyển phục vụ Tư vấn Mua xe
 │   │   ├── rdb_schema/                   # 5 bảng CSV quan hệ chuyên sâu ô tô điện
-│   │   ├── gold_chunks.jsonl             # 2,004 chunks ngữ cảnh tinh chọn (71.55% giữ lại)
+│   │   ├── gold_chunks.jsonl             # 1,871 chunks ngữ cảnh độc bản tinh chọn (đã khử trùng lặp)
 │   │   ├── gold_documents.jsonl          # 112 tài liệu được chứng nhận tư vấn
 │   │   ├── gold_faq.jsonl                # 400 câu hỏi-đáp tư vấn khách hàng
 │   │   ├── gold_vehicles.jsonl           # 27 phiên bản ô tô điện hoàn chỉnh
@@ -70,7 +70,8 @@ P-097-Data/
 │       │   └── relational_extractor.py   # Phân giải bảng giá xe & ma trận lăn bánh 63 tỉnh
 │       ├── filters/                      # Bộ lọc tri thức chuyên biệt
 │       │   ├── __init__.py
-│       │   └── gold_filter.py            # Lọc bỏ nội dung không liên quan, gắn thẻ 7 chủ đề
+│       │   ├── gold_filter.py            # Lọc bỏ nội dung không liên quan, gắn thẻ 7 chủ đề
+│       │   └── chunk_deduplicator.py     # Khử trùng lặp chunk: Exact Hash + Near-Duplicate Jaccard
 │       ├── models/                       # Schemas dữ liệu chuẩn
 │       │   ├── __init__.py
 │       │   └── schemas.py                # BronzeDocument, SilverDocument, SilverChunk, SilverFAQItem,...
@@ -128,26 +129,26 @@ flowchart TD
         S6["dataset/silver/silver_chunks.jsonl (2,801 chunks)"]
     end
 
-    subgraph GoldFilter ["4. Bộ lọc Tư vấn Mua Bán Xe (Gold Consultation Filter)"]
-        GF1{"Phân loại nội dung"}
-        DROP["LOẠI BỎ (797 chunks - 28.45%):<br/>• Quy tắc điều khiển phương tiện (bật đèn, bấm còi, qua phà, hầm)<br/>• Xử phạt vi phạm giao thông (NĐ 100/2019, NĐ 123/2021)<br/>• Cải tạo & hoán cải kết cấu khung gầm cơ khí<br/>• Thể thức văn bản hành chính không liên quan"]
-        KEEP["GIỮ LẠI (2,004 chunks - 71.55%):<br/>• Giá bán niêm yết & Dự toán chi phí lăn bánh 63 tỉnh<br/>• Thông số kỹ thuật & Kinh nghiệm chọn xe điện<br/>• Chương trình ưu đãi, khuyến mại & VinClub<br/>• Thủ tục pháp lý: Đăng ký, Biển số định danh, Lệ phí trước bạ, Bảo hiểm TNDS<br/>• Chính sách Pin, Thuê pin & Trạm sạc V-GREEN<br/>• Tài chính, Gói vay ngân hàng & Trả góp<br/>• Bảo hành 10 năm & Dịch vụ hậu mãi"]
+    subgraph GoldFilter ["4. Bộ lọc & Khử Trùng lặp (Gold Curation & Deduplication)"]
+        GF1{"Phân loại & Khử trùng"}
+        DROP["LOẠI BỎ (930 chunks - 33.20%):<br/>• 797 chunks không liên quan (Quy tắc đi xe, vi phạm NĐ 100, hoán cải khung sườn)<br/>• 100 chunks trùng lặp 100% (Exact Duplicates)<br/>• 33 chunks cận trùng lặp >= 90% (Near Duplicates)"]
+        KEEP["GIỮ LẠI (1,871 chunks - 66.80%):<br/>• Giá bán niêm yết & Dự toán chi phí lăn bánh 63 tỉnh<br/>• Thông số kỹ thuật & Kinh nghiệm chọn xe điện<br/>• Chương trình ưu đãi, khuyến mại & VinClub<br/>• Thủ tục pháp lý: Đăng ký, Biển số định danh, Lệ phí trước bạ, Bảo hiểm TNDS<br/>• Chính sách Pin, Thuê pin & Trạm sạc V-GREEN<br/>• Tài chính, Gói vay ngân hàng & Trả góp<br/>• Bảo hành 10 năm & Dịch vụ hậu mãi"]
     end
 
-    subgraph Gold ["5. Kho tri thức Tinh tuyển Tư vấn Mua Xe (Gold Layer)"]
-        G1["gold_chunks.jsonl (2,004 chunks ngữ cảnh kèm thẻ chủ đề)"]
+    subgraph Gold ["5. Kho tri thức Tinh tuyển & Độc bản (Gold Layer)"]
+        G1["gold_chunks.jsonl (1,871 chunks ngữ cảnh độc bản kèm thẻ chủ đề)"]
         G2["gold_faq.jsonl (400 câu hỏi - đáp tư vấn khách hàng)"]
         G3["gold_vehicles.jsonl (27 phiên bản xe, pin và giá lăn bánh)"]
         G4["gold_documents.jsonl (112 tài liệu đã làm sạch)"]
         G5["gold/rdb_schema/ (5 bảng CSV số liệu quan hệ ô tô điện)"]
-        G6["gold_report.json (Báo cáo chỉ số toàn vẹn)"]
+        G6["gold_report.json (Báo cáo chỉ số toàn vẹn & dedup)"]
     end
 
     Discovery --> Crawl
     Crawl --> Silver
     Silver --> GF1
-    GF1 -->|Nhiễu / Không phục vụ mua bán| DROP
-    GF1 -->|Phục vụ tư vấn mua xe| KEEP
+    GF1 -->|Nhiễu & Trùng lặp| DROP
+    GF1 -->|Độc bản phục vụ mua xe| KEEP
     KEEP --> Gold
 ```
 
@@ -157,7 +158,7 @@ flowchart TD
 
 | Tệp dữ liệu | Số lượng bản ghi | Định dạng | Mục đích & Vai trò kiến trúc trong RAG |
 | :--- | :---: | :---: | :--- |
-| **`gold_chunks.jsonl`** | **2,004 chunks** | JSONL | **Kho tri thức phục vụ Semantic Vector Search (Dense Retrieval)**.<br/>Mỗi chunk có kích thước $\approx 512$ ký tự, được chèn sẵn ngữ cảnh breadcrumb (`[VF 8 > Chính sách pin]`) và nhãn chủ đề (`gold_topic`), đảm bảo mô hình Embedding thu nhận trọn vẹn ngữ nghĩa mà không bị cụt câu. |
+| **`gold_chunks.jsonl`** | **1,871 chunks** | JSONL | **Kho tri thức phục vụ Semantic Vector Search (Dense Retrieval)**.<br/>100% độc bản (đã khử trùng lặp), mỗi chunk có kích thước $\approx 512$ ký tự, được chèn sẵn ngữ cảnh breadcrumb (`[VF 8 > Chính sách pin]`) và nhãn chủ đề (`gold_topic`), đảm bảo mô hình Embedding thu nhận trọn vẹn ngữ nghĩa mà không bị cụt câu. |
 | **`gold_faq.jsonl`** | **400 Q&A** | JSONL | **Bộ câu hỏi - đáp chuẩn phục vụ Semantic Routing & Cache**.<br/>Trước khi kích hoạt chuỗi RAG tốn kém, hệ thống so khớp câu hỏi của người dùng với danh sách câu hỏi chuẩn này. Nếu độ tương đồng cao ($\ge 0.92$), trả về ngay câu trả lời chính thức được kiểm duyệt, tránh hoàn toàn rủi ro hallucination. |
 | **`gold_vehicles.jsonl`** | **27 mẫu xe** | JSONL | **Danh mục thông số & giá xe chi tiết**.<br/>Tổng hợp cấu hình, dung lượng pin, quãng đường di chuyển và giá niêm yết theo từng phiên bản xe điện VinFast (VF 3, VF 5, VF 6, VF 7, VF 8, VF 9,...). |
 | **`gold_documents.jsonl`** | **112 tài liệu** | JSONL | **Tài liệu toàn văn sạch**.<br/>Lưu trữ toàn bộ nội dung tài liệu sau khi loại bỏ boilerplate, header/footer in ấn và watermark, phục vụ tác vụ đọc hiểu toàn văn hoặc summarize. |

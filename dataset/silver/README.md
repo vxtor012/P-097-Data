@@ -1,7 +1,7 @@
 # 🥈 Silver Layer: Normalized & Structured Pre-RAG Data
 
-> **Thời gian cập nhật:** `2026-10-01 05:02:46 UTC`  
-> **Thời gian thực thi:** `8.29s`  
+> **Thời gian cập nhật:** `2026-10-01 05:15:33 UTC`  
+> **Thời gian thực thi:** `9.72s`  
 > **Trạng thái:** Chuẩn hóa hoàn tất từ 113 bản ghi Bronze.
 
 ---

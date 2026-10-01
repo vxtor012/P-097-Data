@@ -1,8 +1,8 @@
 {
   "pipeline_version": "1.0.0",
-  "started_at": "2026-10-01T05:02:38.019870+00:00",
-  "completed_at": "2026-10-01T05:02:46.312275+00:00",
-  "elapsed_seconds": 8.29,
+  "started_at": "2026-10-01T05:15:23.316127+00:00",
+  "completed_at": "2026-10-01T05:15:33.040008+00:00",
+  "elapsed_seconds": 9.72,
   "total_bronze_records": 113,
   "total_silver_documents": 113,
   "total_silver_chunks": 2801,

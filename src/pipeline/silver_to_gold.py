@@ -16,6 +16,7 @@ from typing import Any, Dict, List, Optional
 from .config import PipelineConfig, DEFAULT_CONFIG
 from .extractors.relational_extractor import RelationalExtractor
 from .filters.gold_filter import GoldConsultationFilter
+from .filters.chunk_deduplicator import ChunkDeduplicator
 from .models.schemas import SilverChunk, SilverDocument, SilverFAQItem, SilverVehicle
 from .storage.gold_writer import GoldWriter
 
@@ -23,11 +24,16 @@ logger = logging.getLogger(__name__)
 
 
 class SilverToGoldPipeline:
-    """Pipeline transforming Silver dataset into car-purchasing specialized Gold layer."""
+    """Pipeline transforming Silver dataset into car-purchasing specialized Gold layer with deduplication."""
 
     def __init__(self, config: Optional[PipelineConfig] = None):
         self.config = config or DEFAULT_CONFIG
         self.gold_filter = GoldConsultationFilter()
+        self.deduplicator = ChunkDeduplicator(
+            enable_exact=self.config.gold_dedup_exact,
+            enable_near=self.config.gold_dedup_near,
+            similarity_threshold=self.config.gold_dedup_similarity_threshold,
+        )
         self.writer = GoldWriter(gold_dir=self.config.gold_dir)
 
     def run(self) -> Dict[str, Any]:
@@ -54,10 +60,9 @@ class SilverToGoldPipeline:
                     silver_chunks.append(SilverChunk(**data))
         logger.info("Loaded %d Silver chunks", len(silver_chunks))
 
-        # 2. Filter and Tag Gold Chunks
-        gold_chunks: List[SilverChunk] = []
+        # 2. Filter and Tag Gold Chunks by relevance
+        relevant_chunks: List[SilverChunk] = []
         dropped_reasons = Counter()
-        topic_distribution = Counter()
 
         for chunk in silver_chunks:
             admitted, topic, score, reason = self.gold_filter.evaluate_chunk(chunk)
@@ -65,16 +70,42 @@ class SilverToGoldPipeline:
                 # Enrich chunk metadata with gold annotations
                 chunk.metadata["gold_topic"] = topic
                 chunk.metadata["consultation_score"] = score
-                gold_chunks.append(chunk)
-                topic_distribution[topic] += 1
+                relevant_chunks.append(chunk)
             else:
                 dropped_reasons[reason] += 1
 
         logger.info(
-            "Admitted %d Gold chunks, filtered out %d irrelevant chunks",
-            len(gold_chunks),
-            len(silver_chunks) - len(gold_chunks),
+            "Admitted %d relevant chunks, filtered out %d irrelevant chunks",
+            len(relevant_chunks),
+            len(silver_chunks) - len(relevant_chunks),
         )
+
+        # 3. Deduplicate Gold Chunks (Exact & Near Duplication)
+        dedup_stats = {
+            "exact_duplicates_dropped": 0,
+            "near_duplicates_dropped": 0,
+            "total_duplicates_dropped": 0,
+            "dedup_retained_ratio_percent": 100.0,
+        }
+        if self.config.enable_gold_chunk_deduplication:
+            dedup_res = self.deduplicator.deduplicate(relevant_chunks)
+            gold_chunks = dedup_res.unique_chunks
+            dedup_stats = {
+                "exact_duplicates_dropped": dedup_res.exact_duplicates_count,
+                "near_duplicates_dropped": dedup_res.near_duplicates_count,
+                "total_duplicates_dropped": dedup_res.total_dropped,
+                "dedup_retained_ratio_percent": dedup_res.retained_ratio_percent,
+            }
+            logger.info(
+                "Chunk Deduplication complete: %d unique chunks retained (dropped %d exact, %d near-duplicates)",
+                len(gold_chunks),
+                dedup_res.exact_duplicates_count,
+                dedup_res.near_duplicates_count,
+            )
+        else:
+            gold_chunks = relevant_chunks
+
+        topic_distribution = Counter(c.metadata.get("gold_topic") for c in gold_chunks)
 
         # 3. Load and Filter Silver Documents
         admitted_doc_ids = set(c.doc_id for c in gold_chunks)
@@ -132,6 +163,11 @@ class SilverToGoldPipeline:
             "completed_at": datetime.now(timezone.utc).isoformat(),
             "elapsed_seconds": elapsed,
             "total_silver_chunks": len(silver_chunks),
+            "relevant_chunks_before_dedup": len(relevant_chunks),
+            "filtered_out_irrelevant_chunks": len(silver_chunks) - len(relevant_chunks),
+            "exact_duplicates_dropped": dedup_stats["exact_duplicates_dropped"],
+            "near_duplicates_dropped": dedup_stats["near_duplicates_dropped"],
+            "total_duplicates_dropped": dedup_stats["total_duplicates_dropped"],
             "total_gold_chunks": len(gold_chunks),
             "filtered_out_chunks": len(silver_chunks) - len(gold_chunks),
             "retention_rate_percent": round(len(gold_chunks) / len(silver_chunks) * 100, 2),

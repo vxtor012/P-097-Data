@@ -1,6 +1,6 @@
 # 🥉 Bronze Layer: Raw Automotive Data Ingestion
 
-> **Thời gian cập nhật:** `2026-10-01 05:02:38 UTC`  
+> **Thời gian cập nhật:** `2026-10-01 05:15:23 UTC`  
 > **Trạng thái:** Hoàn tất thu thập dữ liệu thô (Raw Data Layer).
 
 ---

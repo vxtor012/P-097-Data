@@ -40,8 +40,15 @@ class PipelineConfig:
     # Vietnamese Quality Gates
     min_doc_length: int = 50
     min_vietnamese_diacritic_ratio: float = 0.03  # At least 3% of alpha chars have VN diacritics for VN docs
-    enable_deduplication: bool = True
+    # Deduplication Gates
+    enable_deduplication: bool = True  # Document-level deduplication in Silver
     dedup_threshold: float = 0.95
+
+    # Gold Chunk Deduplication
+    enable_gold_chunk_deduplication: bool = True
+    gold_dedup_exact: bool = True
+    gold_dedup_near: bool = True
+    gold_dedup_similarity_threshold: float = 0.90
 
     # Target language
     target_language: str = "vi"

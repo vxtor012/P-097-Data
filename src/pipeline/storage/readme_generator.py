@@ -262,6 +262,10 @@ def generate_gold_readme(gold_dir: Path, report_dict: Dict[str, Any], config: Op
     total_silver = report_dict.get("total_silver_chunks", 0)
     total_gold = report_dict.get("total_gold_chunks", chunks_count)
     filtered_out = report_dict.get("filtered_out_chunks", total_silver - total_gold)
+    filtered_irrelevant = report_dict.get("filtered_out_irrelevant_chunks", filtered_out)
+    exact_dups = report_dict.get("exact_duplicates_dropped", 0)
+    near_dups = report_dict.get("near_duplicates_dropped", 0)
+    total_dups = report_dict.get("total_duplicates_dropped", exact_dups + near_dups)
     retention_rate = report_dict.get("retention_rate_percent", 71.55)
     elapsed = report_dict.get("elapsed_seconds", 0.5)
 
@@ -298,9 +302,10 @@ def generate_gold_readme(gold_dir: Path, report_dict: Dict[str, Any], config: Op
 ---
 
 ## 📌 1. Giới thiệu tầng Gold
-Tầng **Gold** là kho tri thức tinh hoa đã trải qua bộ lọc chuyên biệt **`GoldConsultationFilter`**:
-- **Loại bỏ triệt để ({filtered_out:,} chunks - {100 - retention_rate:.2f}%)**: Quy tắc giao thông đường bộ chung, xử phạt vi phạm (Nghị định 100/2019, 123/2021), thủ tục hoán cải khung sườn cơ khí và các quy định hành chính không phục vụ người mua xe.
-- **Giữ lại trọn vẹn ({total_gold:,} chunks - {retention_rate:.2f}%)**: Toàn bộ thông tin cần thiết phục vụ khách hàng ra quyết định mua xe: Giá bán, lăn bánh 63 tỉnh, thông số kỹ thuật, gói vay trả góp, chính sách pin, trạm sạc và bảo hành 10 năm.
+Tầng **Gold** là kho tri thức tinh hoa đã trải qua quy trình 2 bước kiểm định khắt khe:
+1. **Lọc nội dung không liên quan (Domain Filter)**: Loại bỏ triệt để **{filtered_irrelevant:,} chunks** về luật giao thông đường bộ chung, xử phạt vi phạm (Nghị định 100/2019, 123/2021), thủ tục hoán cải khung sườn cơ khí và các quy định hành chính không phục vụ người mua xe.
+2. **Khử trùng lặp nâng cao (Chunk Deduplication)**: Loại bỏ **{total_dups:,} chunks dư thừa** (gồm **{exact_dups:,} chunks** trùng lặp 100% nội dung và **{near_dups:,} chunks** cận trùng lặp $\\ge 90\\%$), ưu tiên giữ lại các chunk có cấu trúc breadcrumb heading context sâu nhất và gộp nguồn gốc tài liệu (`duplicate_doc_sources`).
+3. **Giữ lại trọn vẹn ({total_gold:,} chunks - {retention_rate:.2f}%)**: Toàn bộ tri thức độc bản, chất lượng cao phục vụ khách hàng ra quyết định mua xe: Giá bán, lăn bánh 63 tỉnh, thông số kỹ thuật, gói vay trả góp, chính sách pin, trạm sạc và bảo hành 10 năm.
 
 ---
 
