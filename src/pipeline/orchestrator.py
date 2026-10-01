@@ -12,11 +12,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-from src.config import DEFAULT_CONFIG, PipelineConfig
-from src.crawlers.raw_crawler import CrawlReport, RawCrawler
-from src.crawlers.url_discoverer import UrlDiscoverer
-from src.pipeline.bronze_to_silver import BronzeToSilverPipeline
-from src.pipeline.silver_to_gold import SilverToGoldPipeline
+from .config import DEFAULT_CONFIG, PipelineConfig
+from .crawlers.raw_crawler import CrawlReport, RawCrawler
+from .crawlers.url_discoverer import UrlDiscoverer
+from .bronze_to_silver import BronzeToSilverPipeline
+from .silver_to_gold import SilverToGoldPipeline
 
 logger = logging.getLogger(__name__)
 

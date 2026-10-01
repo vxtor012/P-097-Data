@@ -13,11 +13,11 @@ from pathlib import Path
 import time
 from typing import Any, Dict, List, Optional
 
-from src.config import PipelineConfig, DEFAULT_CONFIG
-from src.extractors.relational_extractor import RelationalExtractor
-from src.filters.gold_filter import GoldConsultationFilter
-from src.models.schemas import SilverChunk, SilverDocument, SilverFAQItem, SilverVehicle
-from src.storage.gold_writer import GoldWriter
+from .config import PipelineConfig, DEFAULT_CONFIG
+from .extractors.relational_extractor import RelationalExtractor
+from .filters.gold_filter import GoldConsultationFilter
+from .models.schemas import SilverChunk, SilverDocument, SilverFAQItem, SilverVehicle
+from .storage.gold_writer import GoldWriter
 
 logger = logging.getLogger(__name__)
 

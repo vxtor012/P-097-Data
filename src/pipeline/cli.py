@@ -19,12 +19,19 @@ if sys.stdout and hasattr(sys.stdout, "reconfigure"):
     except Exception:
         pass
 
-from src.config import PipelineConfig
-from src.crawlers.raw_crawler import RawCrawler
-from src.crawlers.url_discoverer import UrlDiscoverer
-from src.pipeline.bronze_to_silver import BronzeToSilverPipeline
-from src.pipeline.silver_to_gold import SilverToGoldPipeline
-from src.pipeline.orchestrator import PreRAGPipeline
+# Fallback package setup when invoked directly as a standalone script
+if __package__ is None or __package__ == "":
+    src_parent = Path(__file__).resolve().parent.parent
+    if str(src_parent) not in sys.path:
+        sys.path.insert(0, str(src_parent))
+    __package__ = "pipeline"
+
+from .config import PipelineConfig
+from .crawlers.raw_crawler import RawCrawler
+from .crawlers.url_discoverer import UrlDiscoverer
+from .bronze_to_silver import BronzeToSilverPipeline
+from .silver_to_gold import SilverToGoldPipeline
+from .orchestrator import PreRAGPipeline
 
 
 def setup_logging(verbose: bool = False):

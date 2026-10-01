@@ -11,8 +11,8 @@ from pathlib import Path
 from typing import Generator, List, Optional
 import pymupdf
 
-from src.extractors.base import BaseExtractor
-from src.models.schemas import BronzeDocument
+from .base import BaseExtractor
+from ..models.schemas import BronzeDocument
 
 logger = logging.getLogger(__name__)
 

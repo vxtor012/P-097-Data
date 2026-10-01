@@ -8,8 +8,8 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, Generator, List
 
-from src.extractors.base import BaseExtractor
-from src.models.schemas import BronzeDocument, SilverVehicle
+from .base import BaseExtractor
+from ..models.schemas import BronzeDocument, SilverVehicle
 
 logger = logging.getLogger(__name__)
 

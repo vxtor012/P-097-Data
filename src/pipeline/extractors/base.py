@@ -5,7 +5,7 @@ Base extractor interface.
 from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Generator, List, Union
-from src.models.schemas import BronzeDocument
+from ..models.schemas import BronzeDocument
 
 
 class BaseExtractor(ABC):

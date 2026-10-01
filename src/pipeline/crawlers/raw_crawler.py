@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
 
-from src.crawlers.url_discoverer import DEFAULT_USER_AGENT, MOTORBIKE_KEYWORDS, SEED_ENTRIES
+from .url_discoverer import DEFAULT_USER_AGENT, MOTORBIKE_KEYWORDS, SEED_ENTRIES
 
 logger = logging.getLogger(__name__)
 

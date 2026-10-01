@@ -11,13 +11,13 @@ import logging
 import time
 from typing import Any, Dict, List, Optional
 
-from src.chunking.hierarchical_chunker import HierarchicalChunker
-from src.config import PipelineConfig, DEFAULT_CONFIG
-from src.extractors.faq_extractor import FAQExtractor
-from src.extractors.html_article_extractor import HTMLArticleExtractor
-from src.extractors.pdf_extractor import PDFExtractor
-from src.extractors.relational_extractor import RelationalExtractor
-from src.models.schemas import (
+from .chunking.hierarchical_chunker import HierarchicalChunker
+from .config import PipelineConfig, DEFAULT_CONFIG
+from .extractors.faq_extractor import FAQExtractor
+from .extractors.html_article_extractor import HTMLArticleExtractor
+from .extractors.pdf_extractor import PDFExtractor
+from .extractors.relational_extractor import RelationalExtractor
+from .models.schemas import (
     BronzeDocument,
     SilverChunk,
     SilverDocument,
@@ -25,9 +25,9 @@ from src.models.schemas import (
     SilverReport,
     SilverVehicle,
 )
-from src.nlp.vietnamese_normalizer import VietnameseNormalizer
-from src.nlp.vietnamese_quality import VietnameseQualityScorer, strip_vietnamese_boilerplate
-from src.storage.silver_writer import SilverWriter
+from .nlp.vietnamese_normalizer import VietnameseNormalizer
+from .nlp.vietnamese_quality import VietnameseQualityScorer, strip_vietnamese_boilerplate
+from .storage.silver_writer import SilverWriter
 
 logger = logging.getLogger(__name__)
 

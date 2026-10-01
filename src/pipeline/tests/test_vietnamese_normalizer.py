@@ -2,7 +2,7 @@
 
 import pytest
 import unicodedata
-from src.nlp.vietnamese_normalizer import VietnameseNormalizer
+from pipeline.nlp.vietnamese_normalizer import VietnameseNormalizer
 
 
 def test_unicode_nfc():

@@ -6,8 +6,8 @@ coupled with Vietnamese sentence boundary awareness.
 
 import re
 from typing import List, Tuple, Optional
-from src.nlp.sentence_splitter import VietnameseSentenceSplitter
-from src.models.schemas import SilverChunk
+from ..nlp.sentence_splitter import VietnameseSentenceSplitter
+from ..models.schemas import SilverChunk
 
 
 class HierarchicalChunker:

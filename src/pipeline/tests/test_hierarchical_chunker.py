@@ -1,7 +1,7 @@
 """Unit tests for Hierarchical Chunker."""
 
 import pytest
-from src.chunking.hierarchical_chunker import HierarchicalChunker
+from pipeline.chunking.hierarchical_chunker import HierarchicalChunker
 
 
 def test_breadcrumb_preservation():

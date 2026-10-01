@@ -3,8 +3,8 @@
 import json
 from pathlib import Path
 import pytest
-from src.config import PipelineConfig
-from src.pipeline.bronze_to_silver import BronzeToSilverPipeline
+from pipeline.config import PipelineConfig
+from pipeline.bronze_to_silver import BronzeToSilverPipeline
 
 
 def test_pipeline_execution(tmp_path):

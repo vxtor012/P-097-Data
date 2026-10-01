@@ -10,8 +10,8 @@ from typing import Generator, List, Tuple
 from bs4 import BeautifulSoup
 from markdownify import markdownify
 
-from src.extractors.base import BaseExtractor
-from src.models.schemas import BronzeDocument, SilverFAQItem
+from .base import BaseExtractor
+from ..models.schemas import BronzeDocument, SilverFAQItem
 
 logger = logging.getLogger(__name__)
 

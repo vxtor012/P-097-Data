@@ -6,7 +6,7 @@ and non-automotive legal regulations, retaining only content directly assisting 
 
 import re
 from typing import Dict, List, Optional, Tuple
-from src.models.schemas import SilverChunk, SilverDocument
+from ..models.schemas import SilverChunk, SilverDocument
 
 # Completely excluded legal/penalties documents (irrelevant to car purchasing)
 EXCLUDED_DOCUMENT_PREFIXES = [

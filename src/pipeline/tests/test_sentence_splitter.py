@@ -1,7 +1,7 @@
 """Unit tests for Vietnamese Sentence Splitter."""
 
 import pytest
-from src.nlp.sentence_splitter import VietnameseSentenceSplitter
+from pipeline.nlp.sentence_splitter import VietnameseSentenceSplitter
 
 
 def test_abbreviations_not_split():

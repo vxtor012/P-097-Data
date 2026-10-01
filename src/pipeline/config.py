@@ -8,10 +8,23 @@ from pathlib import Path
 from typing import List
 
 
+def find_workspace_root() -> Path:
+    """Dynamically resolves workspace root containing the dataset/ directory."""
+    curr = Path(__file__).resolve().parent
+    for _ in range(5):
+        if (curr / "dataset").is_dir():
+            return curr
+        if curr.parent == curr:
+            break
+        curr = curr.parent
+    # Fallback: src/pipeline/config.py -> parents[2] is workspace root
+    return Path(__file__).resolve().parents[2]
+
+
 @dataclass
 class PipelineConfig:
     # Workspace root and default directories
-    base_dir: Path = field(default_factory=lambda: Path(__file__).resolve().parent.parent)
+    base_dir: Path = field(default_factory=find_workspace_root)
     bronze_dir: Path = field(default=None)
     pdf_dir: Path = field(default=None)
     silver_dir: Path = field(default=None)
