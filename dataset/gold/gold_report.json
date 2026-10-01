@@ -1,9 +1,9 @@
 {
   "pipeline_stage": "silver_to_gold",
   "target_domain": "Tư vấn mua bán xe & pháp lý sở hữu xe (Car Purchasing Consultation)",
-  "started_at": "2026-10-01T04:51:58.272234+00:00",
-  "completed_at": "2026-10-01T04:51:58.816677+00:00",
-  "elapsed_seconds": 0.54,
+  "started_at": "2026-10-01T05:02:46.450468+00:00",
+  "completed_at": "2026-10-01T05:02:46.909921+00:00",
+  "elapsed_seconds": 0.46,
   "total_silver_chunks": 2801,
   "total_gold_chunks": 2004,
   "filtered_out_chunks": 797,

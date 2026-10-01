@@ -61,12 +61,26 @@ class GoldWriter:
         return out_path
 
     def write_report(self, report_dict: Dict[str, Any]) -> Path:
-        """Writes audit metrics to gold_report.json."""
+        """Writes audit metrics to gold_report.json and generates gold README.md."""
         out_path = self.gold_dir / "gold_report.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(report_dict, f, ensure_ascii=False, indent=2)
         logger.info("Saved Gold pipeline report to %s", out_path)
+
+        # Automatically generate dataset/gold/README.md
+        try:
+            from .readme_generator import generate_gold_readme
+            readme_path = generate_gold_readme(self.gold_dir, report_dict)
+            logger.info("Generated Gold README at %s", readme_path)
+        except Exception as e:
+            logger.warning("Failed to generate Gold README: %s", e)
+
         return out_path
+
+    def write_readme(self, report_dict: Dict[str, Any]) -> Path:
+        """Explicitly generates dataset/gold/README.md."""
+        from .readme_generator import generate_gold_readme
+        return generate_gold_readme(self.gold_dir, report_dict)
 
     def write_rdb_schema(self, tables: Dict[str, List[Dict[str, Any]]]) -> Path:
         """Writes structured relational tables as CSV files into rdb_schema/."""

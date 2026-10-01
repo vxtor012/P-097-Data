@@ -62,12 +62,26 @@ class SilverWriter:
         return out_path
 
     def write_report(self, report: SilverReport) -> Path:
-        """Writes audit metrics to silver_report.json."""
+        """Writes audit metrics to silver_report.json and generates silver README.md."""
         out_path = self.silver_dir / "silver_report.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(report.to_dict(), f, ensure_ascii=False, indent=2)
         logger.info("Saved pipeline report to %s", out_path)
+
+        # Automatically generate dataset/silver/README.md
+        try:
+            from .readme_generator import generate_silver_readme
+            readme_path = generate_silver_readme(self.silver_dir, report)
+            logger.info("Generated Silver README at %s", readme_path)
+        except Exception as e:
+            logger.warning("Failed to generate Silver README: %s", e)
+
         return out_path
+
+    def write_readme(self, report: SilverReport) -> Path:
+        """Explicitly generates dataset/silver/README.md."""
+        from .readme_generator import generate_silver_readme
+        return generate_silver_readme(self.silver_dir, report)
 
     def write_rdb_schema(self, tables: Dict[str, List[Dict[str, Any]]]) -> Path:
         """Writes structured relational tables as CSV files into rdb_schema/."""

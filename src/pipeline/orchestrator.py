@@ -72,6 +72,9 @@ class PreRAGPipeline:
         crawl_summary = None
         if crawl_first:
             crawl_summary = self.crawl(include_dynamic_urls=include_dynamic_urls)
+        else:
+            # Ensure Bronze destination README is generated/updated
+            self.crawler.write_readme()
 
         silver_report = self.run_silver()
         gold_report = self.run_gold()

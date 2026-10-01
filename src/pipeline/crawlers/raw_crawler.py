@@ -457,4 +457,19 @@ class RawCrawler:
         report.sources_crawled = len(sources)
 
         report.elapsed_seconds = round(time.time() - start_time, 2)
+
+        # Automatically generate dataset/bronze/README.md
+        self.write_readme(report)
+
         return report
+
+    def write_readme(self, report: Optional[CrawlReport] = None) -> Path:
+        """Generates dataset/bronze/README.md."""
+        try:
+            from ..storage.readme_generator import generate_bronze_readme
+            readme_path = generate_bronze_readme(self.bronze_dir, report=report, pdf_dir=self.pdf_dir)
+            logger.info("Generated Bronze README at %s", readme_path)
+            return readme_path
+        except Exception as e:
+            logger.warning("Failed to generate Bronze README: %s", e)
+            return self.bronze_dir / "README.md"
