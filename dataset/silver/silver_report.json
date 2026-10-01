@@ -1,0 +1,33 @@
+{
+  "pipeline_version": "1.0.0",
+  "started_at": "2026-10-01T05:15:23.316127+00:00",
+  "completed_at": "2026-10-01T05:15:33.040008+00:00",
+  "elapsed_seconds": 9.72,
+  "total_bronze_records": 113,
+  "total_silver_documents": 113,
+  "total_silver_chunks": 2801,
+  "total_faq_items": 400,
+  "total_vehicles": 27,
+  "duplicates_filtered": 0,
+  "low_quality_filtered": 0,
+  "language_distribution": {
+    "vi": 113
+  },
+  "source_distribution": {
+    "html_article": 45,
+    "faq": 34,
+    "relational_snapshot": 1,
+    "pdf": 33
+  },
+  "category_distribution": {
+    "chinh_sach_uu_dai": 32,
+    "tai_chinh_tra_gop": 3,
+    "thu_tuc_phap_ly": 13,
+    "trai_nghiem_danh_gia": 22,
+    "faq": 34,
+    "gia_xe_va_chi_phi_lan_banh": 1,
+    "thong_so_ky_thuat": 8
+  },
+  "average_quality_score": 0.952,
+  "average_token_count_per_chunk": 118.9
+}

@@ -1,0 +1,7 @@
+﻿fee_code,fee_name,rate_percent,fixed_amount_vnd,description,snapshot_datetime
+REGISTRATION_FEE,Lệ phí trước bạ ô tô điện,0.0,0,Nghị định 10/2022/NĐ-CP & 50/2025/NĐ-CP: Ô tô điện chạy pin miễn 100% lệ phí trước bạ,2026-09-30 08:07:24 UTC
+PLATE_FEE_HN_HCM,"Phí cấp biển số Khu vực I (Hà Nội, TP.HCM)",0.0,20000000,Thông tư 60/2023/TT-BTC: Hà Nội và TP.HCM áp dụng 20.000.000 VNĐ,2026-09-30 08:07:24 UTC
+PLATE_FEE_OTHER,Phí cấp biển số Khu vực II & III (Tỉnh/Thành khác),0.0,1000000,Thông tư 60/2023/TT-BTC: Các tỉnh thành còn lại 1.000.000 VNĐ,2026-09-30 08:07:24 UTC
+INSPECTION_FEE,Phí kiểm định đăng kiểm,0.0,340000,Thông tư 55/2022/TT-BTC: Xe con dưới 10 chỗ,2026-09-30 08:07:24 UTC
+ROAD_MAINTENANCE_FEE,Phí bảo trì đường bộ (1 năm),0.0,1560000,Nghị định 90/2023/NĐ-CP: Xe cá nhân 130.000 VNĐ/tháng,2026-09-30 08:07:24 UTC
+MANDATORY_INSURANCE,Bảo hiểm TNDS bắt buộc (1 năm),0.0,480700,Nghị định 67/2023/NĐ-CP: Xe dưới 6 chỗ không kinh doanh vận tải,2026-09-30 08:07:24 UTC

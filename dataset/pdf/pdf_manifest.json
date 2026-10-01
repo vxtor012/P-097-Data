@@ -1,0 +1,247 @@
+[
+  {
+    "title": "Nghi Dinh 10 2022 Nd Cp Le Phi Truoc Ba",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/nghi_dinh_10_2022_nd_cp_le_phi_truoc_ba.pdf",
+    "size_bytes": 258809,
+    "type": "legal_document"
+  },
+  {
+    "title": "Nghi Dinh 67 2023 Nd Cp Bao Hiem Bat Buoc Chu Xe Co Gioi",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/nghi_dinh_67_2023_nd_cp_bao_hiem_bat_buoc_chu_xe_co_gioi.pdf",
+    "size_bytes": 3804016,
+    "type": "legal_document"
+  },
+  {
+    "title": "Nghi Dinh 90 2023 Nd Cp Phi Su Dung Duong Bo",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/nghi_dinh_90_2023_nd_cp_phi_su_dung_duong_bo.pdf",
+    "size_bytes": 568564,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 06 2023 Tt Nhnn Sua Doi Quy Dinh Cho Vay",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_06_2023_tt_nhnn_sua_doi_quy_dinh_cho_vay.pdf",
+    "size_bytes": 247817,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 13 2022 Tt Btc Huong Dan Le Phi Truoc Ba",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_13_2022_tt_btc_huong_dan_le_phi_truoc_ba.pdf",
+    "size_bytes": 242060,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 16 2021 Tt Bgtvt Kiem Dinh An Toan Ky Thuat Xe Co Gioi",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_16_2021_tt_bgtvt_kiem_dinh_an_toan_ky_thuat_xe_co_gioi.pdf",
+    "size_bytes": 1691545,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 24 2023 Tt Bca Cap Thu Hoi Dang Ky Bien So Xe",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_24_2023_tt_bca_cap_thu_hoi_dang_ky_bien_so_xe.pdf",
+    "size_bytes": 441412,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 28 2024 Tt Bca Cap Thu Hoi Dang Ky Bien So Xe",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_28_2024_tt_bca_cap_thu_hoi_dang_ky_bien_so_xe.pdf",
+    "size_bytes": 243372,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 39 2016 Tt Nhnn Quy Dinh Cho Vay",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_39_2016_tt_nhnn_quy_dinh_cho_vay.pdf",
+    "size_bytes": 295260,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 55 2022 Tt Btc Gia Dich Vu Kiem Dinh Xe Co Gioi",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_55_2022_tt_btc_gia_dich_vu_kiem_dinh_xe_co_gioi.pdf",
+    "size_bytes": 339406,
+    "type": "legal_document"
+  },
+  {
+    "title": "Thong Tu 60 2023 Tt Btc Le Phi Dang Ky Cap Bien So Xe",
+    "category": "thu_tuc_phap_ly",
+    "relative_path": "data/pdf/thu_tuc_phap_ly/thong_tu_60_2023_tt_btc_le_phi_dang_ky_cap_bien_so_xe.pdf",
+    "size_bytes": 469481,
+    "type": "legal_document"
+  },
+  {
+    "title": "Brochure Vinfast Ecvan",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_ecvan.pdf",
+    "size_bytes": 1550258,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Herio Green",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_herio_green.pdf",
+    "size_bytes": 1006431,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Limo Green",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_limo_green.pdf",
+    "size_bytes": 1839417,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf3",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf3.pdf",
+    "size_bytes": 4015890,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf6",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf6.pdf",
+    "size_bytes": 12422114,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf7",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf7.pdf",
+    "size_bytes": 6127342,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf8",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf8.pdf",
+    "size_bytes": 11085234,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf8 The All New",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf8_the_all_new.pdf",
+    "size_bytes": 28639232,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf9",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf9.pdf",
+    "size_bytes": 2652978,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "Brochure Vinfast Vf Mpv7",
+    "category": "thong_so_ky_thuat",
+    "relative_path": "data/pdf/thong_so_ky_thuat/brochure_vinfast_vf_mpv7.pdf",
+    "size_bytes": 4244512,
+    "type": "vehicle_brochure"
+  },
+  {
+    "title": "01022026-Thong-Bao-Chinh-Sach-Uu-Dai-Nhan-Doi-Loc-Tet-Mua-Xe-Trung-Xe",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/01022026-thong-bao-chinh-sach-uu-dai-nhan-doi-loc-tet-mua-xe-trung-xe.pdf",
+    "size_bytes": 758724,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260105 Thong-Bao-Chinh-Sach-Uu-Dai-Vi-Thu-Do-Trong-Xanh-Va-Sai-Gon-Xanh-Danh-Cho-O-To-Dien-Thang-01.2026 0",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260105_thong-bao-chinh-sach-uu-dai-vi-thu-do-trong-xanh-va-sai-gon-xanh-danh-cho-o-to-dien-thang-01.2026_0.pdf",
+    "size_bytes": 272364,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260316 Thong-Bao-Chinh-Sach-Ban-Hang-Cho-Cac-Dong-Xe-Dien-Vinfast-Da-Dung-San-Xuat-Thang-03.2026",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260316_thong-bao-chinh-sach-ban-hang-cho-cac-dong-xe-dien-vinfast-da-dung-san-xuat-thang-03.2026.pdf",
+    "size_bytes": 340349,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260518 Thong-Bao-Chinh-Sach-Uu-Dai-Sac-Pin-Cho-Cac-Dong-Xe-O-To-Dien-Vinfast-Tai-Thi-Truong-Viet-Nam-Thang-04.2026-Update 3",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260518_thong-bao-chinh-sach-uu-dai-sac-pin-cho-cac-dong-xe-o-to-dien-vinfast-tai-thi-truong-viet-nam-thang-04.2026-update_3.pdf",
+    "size_bytes": 269109,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "202607015 Thong-Bao-Chinh-Sach-Gia-Ban-Cac-Dong-Xe-Vinfast-Thang-07.2026 0",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/202607015_thong-bao-chinh-sach-gia-ban-cac-dong-xe-vinfast-thang-07.2026_0.pdf",
+    "size_bytes": 400901,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260701 Thong-Bao-Chinh-Sach-Gia-Ban-Phan-Mem-Vf-Estore-Tai-Viet-Nam-Thang-07.2026 2",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260701_thong-bao-chinh-sach-gia-ban-phan-mem-vf-estore-tai-viet-nam-thang-07.2026_2.pdf",
+    "size_bytes": 283010,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260718 Thong-Bao-Chinh-Sach-Ban-Hang-Cho-Cac-Dong-Xe-Dien-Vinfast-Da-Dung-San-Xuat-Thang-07.2026",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260718_thong-bao-chinh-sach-ban-hang-cho-cac-dong-xe-dien-vinfast-da-dung-san-xuat-thang-07.2026.pdf",
+    "size_bytes": 287050,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260718 Thong-Bao-Chinh-Sach-Thuc-Day-Ban-Hang-O-To-Dien-Thang-07.2026 1",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260718_thong-bao-chinh-sach-thuc-day-ban-hang-o-to-dien-thang-07.2026_1.pdf",
+    "size_bytes": 352932,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260801 Thong-Bao-Cs-Khach-Hang-Than-Thiet-Vinclub-Thang-08.2026",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260801_thong-bao-cs-khach-hang-than-thiet-vinclub-thang-08.2026.pdf",
+    "size_bytes": 327366,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260904 Thong-Bao-Chinh-Sach-Khach-Hang-Than-Thiet-Vinclub-Thang-09.2026",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260904_thong-bao-chinh-sach-khach-hang-than-thiet-vinclub-thang-09.2026.pdf",
+    "size_bytes": 325454,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260919 Thong-Bao-Chinh-Sach-Gia-Ban-Cac-Dong-Xe-Vinfast-Thang-09.2026",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260919_thong-bao-chinh-sach-gia-ban-cac-dong-xe-vinfast-thang-09.2026.pdf",
+    "size_bytes": 412690,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260919 Thong-Bao-Chinh-Sach-Uu-Dai-Sac-Pin-Cac-Dong-Xe-O-To-Dien-Vinfast-Thang-09.2026",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260919_thong-bao-chinh-sach-uu-dai-sac-pin-cac-dong-xe-o-to-dien-vinfast-thang-09.2026.pdf",
+    "size_bytes": 334475,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "20260928 Thong-Bao-Chinh-Sach-Thuc-Day-Ban-Hang-O-To-Dien-Thang-09.2026 0",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/20260928_thong-bao-chinh-sach-thuc-day-ban-hang-o-to-dien-thang-09.2026_0.pdf",
+    "size_bytes": 340753,
+    "type": "policy_document_2026_ev"
+  },
+  {
+    "title": "26012026-Thong-Bao-Chinh-Sach-Uu-Dai-Ho-Tro-Lai-Suat-Manh-Liet-Vi-Tuong-Lai-Xanh",
+    "category": "chinh_sach_uu_dai",
+    "relative_path": "data/pdf/chinh_sach_uu_dai/26012026-thong-bao-chinh-sach-uu-dai-ho-tro-lai-suat-manh-liet-vi-tuong-lai-xanh.pdf",
+    "size_bytes": 368665,
+    "type": "policy_document_2026_ev"
+  }
+]
