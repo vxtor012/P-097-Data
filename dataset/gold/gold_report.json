@@ -1,0 +1,28 @@
+{
+  "pipeline_stage": "silver_to_gold",
+  "target_domain": "Tư vấn mua bán xe & pháp lý sở hữu xe (Car Purchasing Consultation)",
+  "started_at": "2026-10-01T04:03:30.081108+00:00",
+  "completed_at": "2026-10-01T04:03:30.576612+00:00",
+  "elapsed_seconds": 0.5,
+  "total_silver_chunks": 2801,
+  "total_gold_chunks": 2004,
+  "filtered_out_chunks": 797,
+  "retention_rate_percent": 71.55,
+  "total_gold_documents": 112,
+  "total_gold_faq": 400,
+  "total_gold_vehicles": 27,
+  "gold_topic_distribution": {
+    "chinh_sach_uu_dai": 255,
+    "bao_gia_chi_phi": 622,
+    "tai_chinh_tra_gop": 77,
+    "bao_hanh_hau_mai": 58,
+    "thong_so_va_chon_xe": 507,
+    "pin_va_tram_sac": 177,
+    "thu_tuc_phap_ly_so_huu": 308
+  },
+  "top_filter_reasons": {
+    "No car purchasing or consultation relevance": 396,
+    "Insurance enterprise bureaucracy (non-vehicle buyer relevance)": 258,
+    "Excluded legal document: Nghi Dinh 90 2023 Nd Cp Phi Su Dung Duong Bo": 143
+  }
+}

@@ -1,0 +1,28 @@
+﻿car_id,car_name,default_product_id,vehicle_type,manufacturer,snapshot_datetime
+Products-Car-VF2,VF 2,VF-ZVEH-EI23_2025-TH14V-CE17-CI1M,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF3,VF 3,VF-ZVEH-EI13_1024-TI1CV-CE2Q-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF5,VF 5,VF-ZVEH-EA15_2023-GA12V-181Y-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF6,VF 6,VF-ZVEH-EB15_2023-JB10V-CE18-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF7,VF 7,VF-ZVEH-EC15_2023-GC15V-CE11-CI13,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF8,VF 8,VF-ZVEH-PD1U_2023-ND31V-CE18-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF9,VF 9,VF-ZVEH-PE1U_2023-NE3LV-CE18-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-ECVAN,EC Van,VF-ZVEH-EM1V_2025-TG10V-CE1W-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-HerioGreen,Herio Green,VF-ZVEH-EA15_2023-GA1XV-CE11-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-LimoGreen,Limo Green,VF-ZVEH-EC1V_2025-SL1VV-CE17-CI1H,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-MinioGreen,Minio Green,VF-ZVEH-EI23_2025-TH12V-CE2I-CI1M,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VF8-THE-ALL-NEW,VF 8 The All New,VF-ZVEH-EC25_2025-HC11V-CE33-CI12,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VFMPV7,VF MPV 7,VF-ZVEH-EC1V_2025-SL1WV-CE1V-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Car-VFWILD,VF Wild,VF-ZVEH-MP1C_2026-HJ01V-CE2Q-CI11,Electric Car,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-EVO-200,Evo200,VF-ZFG-ESNA5LHH-REQ,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-EVO-200-LITE,Evo200 Lite,VF-ZFG-ESNA5LHL-REQ1,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-EVOGRAND,Evo Grand,VF-ZFG-ESNE2LHH-BAR2,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-EVOGRANDLITE,Evo Grand Lite,VF-ZFG-ESNE2LHL-BAR,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-FELIZ,Feliz 2025,VF-ZFG-ESV52SHH-BAQ,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-FELIZ-S,Feliz S,VF-ZFG-ESMA2LHH-WHR,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-FELIZLITE,Feliz Lite,VF-ZFG-ESNE6LHL-GNV,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-FLAZZ,Flazz,VF-ZFG-ESNEDLHL-WHR,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-KLARA-S-2022,Klara S2,VF-ZFG-ESMA1LHH-WHR,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-KLARANEO,Klara Neo,VF-ZFG-ESMD7LHH-WHR,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-VENTO-S,Vento S,VF-ZFG-ESMA3LMH-YER,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-VEROX,Vero X,VF-ZFG-ESNE7LHH-WHR,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
+Products-Scooter-ZGOO,ZGoo,VF-ZFG-ESNECLHLHT-GNV,Electric Bike,VinFast,2026-09-30 08:07:24 UTC
