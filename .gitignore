@@ -28,10 +28,11 @@ env/
 .DS_Store
 Thumbs.db
 
-# Data (never commit large data)
-# data/
-# *.db
-# *.sqlite3
+# Data (never commit raw scraped data or large db files)
+dataset/bronze/
+data/bronze/
+*.db
+*.sqlite3
 
 # Logs
 logs/
